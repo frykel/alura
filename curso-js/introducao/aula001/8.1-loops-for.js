@@ -18,9 +18,9 @@ console.log(`Destinos restantes: ${listaDeDestinos}`)
 
 console.log("Embarque: \n \n")
 
-let contador = 0
+
 let destinoExiste = false
-while(contador<3){
+for(let contador = 0; contador<3; contador++){
     if(listaDeDestinos[contador]== destino){
         console.log("Destino escolhido existe: ",listaDeDestinos[contador])
         destinoExiste=true
