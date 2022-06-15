@@ -15,21 +15,37 @@ const cliente1 = new Cliente()
  cliente1.cpf = 11122233309;
 
 
-const cliente2 = new Cliente()
+//const cliente2 = new Cliente()
 
-cliente2.nome = "Alice";
-cliente2.cpf = 88822233309;
+//cliente2.nome = "Alice";
+//cliente2.cpf = 88822233309;
 
 const contaCorrenteRicardo = new ContaCorrente()
 
 
 contaCorrenteRicardo.agencia=1001
-
+contaCorrenteRicardo.cliente= cliente1
 
 
 contaCorrenteRicardo.sacar(100)
 contaCorrenteRicardo.depositar(500)
-const valorSacado = contaCorrenteRicardo.sacar(200)
 
-console.log(cliente1)
-console.log(valorSacado)
+
+
+
+
+const conta2= new ContaCorrente()
+conta2.cliente = new Cliente()
+//posso atribuir a conta2.cliente = null, isso faz com que eu diga a minha memoria para armazenar nada lá (null)
+//se eu não atribuir nada a conta2.cliente ele vai atribuir undefined.
+conta2.cliente.nome = "Alice"
+conta2.cliente.cpf= 88822233309
+conta2.agencia= 1020
+
+conta2.depositar(600)
+
+
+
+conta2.transferir(100,contaCorrenteRicardo)
+
+console.log(contaCorrenteRicardo,conta2)
