@@ -35,12 +35,14 @@ contaCorrenteRicardo.depositar(500)
 
 
 const conta2= new ContaCorrente()
-conta2.cliente = new Cliente()
+const cliente2 = new Cliente()
 //posso atribuir a conta2.cliente = null, isso faz com que eu diga a minha memoria para armazenar nada lá (null)
 //se eu não atribuir nada a conta2.cliente ele vai atribuir undefined.
-conta2.cliente.nome = "Alice"
-conta2.cliente.cpf= 88822233309
+
+cliente2.nome = "Alice"
+cliente2.cpf= 88822233309
 conta2.agencia= 1020
+conta2.cliente=cliente2
 
 conta2.depositar(600)
 
@@ -49,3 +51,5 @@ conta2.depositar(600)
 conta2.transferir(100,contaCorrenteRicardo)
 
 console.log(contaCorrenteRicardo,conta2)
+console.log(conta2.cliente)
+console.log("Saldo Atual: R$ "+conta2.saldo+",00")
