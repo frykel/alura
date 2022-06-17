@@ -1,6 +1,11 @@
 import { Cliente } from "./Cliente.js"
 
 export class ContaCorrente{
+    /*Para sabermos o número de contas correntes já criadas podemos criar mais um atributo, para que ele seja implementado corretamente ele
+    deverá ser estático, ou seja, deverá valer para todas as instâncias (conta corrente do cliente 1, conta corrente do cliente 2, etc...) da classe (ContaCorrente) e não só para uma instância, para isso usamos o comando static, veja abaixo:*/
+
+    static numeroDeContas = 0
+    
     agencia //atributos
     //#saldo = 0 //a # antes do atributo saldo serve para indicar que ele é privado e nada, a não ser outro atributo dessa classe pode alterar seu valor. 
     //Esse conceito de atributo privado com # ainda está em fase de implementação, dessa forma não é oficial, a convenção é de que se use _ em vez de # para indicar atributo privado. Neste exemplo foi utilizado o #.
@@ -28,6 +33,11 @@ export class ContaCorrente{
         return this._saldo
     }
 
+    constructor(agencia,cliente){
+        this.cliente=cliente // o cliente no this.cliente é o acessor da classe (set cliente(novoValor){}) e não o atributo privado _cliente
+        this.agencia=agencia
+        ContaCorrente.numeroDeContas += 1
+    }
     sacar(valor){ //método ou função
 
         if(this._saldo>=valor){ //não seria correto colocar contaCorrenteRicardo.saldo pois ele seria específico a um objeto, neste caso usamos this para se referir a qualquer conta corrente.
