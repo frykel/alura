@@ -88,12 +88,12 @@ footer{
 main{
 	width: 940px;
 	margin: 0 auto;
-	background-color: aquamarine;
+	
 }
 form{
 	margin: 40px 0;
 }
-form input{
+.input-padrao{
 	display: block;
 	margin-bottom: 10px;
 	padding: 10px 20px;
@@ -101,9 +101,16 @@ form input{
 	box-sizing: border-box;
 }
 
-form label{
+form label, form legend{
 	display: block;
 	font-size: 20px;
 	margin-bottom: 10px;
-	font-weight: bold;
+
+}
+div label{
+	font-weight: normal;
+	font-size: 18px;
+}
+.checkbox{
+	margin: 20px 0;
 }

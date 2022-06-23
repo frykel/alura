@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 		<title>Produtos - Barbearia Alura</title>
@@ -10,7 +10,7 @@
 	<body>
 		<header>
 			<div class="caixa">
-				<h1><img src="imagens/logo.png"></h1>
+				<h1><img src="imagens/logo.png" alt="Logo da Barbearia Alura"></h1>
 
 				<nav>
 					<ul>
@@ -25,18 +25,44 @@
         <main>
 
             <form>
+				<!--Consultar site: mobileinputtypes.com para ver os tipos de input para celular
+				
+				o comando required dentro do input abaixo faz com que aquele campo seja obrigatório preencher
+				-->
                 <label for="nome">Nome e Sobrenome:</label>
-                <input type="text" name="Nome" id="nome">
+                <input type="text" name="Nome" id="nome" class="input-padrao" required>
 
                 <label for="email">Email:</label>
-                <input type="text" name="Email" id="email" placeholder="email@dominio.com">
+                <input type="email" name="Email" id="email" class="input-padrao" placeholder="email@dominio.com" required>
 
                 <label for="telefone">Telefone:</label>
-                <input type="text" name="Telefone" id="telefone" placeholder="(XX) XXXXX-XXXX">
+                <input type="tel" name="Telefone" id="telefone" class="input-padrao" placeholder="(XX) XXXXX-XXXX" required>
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea name="Mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite aqui sua mensagem"></textarea>
+                <textarea name="Mensagem" id="mensagem" cols="30" rows="10" class="input-padrao" placeholder="Digite aqui sua mensagem" required></textarea>
+				
+				<!--No lugar de usar uma div para definir um bloco no formulário usamos fieldset
+				Para títulos dentro do fieldset em vez de parágrafo (p), usamos legend-->
+				<fieldset>
+					<legend>Como prefere o nosso contato?</legend>
+					<label for="radio-email"><input type="radio" name="contato" id="radio-email">Email</label>
+					
+					<label for="radio-telefone"><input type="radio" name="contato" id="radio-telefone" c>Telefone</label>
+					
+					<label for="radio-whatsapp"><input type="radio" name="contato" id="radio-whatsapp" checked>Whatsapp</label>
+					
+				</fieldset>
 
+				<fieldset>
+					<legend>Qual horário prefere ser atendido?</legend>
+					<select name="turno" id="turno">
+						<option value="manha">Manha</option>
+						<option value="tarde">Tarde</option>
+						<option value="noite">Noite</option>
+					</select>
+				</fieldset>
+
+				<label class="checkbox"><input type="checkbox" name="contact" id="contact" checked>Gostaria de receber nossas novidades por email?</label>
                 <input type="submit" value="Enviar Formulário">
 
 
@@ -45,7 +71,7 @@
         </main>
 
         <footer>
-			<img src="imagens/logo-branco.png" alt="logo">
+			<img src="imagens/logo-branco.png" alt="Logo da Barbearia Alura">
 			<p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
 		</footer>
 	</body>
