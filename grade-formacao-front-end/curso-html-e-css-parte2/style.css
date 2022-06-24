@@ -135,3 +135,53 @@ div label{
 	background-color: orangered;
 	transform: scale(1.1) rotate(360deg);
 }
+table{
+	margin: 20px 0 40px;
+	
+}
+thead{
+	background-color: #555555;
+	color: white;
+	font-weight: bold;
+}
+
+td,th{
+	border: 2px solid black;
+	padding: 8px 15px;
+	text-align: center;
+}
+
+.banner{
+	width: 100%;
+}
+.titulo-principal{
+	text-align: center;
+	font-size: 2em; /*2em quer dizer 2x o tamanho base da fonte usada */
+	margin: 0 0 1em;
+	clear: left; /*O comando clear: left anula o efeito do float nesse elemento */
+}
+
+.principal p{
+	margin: 0 0 1em;
+}
+
+.principal strong{
+	font-weight: bold;
+}
+
+.principal em{
+	font-style: italic;
+}
+
+.imagembeneficios{
+	width: 60%;
+}
+body{
+	background-image: linear-gradient(to bottom,rgb(221, 221, 216),rgb(180, 180, 176),rgb(110, 110, 108));
+}
+
+.utensilios{
+	width: 120px;
+	float: left; /*Comando float faz com que o texto fique ao redor da imagem, contornando-a */
+	margin: 0 20px 20px 0;
+}
