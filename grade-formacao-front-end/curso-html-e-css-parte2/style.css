@@ -255,3 +255,19 @@ body{
 	Para o elemento n: nth-child(n) */
 	font-weight: bold;
 }
+
+@media screen and (max-width = 480px){
+
+	.caixa,.principal,.conteudo-beneficios,.mapa,.video{
+		width: auto;
+	}
+	h1{
+		text-align: center;
+	}
+	nav{
+		position: static;
+	}
+	.imagem-beneficios,.conteudo-beneficios{
+		width: 100%;
+	}
+	}

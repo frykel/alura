@@ -1,0 +1,57 @@
+
+
+header{
+    width: 100%;
+    background:linear-gradient(#02DAC7,#048F96,#014667);
+    box-shadow: 0px 4px 5px black;
+}
+header img{
+    width: 25%;
+}
+main{
+    background: lightgray;
+    background-image: url('cortina-fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.img-cabecalho{
+    position: relative;
+    width: 940px;
+    
+}
+.pesquisa{
+    position: absolute;
+    top:70px;
+    right: 100px;
+    
+}
+div>input{
+    width:600px;
+    padding: 10px;
+}
+nav li{
+    display: inline;
+    padding: 5px;   
+    
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px black;
+    background-color: rgba(1, 70, 103,0.3);
+}
+li a:hover{
+    background-color: rgb(1, 70, 103);
+}
+nav{
+    position: absolute;
+    top: 150px;
+    right: 50px;
+    margin: 0 50px;
+}
+
