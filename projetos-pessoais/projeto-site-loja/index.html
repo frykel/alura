@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servlatec - A sua loja de tecidos e decor</title>
     <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        #fundo{
+            background: lightgray;
+            
+            background-size: contain;
+            background-attachment: fixed;
+            background-position: center center;
+        }
+
+    </style>
 
 </head>
-<body>
+<body id="fundo">
     
     <header>
 <div class="img-header">
     
-            <img src="imagens/logo-nome.png" alt="Logo da Loja">
+            <a href="index.html"><img src="imagens/logo-nome.png" alt="Logo da Loja"></a>
 </div>
     <div class="pesquisa">
         <input type="search" name="pesquisa" id="pesq" placeholder="Digite um produto">
@@ -34,7 +46,25 @@
     </header>
    
     <main>
-        
+       <section>
+
+           <div class="principal">
+            <h1>Nossos Segmentos</h1>
+           </div>
+
+           <div id="segmento1">
+
+            <P>DECOR</P>
+
+           </div>
+           <div id="segmento2">
+
+            <P>CAMA</P>
+
+           </div>
+           
+
+       </section>
 
     </main>
 

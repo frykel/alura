@@ -7,14 +7,9 @@ header{
 }
 header img{
     width: 25%;
+    
 }
-main{
-    background: lightgray;
-    background-image: url('cortina-fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 .img-cabecalho{
     position: relative;
     width: 940px;
@@ -54,4 +49,26 @@ nav{
     right: 50px;
     margin: 0 50px;
 }
+main{
+    width: 940px;
+    margin: 25px auto;
+    background-color: rgb(236, 234, 234);
+}
 
+section{
+    width: 100%;
+    margin: 0 auto;
+}
+.principal{
+    background: #014667;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 10px;
+}
+#segmento1{
+    width: 30%;
+    display: inline-block;
+    height: 200px;
+    background-image: url("cortina-fundo.jpg");
+}
