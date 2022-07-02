@@ -17,8 +17,8 @@ header img{
 }
 .pesquisa{
     position: absolute;
-    top:70px;
-    right: 100px;
+    top:4em;
+    right:4em;
     
 }
 div>input{
@@ -45,19 +45,23 @@ li a:hover{
 }
 nav{
     position: absolute;
-    top: 150px;
-    right: 50px;
+    top: 8em;
+    right: 1em;
     margin: 0 50px;
 }
 main{
-    width: 940px;
+    width: 1040px;
     margin: 25px auto;
     background-color: rgb(236, 234, 234);
+    height: 100%;
+    box-shadow: 2px 2px 2px black;
 }
 
 section{
     width: 100%;
     margin: 0 auto;
+    background-color: #02DAC7;
+
 }
 .principal{
     background: #014667;
@@ -65,10 +69,48 @@ section{
     font-size: 2em;
     text-align: center;
     border-radius: 10px;
+    
+}
+section{
+    padding: 5px;
+    box-sizing: border-box;
 }
 #segmento1{
-    width: 30%;
+    
+    background-image: url("imagens/cortina-fundo.jpg");
+    
+}
+#segmento2{
+    background-image: url("imagens/cama.jpg");
+}
+
+.segmento{
     display: inline-block;
-    height: 200px;
-    background-image: url("cortina-fundo.jpg");
+    background-size: cover;
+    height: 250px;
+    text-align: center;
+    border: 1px solid black;
+    width: 31%;
+    margin: 5PX 9PX;
+   
+    
+    
+}
+.segmento p{
+
+    font-size: 2em;
+    position: relative;
+    top: 43%;
+    text-shadow: 1px 1px 1px;     
+   
+}
+.segmento a{
+
+    text-decoration: none;
+    color: black;
+}
+.segmento:hover{
+    opacity: 0.9;
+    transition: 500ms;
+    transform: scale(1.02);
 }
