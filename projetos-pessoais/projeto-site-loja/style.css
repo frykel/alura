@@ -1,5 +1,4 @@
 
-
 header{
     width: 100%;
     background:linear-gradient(#02DAC7,#048F96,#014667);
@@ -8,22 +7,30 @@ header{
 header img{
     width: 25%;
     
+    
 }
 
 .img-cabecalho{
     position: relative;
     width: 940px;
     
+    
 }
 .pesquisa{
     position: absolute;
-    top:4em;
-    right:4em;
+    top:10%;
+    right:5%;
+    width: 45%;
+    
     
 }
 div>input{
-    width:600px;
+    width:100%;
     padding: 10px;
+}
+div input::after{
+
+    content: \2192;
 }
 nav li{
     display: inline;
@@ -49,18 +56,22 @@ nav{
     right: 1em;
     margin: 0 50px;
 }
+body{
+
+    background-color: rgb(184, 180, 180);
+}
 main{
-    width: 1040px;
-    margin: 25px auto;
-    background-color: rgb(236, 234, 234);
-    height: 100%;
-    box-shadow: 2px 2px 2px black;
+    
+    margin: 10px 0px auto;
+    background-color: rgb(184, 180, 180);
+   
+   
 }
 
-section{
-    width: 100%;
+.departamentos{
+    width: 1040px;
     margin: 0 auto;
-    background-color: #02DAC7;
+    background-color: rgb(184, 180, 180);
 
 }
 .principal{
@@ -73,7 +84,7 @@ section{
 }
 section{
     padding: 5px;
-    box-sizing: border-box;
+    
 }
 #segmento1{
     
@@ -83,15 +94,32 @@ section{
 #segmento2{
     background-image: url("imagens/cama.jpg");
 }
+#segmento3{
+    background-image: url("imagens/banho.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#segmento4{
+    background-image: url("imagens/mesa.jpg");
+}
+#segmento5{
+    background-image: url("imagens/moda.jpg");
+}
+#segmento6{
+    background-image: url("imagens/festa.jpg");
+}
 
 .segmento{
     display: inline-block;
     background-size: cover;
-    height: 250px;
+    height: 15em;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid black ;
+    box-shadow: 3px 3px 5px black;
     width: 31%;
-    margin: 5PX 9PX;
+    margin: 9PX 9PX;
+
    
     
     
@@ -101,10 +129,15 @@ section{
     font-size: 2em;
     position: relative;
     top: 43%;
+    left: 25%;
+    background: white;
+    border-radius: 50px;
+    width: 50%;
     text-shadow: 1px 1px 1px;     
+    box-shadow: 1px 1px 1px black;
    
 }
-.segmento a{
+a{
 
     text-decoration: none;
     color: black;
@@ -113,4 +146,45 @@ section{
     opacity: 0.9;
     transition: 500ms;
     transform: scale(1.02);
+}
+.segmento:hover
+
+.fornecedores{
+    background-color: white;
+}
+
+.fornecedores div{
+    display: inline-block;
+    width: 12%;
+    margin: 5px 5px;
+    vertical-align: middle;
+    margin: 5px 12px;
+}
+.fornecedores img{
+    width: 100%;
+}
+
+.informacoes{
+
+    width: 90%;
+    margin: 5px auto;
+    background-color: lightgray ;
+   
+}
+.informacoes div{
+    display: inline-block;
+    width: 23%;
+    margin: 0 10px;
+    vertical-align: middle;
+   
+}
+.informacoes span{
+    font-weight: bold;
+    color: red;
+}
+
+footer{
+    width: 100%;
+    background:linear-gradient(to top,#02DAC7,#048F96,#014667);
+    height: 100px;
 }
