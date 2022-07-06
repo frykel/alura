@@ -8,25 +8,47 @@
         <title>Fruta & Fruto</title>
         <link href="./assets/css/normalize.css" rel="stylesheet" />
         <link href="./assets/css/reset.css" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/cabecalho.css">
+        <link rel="stylesheet" href="assets/css/menu/menu-item.css">
+        <link rel="stylesheet" href="assets/css/menu/menu-link.css">
+        <link rel="stylesheet" href="assets/css/menu/menu-lista.css">
+        <!--Por convenção ao se nomear classes e ids se utiliza o conceito Block Element Modifier (BEM)
+        
+        No bloco usamos a palavra chave do bloco, como abaixo "class=menu"
+        O elemento é o filho do bloco e por convenção deve vir com __ como abaixo (class="menu__item" ou class="menu__link")
+        o Modificador se utiliza --
+        -->
     </head>
     <body>
 
-        <header>
+        <header class="cabecalho">
 
-            <img src="assets/img/logo.jpg" alt="Logo da Empresa">
-            <nav>
-                <ul>
-                    <li><a href="#" id="ativo">Início</a></li>
-                    <li><a href="#">Receitas</a></li>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Comunidade</a></li>
+            <img class="logo" src="assets/img/logo.jpg" alt="Logo da Empresa">
+            <nav class="menu">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__link ativo" href="#" >Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Receitas</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Quem Somos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Comunidade</a></li>
 
 
                 </ul>
 
             </nav>
         </header>
+
+        <section class="banner">
+            
+            <img class="banner__imagem" src="assets/img/banner.jpg" alt="Banner">
+
+            <h2 class="banner__titulo">Reaproveite melhor os alimentos</h2>
+        </section>
+
+        <section class="sobre">
+            <h2 class="sobre__titulo">Receitas para economizar e ganhar saúde </h2>
+            <p class="sobre__descricao">Nossas receitas ajudam você a aproveitar melhor os alimentos, economizar, ganhar tempo e praticidade</p>
+
+        </section>
 
     </body>
 </html>
