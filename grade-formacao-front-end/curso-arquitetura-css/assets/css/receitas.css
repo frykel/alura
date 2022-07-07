@@ -1,0 +1,6 @@
+.receitas{
+    background: #e5e5e5;
+    display: flex;
+    flex-wrap: wrap; /*flex-wrap: wrap ajuda a fazer com que blocos inline vão quebrando para próxima linha conforme a largura da página diminui */
+    padding: 5rem 0  0 5rem;
+}
