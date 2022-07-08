@@ -1,0 +1,18 @@
+.pessoa__imagem{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+.pessoa__imagem--roberta{   /*Nessa classificação de imagem podemos ver bem a estrutura BEM onde o .pessoa__imagem é o Elemento e .pessoa__imagem--roberta é o modificador */
+    background-image: url('../../img/pessoas/roberta.jpg');
+}
+.pessoa__imagem--marcela{
+    background-image: url('../../img/pessoas/marcela.jpg');
+    background-position:center;
+}
+.pessoa__imagem--andreia{
+    background-image: url('../../img/pessoas/andreia.jpg');
+}
