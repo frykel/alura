@@ -2,7 +2,7 @@
 .banner__titulo{
 
     font-family: Pacifico, cursive;
-    font-size: 5.06rem;
+   
     position: absolute;
     left: 50%;
     text-shadow: 0 4px 4px black;
@@ -11,4 +11,20 @@
     transform: translate(-50%,-50%);
     color: white;
     width: 100%;
+}
+
+@media screen and (min-width: 0){
+
+    .banner__titulo{
+
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+
+    .banner__titulo{
+        font-size: 5.06rem;
+    }
 }
