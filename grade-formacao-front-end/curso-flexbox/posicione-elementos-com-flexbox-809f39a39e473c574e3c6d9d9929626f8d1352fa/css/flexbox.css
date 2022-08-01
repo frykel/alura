@@ -1,0 +1,32 @@
+.cabecalhoPrincipal .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalhoPrincipal-nav{
+
+    display: flex;
+}
+
+/* o Flexbox pode não ser suportado em alguns navegadores por ser relativamente novo, para verificar se a propriedade é suportada por um navegador visite o site: caniuse.com */
+
+.rodapePrincipal-patrocinadores .container{
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    
+}
+.rodapePrincipal-contatoForm{
+    width: 25%;
+}
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
