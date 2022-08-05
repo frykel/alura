@@ -30,3 +30,11 @@
 .rodapePrincipal-contatoForm-fieldset{
     display: flex;
 }
+.rodapePrincipal-navMap-list{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*Posso usar o comando flex-flow: column wrap; como um shorthand para os dois comandos acima */
+    height: 260px;
+}
