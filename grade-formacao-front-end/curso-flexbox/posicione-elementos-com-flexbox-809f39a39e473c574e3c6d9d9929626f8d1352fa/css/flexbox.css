@@ -38,3 +38,13 @@
     /*Posso usar o comando flex-flow: column wrap; como um shorthand para os dois comandos acima */
     height: 260px;
 }
+
+.conteudoPrincipal-cursos{
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.conteudoPrincipal-cursos-link{
+    width: 20%;
+}
