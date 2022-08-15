@@ -64,16 +64,56 @@ text-align: center;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    flex-shrink: 2; /*Esse comando faz com que esse elemento ao reduzir o tamanho da página ele encolha mais rapidamente do os outros elementos do flexbox 
+    
+    Se eu usar flex-shrink=0 o elemento não irá diminuir! Mesmo diminuindo a página
+    */
+
+    /* O comando flex é um shorthand para flex-grow e flex-shrink e flex-basis:
+    Ex: flex: 2 1; (flex-grow: 2 flex-shrink: 1)
+    */
+    /*o comando flex-basis funciona dentro do flex como o width em outra situação */
 }
 .videoSobre-sobre-list{
-    flex-grow: 1;
+    flex-grow: 2;
+    align-items:  ;
     
 }
+/*O comando Flex-grow faz com que os elementos de uma flexbox ocupem o espaço restante na caixa, o fator selecionado indica quantas partes desse espaço será preenchido por cada elemento 
+*/
 .videoSobre-video{
     flex-grow: 1;
 }
 
 /*mobile */
+@media(max-width: 998px){
+    
+    .conteudoPrincipal-cursos-link{
+        width: 44%;
+        
+    }
+    .conteudoPrincipal-cursos-link:nth-child(3n) {
+		margin-right: 1%;
+	}
+
+	.conteudoPrincipal-cursos-link:nth-child(3n+1) {
+		margin-left: 1%;
+	}
+    .conteudoPrincipal-cursos-link:nth-child(4n){
+        margin-right: 1%;
+    }
+    .conteudoPrincipal-cursos-link:nth-child(4n+1){
+        margin-left: 1%;
+    }
+    .conteudoPrincipal-cursos-link:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	.conteudoPrincipal-cursos-link:nth-child(2n+1) {
+		margin-left: 0;
+	}
+}
+    
 @media(max-width: 768px){
 
 .cabecalhoPrincipal-nav{
@@ -84,15 +124,28 @@ text-align: center;
     align-items: initial;
     text-align: center;
 }
-.cabecalhoPrincipal-cursos{
-    flex-direction: column;
+.conteudoPrincipal-cursos{
+    flex-direction: column;   
   
 }
-.cabecalhoPrincipal-cursos-link{
+.conteudoPrincipal-cursos-link{
     width: 100%;
 }
 .rodapePrincipal-navMap-list{
     height: auto;
+}
+.conteudoPrincipal-cursos-link:nth-child(3n) {
+    margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(3n+1) {
+    margin: 1%;
+}
+.conteudoPrincipal-cursos-link:nth-child(4n){
+    margin: 1%;
+}
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+    margin: 1%;
 }
 .rodapePrincipal-patrocinadores .container{
 flex-direction: column;
@@ -109,5 +162,11 @@ flex-direction: column;
 }
 .cabecalhoPrincipal-nav-link-app{
 order: -1; /*altera a ordem de posicionamento de itens flex */
+}
+.videoSobre .container{
+    flex-direction: column;
+}
+.videoSobre-video{
+    margin: 0 auto;
 }
 }
