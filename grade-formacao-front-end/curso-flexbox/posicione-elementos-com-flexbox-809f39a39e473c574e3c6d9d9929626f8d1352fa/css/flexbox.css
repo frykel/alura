@@ -76,7 +76,7 @@ text-align: center;
 }
 .videoSobre-sobre-list{
     flex-grow: 2;
-    align-items:  ;
+
     
 }
 /*O comando Flex-grow faz com que os elementos de uma flexbox ocupem o espaço restante na caixa, o fator selecionado indica quantas partes desse espaço será preenchido por cada elemento 
