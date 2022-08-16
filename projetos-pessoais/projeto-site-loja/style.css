@@ -72,8 +72,10 @@ main{
     width: 1040px;
     margin: 0 auto;
     background-color: rgb(184, 180, 180);
+   
 
 }
+
 .principal{
     background: #014667;
     color: white;
@@ -83,42 +85,39 @@ main{
     
 }
 
-#segmento1{
+.decor{
     
     background-image: url("imagens/cortina-fundo.jpg");
     
 }
-#segmento2{
+.cama{
     background-image: url("imagens/cama.jpg");
 }
-#segmento3{
+.banho{
     background-image: url("imagens/banho.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-#segmento4{
+.mesa{
     background-image: url("imagens/mesa.jpg");
 }
-#segmento5{
+.moda{
     background-image: url("imagens/moda.jpg");
 }
-#segmento6{
+.festa{
     background-image: url("imagens/festa.jpg");
 }
 
-.segmento{
-    display: inline-block;
-    background-size: cover;
+.departamentos-segmento-link{
+    
     height: 15em;
     text-align: center;
     border: 1px solid black ;
     box-shadow: 3px 3px 5px black;
-    width: 31%;
-    margin: 9PX 9PX;
-
-   
-    
+    width:23%;  
+    margin:1%;    
+    flex-grow: 1;
     
 }
 .segmento p{
@@ -129,10 +128,17 @@ main{
     left: 25%;
     background: white;
     border-radius: 50px;
-    width: 50%;
     text-shadow: 1px 1px 1px;     
     box-shadow: 1px 1px 1px black;
    
+}
+.departamentos-segmentos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 a{
 
