@@ -1,29 +1,32 @@
 .container-cabecalho{
 background:linear-gradient(#02DAC7,#048F96,#014667);
-box-shadow: 3px 3px 2px;
+box-shadow: 0px 3px 2px;
 }
-.cabecalho-logo img{
- height: 200px;
 
-    
+.cabecalho-logo img{
+ height: 200px;    
 }
+
 .cabecalho-logo{
     width: 60%;
-    height: 200px;
-    
-    
-    
+    height: 200px;            
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.home{
+    margin-left: 0;
+}
+
 .cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 200px;
-
-    
- 
-
+    height: 200px;   
 }
+
 .cabecalho-menu{
     display: flex;    
     width: 70%;    
@@ -41,17 +44,197 @@ box-shadow: 3px 3px 2px;
 }
 
 .cabecalho-pesquisa{
-    align-self: center;            
+    align-self: left;    
+    display: flex;        
 }
 .cabecalho-pesquisa-caixa{
-    width: 100%;
+    width: 30vw;
+    height: 30px;   
 }
 .cabecalho-menu-lista-link{
    flex-grow: 1;
     text-align: center;
+    height: 28px;
     margin-left: 5px;
     font-size: 1.5em;
     border: 1px solid black;
+    box-shadow: 2px 2px 1px black;
     background: rgba(255, 255, 255, 0.685);
    
 }
+.cabecalho-menu-lista-link:hover{
+    background: rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+}
+
+.cabecalho-pesquisa-botao{
+
+    background-color: orangered;
+    color: white;
+    font-size: 1em;
+    width: 100px;
+    box-shadow: 2px 2px 1px black;
+    font-weight: bold;
+}
+.cabecalho-pesquisa-botao:hover{
+    background-color: red;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.banner{
+    position: relative;
+    margin-top: 2px;
+}
+
+.banner-imagem{
+    
+    height: calc(100vh - 203px);
+    width: 100%;
+}
+.banner-texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    font-family: Pacifico, cursive;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 4px black;
+    color: #00DCC7;
+    text-align: center;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+.departamentos-titulo{
+    background-color: #014667;
+    border-radius: 5px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    height: 35px;
+    text-shadow: 1px 1px 1px black;
+}
+.departamentos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.departamentos-container-segmento{
+    width: 30%;
+    margin: 1%;
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px black;
+    height: 200px;
+    position: relative;
+}
+.departamentos-container-segmento:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.moda{
+    background-image: url('assets/imagens/moda.jpg');
+    background-size: cover;    
+}
+.festa{
+    background-image: url('assets/imagens/festa.jpg');
+    background-size: cover;
+}
+.cama{
+    background-image: url('assets/imagens/cama.jpg');
+    background-size: cover;
+}
+.banho{
+    background-image: url('assets/imagens/banho.jpg');
+    background-size: cover;
+}
+.decor{
+    background-image: url('assets/imagens/cortina-fundo.jpg');
+    background-size: cover;
+}
+.mesa-posta{
+    background-image: url('assets/imagens/mesa.jpg');
+    background-size: cover;
+}
+.departamentos-container-segmento-texto{   
+    position: absolute;
+    color: white;
+    width: 100%;
+    box-shadow: 2px 2px 1px black;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #014667;
+
+}
+.fornecedores-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.fornecedores-imagem{
+    width: 23%;
+    margin: 1%;
+    height: 100px;
+
+}
+.vantagens{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #014667;
+    height: 100px;
+    align-items: center;
+}
+.vantagens-item{
+    width: 23%;
+   text-align: center;
+   font-size: 1.4rem;
+}
+strong{
+    font-weight: bold;
+}
+.mapa{
+    width: 100%;
+    margin-top: 5px;
+}
+.mapa-iframe{
+    margin-top: 3px;
+    width: 100%;
+}
+.rodape{
+    height: 300px;
+    width: 100%;
+    background:#02bba5;
+    display: flex;
+    justify-content: left;
+    color: #013c57;
+    
+}
+.rodape-departamentos, .rodape-contatos, .rodape-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    width: 25%;
+}
+.rodape-departamentos-titulo, .rodape-contatos-titulo, .rodape-redes-titulo{
+    height: 20%;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.rodape-departamentos-links, .rodape-contatos-links, .rodape-redes-links{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    font-size: 1.2rem;
+    line-height: 30px;
+        
+}
+.rodape-instagram::before{
+   
+}
+
