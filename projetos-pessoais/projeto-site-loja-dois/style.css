@@ -36,15 +36,11 @@ a{
     width: 70%;    
     height: 200px;
    flex-direction: column-reverse;
-   justify-content: space-around;
-   
-   
-}
+   justify-content: space-around; 
+   }
 .cabecalho-menu-lista{
    display: flex;
    margin-right: 1%;
-
-
 }
 
 .cabecalho-pesquisa{
