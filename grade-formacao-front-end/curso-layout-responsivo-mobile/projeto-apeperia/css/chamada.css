@@ -31,3 +31,16 @@
 .chamada__botao {
     width: 100%;
 }
+
+/*Tamanho "padrão para tela de Tablet: 768px até 1024px
+
+
+O comando @media pode ser usado com multiplas condições no caso o tamanho da largura da tela (width), para quando o dispositivo tiver tela (screen), para caso de impressoras (print) 
+*/
+
+@media screen and(min-width: 610px){
+
+    .chamada__texto{
+        max-width: 600px;
+    }
+}
