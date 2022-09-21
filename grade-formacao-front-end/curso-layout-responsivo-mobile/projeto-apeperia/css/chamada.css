@@ -44,3 +44,11 @@ O comando @media pode ser usado com multiplas condições no caso o tamanho da l
         max-width: 600px;
     }
 }
+@media screen and (min-width: 1024px) {
+    .chamada__texto{
+        max-width: 600px;
+    }
+    .chamada__titulo{
+        font-size: 3rem;
+    }
+}

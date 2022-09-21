@@ -34,3 +34,16 @@
     margin-bottom: 1.25rem;
     margin-left: .7rem;
 }
+
+@media screen and (min-width: 1024px){
+
+    .cabecalho{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .chamada{
+        background-image: url('../img/bg-intro.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+}
