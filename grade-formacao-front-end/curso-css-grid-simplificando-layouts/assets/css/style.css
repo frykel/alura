@@ -1,0 +1,25 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: "cabecalho" /*Esse comando inicia as configurações para uma nova funcionalidade do css em que montamos o templates em css para construção dos nosso site. Nesta parte definimos o nome em string das partes do site */
+    "conteudo"
+    "rodape";
+    grid-template-columns: auto; /*Definição da largura das colunas, no caso é somente 1 com tamanho auto */
+    grid-template-rows: 50px 100vh auto; /*os 3 comandos dado ao lado se referem ao tamanho de cada linha do grid, no caso (cabecalho:50px, conteudo: auto (automatico), rodape: auto (automatico)) */
+}
+
+.cabecalho {
+    background-color: rgb(88, 141, 88);
+    grid-area: cabecalho;
+}
+ 
+.conteudo {
+    background-color: rgb(216, 97, 97);
+    grid-area: conteudo;
+}
+
+.rodape {
+    background-color: rgb(67, 67, 214);
+    grid-area: rodape;
+}
