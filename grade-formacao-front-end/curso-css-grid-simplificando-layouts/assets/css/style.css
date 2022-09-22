@@ -10,16 +10,16 @@
 }
 
 .cabecalho {
-    background-color: rgb(88, 141, 88);
+    
     grid-area: cabecalho;
 }
  
 .conteudo {
-    background-color: rgb(216, 97, 97);
+    
     grid-area: conteudo;
 }
 
 .rodape {
-    background-color: rgb(67, 67, 214);
+    
     grid-area: rodape;
 }
