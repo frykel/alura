@@ -1,6 +1,13 @@
+.caixa{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 .destaques{
     background-color: bisque;
     display: grid;
+    grid-gap: 0.2rem;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 33.33% 33.33% 33.33%;
     height: calc(100vh - 50px);
@@ -54,8 +61,35 @@
     
 }
 .destaques__categorias{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    grid-column: 1/3;
+    grid-row: 3/3;
+      }
+.destaques__titulo{
+    background: rgba(0,0,0,.5);
+    color: #fdfdfd;
+    padding: .6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.destaques__categorias___lista{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+    
+
+}
+.destaques__categorias___item{
+    align-items: center;
+    display: flex;
+    background-color: #fdfdfd;
+    color: #333333;
+    width: 50%;
+    padding: 1rem;
+    border-left: 5px solid transparent;
+}
+.destaques__categorias___link{
+    color: inherit;
+    text-decoration: none;
 }
