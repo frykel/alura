@@ -36,3 +36,12 @@
     padding-top: 0.75rem; 
     
 }
+.populares__card___titulo{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333333;
+}
+.populares__card___data{
+    font-weight: 100;
+    font-size: 1rem;
+}
