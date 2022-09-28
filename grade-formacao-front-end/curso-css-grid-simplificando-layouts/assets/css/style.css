@@ -1,6 +1,7 @@
 .app {
     background: #f1f1f1;
-    display: grid;  
+    display: grid;
+    margin: 5px;  
     font-family: Arial, Helvetica, sans-serif;
     grid-template-areas: "cabecalho" /*Esse comando inicia as configurações para uma nova funcionalidade do css em que montamos o templates em css para construção dos nosso site. Nesta parte definimos o nome em string das partes do site */
     "conteudo"
@@ -12,6 +13,10 @@
 .cabecalho {
     
     grid-area: cabecalho;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+
 }
  
 .conteudo {
