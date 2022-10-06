@@ -17,51 +17,39 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    grid-column-start: 1;
-    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
 }
 
 .destaques__secundario:nth-child(2){
     background-image: url('../img/pubg.jpg');
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
+   
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .destaques__secundario:nth-child(3){
     background-image: url('../img/slack.png');
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 2;
+  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .destaques__secundario:nth-child(4){
     background-image: url('../img/whatsapp.png');
-    grid-column-start: 4;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
+  
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 .destaques__secundario:nth-child(5){
     background: url('../img/cs-go.jpg') center / cover no-repeat;
-    grid-column: 3/3;    
-    grid-row: 3/3;
+ 
     /*Nesse elemento foi usado shorthand para background e grid-row/grid-column */
     
 }
 .destaques__categorias{
-    grid-column: 1/3;
+    
     grid-row: 3/3;
       }
 .destaques__titulo{

@@ -7,7 +7,7 @@
     "conteudo"
     "rodape";
     grid-template-columns: auto; /*Definição da largura das colunas, no caso é somente 1 com tamanho auto */
-    grid-template-rows: 50px 100vh auto; /*os 3 comandos dado ao lado se referem ao tamanho de cada linha do grid, no caso (cabecalho:50px, conteudo: auto (automatico), rodape: auto (automatico)) */
+    grid-template-rows: 50px auto auto; /*os 3 comandos dado ao lado se referem ao tamanho de cada linha do grid, no caso (cabecalho:50px, conteudo: auto (automatico), rodape: auto (automatico)) */
 }
 
 .cabecalho {
@@ -22,9 +22,14 @@
 .conteudo {
     
     grid-area: conteudo;
+    padding: 0 2rem;
 }
 
 .rodape {
-    
+    background-color: #fdfdfd;
+    color: #333333;
+    text-align: center;
+    padding: 1rem;
     grid-area: rodape;
+    grid-row: 3/3;
 }
