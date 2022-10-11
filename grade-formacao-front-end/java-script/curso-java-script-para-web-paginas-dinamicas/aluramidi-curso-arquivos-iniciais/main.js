@@ -1,4 +1,12 @@
-function TocaSomPom (){
+
+const listaDeTeclas = document.querySelectorAll('.tecla');
+
+let n=0;
+
+while (n<listaDeTeclas.length)
+
+function TocaSom (){
     document.querySelector('#som_tecla_pom').play();
 }
-document.querySelector('.tecla_pom').onclick = TocaSomPom;
+
+listaDeTeclas[n].onclick = TocaSom;
