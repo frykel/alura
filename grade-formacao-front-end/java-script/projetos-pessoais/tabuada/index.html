@@ -5,18 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabuada</title>
+    <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
     <header class="cabecalho">
         <h1 class="cabecalho__titulo">Gerador de Tabuada</h1>
     </header>
-    <main>
+    <main class="conteudo">
 
-        <p>Digite o número equivalente a tabuada desejada</p>
-        <input type="number" name="numero" id="ntabuada" class="ntabuada">
+        <p>Digite um número e a quantidade de multiplos</p>
+        <input type="number" name="numero" id="ntabuada" class="ntabuada" placeholder="Número">
+        <input type="number" name="numero" id="mult" class="ntabuada" placeholder="Múltiplos">
         <input type="button" value="Gerar" class="buttons" id="buttongerar">
-        <input type="button" value="Apagar" class="buttons" id="buttonapagar">
+
+       
         <section>
             <select name="tabuada" id="tabuadaid" class="tabuada" size="11"></select>
         </section>
