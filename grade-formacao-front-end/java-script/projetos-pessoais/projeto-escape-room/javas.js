@@ -4,7 +4,7 @@ let b = document.querySelector('.but');
 function secret(n){
     const meta = 111773.10;
     if (meta==n.value){
-        alert('Você acertou, para continuar: --. .- ...- . - .- / -.. --- / . ... - .. .-.. .. ... - .-');
+        alert('Certa Respota! Gostaria de dizer: ...- --- -.-. . / -- . .-. . -.-. .. .- / ..- -- / .--. .-. . ... . -. - . .-.-.-');
     }
     else{
         alert('Você errou! Tente novamente.');
