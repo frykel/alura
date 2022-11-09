@@ -1,9 +1,9 @@
 
 const dataNascimento = document.querySelector('#nascimento');
 
-dataNascimento.addEventListener('blur', (evento) =>{ 
+dataNascimento.addEventListener('blur', (bb) =>{ 
     /*Adicionamos um evento que irá identificar (escutar) quando o usuário da página fizer uma ação, a ação em específico é 'blur', que é quando o campo do input em questão perder o foco. Aplicamos em seguida uma função anônima para implementar a função abaixo: */
-    validaDataNascimento(evento.target);
+    validaDataNascimento(bb.target);
 })
 
 function validaDataNascimento (input){
