@@ -38,6 +38,10 @@ body {
   top: 10%;
   right: 5%;
 }
+.texto{
+  padding: 5px;
+  width: 30%;
+}
 .botao{
     padding: 5px;
     font-size: 1rem;
@@ -58,6 +62,8 @@ body {
 <!-- fonte  -->
 
 <section class="container">
+  <label for="texto">Troque o Texto</label>
+<input type="text" name="textoN" id="textoN" class="texto">
 <div class="trono"></div>
 <p id="texto">O inverno está chegando</p>
 <button class="botao">Clique!</button>
@@ -65,13 +71,17 @@ body {
 
 <script>
     let text = document.querySelector('#texto');
-    let bot = document.querySelector('.botao')
+    let bot = document.querySelector('.botao');
+    let textoNovo = document.querySelector('#textoN');
 
-    bot.onclick = function{
-        trocar();
+    function textoTrocado (){
+      return textoNovo.value;
     }
+
+
+    bot.onclick = trocar;
     function trocar(){
-    text.innerHTML = "The Winter is Coming";
+    text.innerHTML = textoTrocado();
     }
 </script>
 </body>
