@@ -22,6 +22,8 @@ console.log('Bem vindo ao Programa')
 }
 */
 
+/*
+Podemos usar os comandos abaixo para configurar um dos equipamentos do robô, mas para isso precisariamos repetir esses comandos para cada equipamento, logo não seria recomendado:
 
 const subtrair = document.querySelector('#subtrair');
 const somar = document.querySelector('#somar');
@@ -33,3 +35,27 @@ subtrair.addEventListener("click",() => {
 somar.addEventListener("click",() => {
     braco.value = parseInt(braco.value) + 1;      
 });
+
+Mais viável usar o abaixo:
+*/
+
+const controle = document.querySelectorAll('.controle-ajuste');
+const contador = document.querySelectorAll('.controle-contador');
+
+controle.forEach((elemento) => {
+
+    elemento.addEventListener("click",(evento) => {
+        manipulaDados(evento.target.textContent)
+    })
+})
+
+ function manipulaDados(operacao){
+    if(operacao === "+"){
+        
+    }
+    else{
+
+    }
+ }
+
+
