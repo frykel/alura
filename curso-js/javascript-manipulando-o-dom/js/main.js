@@ -39,13 +39,48 @@ somar.addEventListener("click",() => {
 Mais viável usar o abaixo:
 */
 
-const controle = document.querySelectorAll('.controle-ajuste');
+/*Ao inves de usar a classe como buscador para o meu querySelector, usaremos o data-attributes implementado no html */
+const controle = document.querySelectorAll("[data-controle]");
+const pecas = {
+    "bracos": {
+        "forca": 29,
+        "poder": 35,
+        "energia": -21,
+        "velocidade": -5
+    },
 
+    "blindagem": {
+        "forca": 41,
+        "poder": 20,
+        "energia": 0,
+        "velocidade": -20
+    },
+    "nucleos":{
+        "forca": 0,
+        "poder": 7,
+        "energia": 48,
+        "velocidade": -24
+    },
+    "pernas":{
+        "forca": 27,
+        "poder": 21,
+        "energia": -32,
+        "velocidade": 42
+    },
+    "foguetes":{
+        "forca": 0,
+        "poder": 28,
+        "energia": 0,
+        "velocidade": -2
+    }
+}
 
 controle.forEach((elemento) => {
 
     elemento.addEventListener("click",(evento) => {
-        manipulaDados(evento.target.textContent,evento.target.parentNode)
+        /*Como estamos usando o data-attributes como parâmetro ao inves do elemento propriamente dito,não
+        precisamos buscar a função com textContent --> manipulaDados(evento.target.textContent,evento.target.parentNode), ao inves disso fazemos como abaixo:*/
+        manipulaDados(evento.target.dataset.controle,evento.target.parentNode)
         /*Aqui estamos passando dois tipos de parâmetros para a função manipulaDados:
         o primeiro evento.target.textContent irá nos retornar o valor + ou - necessario para identificar a operação
 
@@ -55,8 +90,11 @@ controle.forEach((elemento) => {
 })
 
  function manipulaDados(operacao,controle){
-    /*Para não precisar procurar o contador em todo o documento do html, iremos usar ao inves do document.querySelector(), usaremos controle.querySelector(), conforme abaixo para pesquisar somente dentro da div passada como parâmetro (fazemos isso por dois motivos, o primeiro é para não termos que pesquisar em todo o html, o segundo e mais importante é para que somente a classe controle-contador do elemento que foi clicado seja modificada, já que temos outros elementos com essa classe) dentro da div pai iremos procurar  */
-    const peca = controle.querySelector('.controle-contador')
+    /*Para não precisar procurar o controle-contador em todo o documento do html, iremos usar ao inves do document.querySelector(), usaremos controle.querySelector(), conforme abaixo para pesquisar somente dentro da div passada como parâmetro (fazemos isso por dois motivos, o primeiro é para não termos que pesquisar em todo o html, o segundo e mais importante é para que somente a classe controle-contador do elemento que foi clicado seja modificada, já que temos outros elementos com essa classe) dentro da div pai iremos procurar  */
+
+    /*assim como foi feito lá em cima iremos usar um datta attribute para buscar um elemento do html ao invés 
+    da classe, que neste caso era: const peca = controle.querySelector('.controle-contador') e ficará como abaixo: */
+    const peca = controle.querySelector('[data-contador]');
     if(operacao === "+"){
         peca.value = parseInt(peca.value) + 1;
     }
