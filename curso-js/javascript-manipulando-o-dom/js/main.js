@@ -40,22 +40,30 @@ Mais viável usar o abaixo:
 */
 
 const controle = document.querySelectorAll('.controle-ajuste');
-const contador = document.querySelectorAll('.controle-contador');
+
 
 controle.forEach((elemento) => {
 
     elemento.addEventListener("click",(evento) => {
-        manipulaDados(evento.target.textContent)
+        manipulaDados(evento.target.textContent,evento.target.parentNode)
+        /*Aqui estamos passando dois tipos de parâmetros para a função manipulaDados:
+        o primeiro evento.target.textContent irá nos retornar o valor + ou - necessario para identificar a operação
+
+        o segundo evento.target.parentNode irá retornar o elemento pai no html, nesse caso a div da classe controle
+        */
     })
 })
 
- function manipulaDados(operacao){
+ function manipulaDados(operacao,controle){
+    /*Para não precisar procurar o contador em todo o documento do html, iremos usar ao inves do document.querySelector(), usaremos controle.querySelector(), conforme abaixo para pesquisar somente dentro da div passada como parâmetro (fazemos isso por dois motivos, o primeiro é para não termos que pesquisar em todo o html, o segundo e mais importante é para que somente a classe controle-contador do elemento que foi clicado seja modificada, já que temos outros elementos com essa classe) dentro da div pai iremos procurar  */
+    const peca = controle.querySelector('.controle-contador')
     if(operacao === "+"){
-        
+        peca.value = parseInt(peca.value) + 1;
     }
     else{
-
+        peca.value = parseInt(peca.value) - 1;
     }
+    return peca.value;
  }
 
 
