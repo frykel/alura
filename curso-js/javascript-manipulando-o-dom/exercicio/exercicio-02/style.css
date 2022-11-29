@@ -1,0 +1,11 @@
+.corpo{
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.tudo{
+    background-color: bisque;
+}
