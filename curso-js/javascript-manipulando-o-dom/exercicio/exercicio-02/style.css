@@ -4,8 +4,46 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.5rem;
     
 }
 .tudo{
     background-color: bisque;
+}
+.nome{
+    margin-right: 20px;
+}
+.botao{
+    padding: 10px;
+    min-width: 40px;
+    font-size: 1.2rem;
+    border-radius: 40%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+[data-nome]{
+    padding: 10px;
+    font-size: 1.2rem;
+    max-width: 100px;
+    text-align: center;
+}
+.nota{
+    margin-bottom: 15px;
+}
+.media{
+    margin-top: 20px;
+    margin-left: 50%;
+    cursor: pointer;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 1px black;
+
+}
+.media:hover{
+    box-shadow: inset 2px 2px 1px red;
+    
+}
+.nota-final{
+    margin-top: 50px;
 }

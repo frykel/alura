@@ -11,14 +11,32 @@
 
 <main class="corpo">
     <section class="turma">
-        <div class="aluno">
-            <label for="nome">Aluno</label>
-            <input type="text" name="nome" data-nome>
+        <div class="nota">
+            <label for="nome" class="nome">Nota 1</label>
+            <button class="botao" data-operacao="-">-</button>
+            <input type="text" name="nome" data-nome value="0">
+            <button class="botao" data-operacao="+">+</button>
         </div>
-
+        <div class="nota">
+            <label for="nome" class="nome">Nota 2</label>
+            <button class="botao" data-operacao="-">-</button>
+            <input type="text" name="nome" data-nome value="0">
+            <button class="botao" data-operacao="+">+</button>
+        </div>
+        <div class="nota">
+            <label for="nome" class="nome">Nota 3</label>
+            <button class="botao" data-operacao="-">-</button>
+            <input type="text" name="nome" data-nome value="0">
+            <button class="botao" data-operacao="+">+</button>
+        </div>
+        <button class="botao media">Média</button>
+    </section>
+    <section class="nota-final">
+        <div class="res">Nota Final:</div>
     </section>
 </main>
 
+<script src="main.js"></script>
 
 </body>
 </html>
