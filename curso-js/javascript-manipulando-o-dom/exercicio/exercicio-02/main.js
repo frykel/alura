@@ -15,7 +15,9 @@ function checaOperacao(operacao,operador){
     console.log(contador.value)
 
     if(operacao=== "+"){
+        if(contador.value<10){
         contador.value = parseInt(contador.value) + 1;
+        }
         
     }
 
@@ -28,7 +30,7 @@ function checaOperacao(operacao,operador){
     return contador.value;
 }
 
-function calculaMedia(a,b,c){
+/*function calculaMedia(a,b,c){
     let med = 0
 
     console.log(a.value+b.value+c.value+seletores);
@@ -36,11 +38,22 @@ function calculaMedia(a,b,c){
     med = med.toFixed(2);
     res.innerHTML= `Sua média é ${med}.`
 }
+*/
+function calculaMedia(a){
+    let med = 0;
+    let soma = 0;
+    for (let i = 0; i<a.length;i++){
+        soma = soma+parseInt(a[i].value);
+    }
+    med = soma/a.length;
+    med = med.toFixed(1);
+    res.innerHTML = `Sua média é ${med}.`
+}
 
 const media = document.querySelector(".media");
 const notas = document.querySelectorAll("[data-nome]");
 const res = document.querySelector(".res")
 media.addEventListener("click",()=>{
 
-    calculaMedia(notas[0],notas[1],notas[2]); 
+    calculaMedia(notas); 
 })
