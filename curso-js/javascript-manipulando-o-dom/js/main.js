@@ -41,6 +41,7 @@ Mais viável usar o abaixo:
 
 /*Ao inves de usar a classe como buscador para o meu querySelector, usaremos o data-attributes implementado no html */
 const controle = document.querySelectorAll("[data-controle]");
+const estatisticas = document.querySelectorAll("[data-estatistica]");
 const pecas = {
     "bracos": {
         "forca": 29,
@@ -86,6 +87,7 @@ controle.forEach((elemento) => {
 
         o segundo evento.target.parentNode irá retornar o elemento pai no html, nesse caso a div da classe controle
         */
+       atualizaEstatistica(evento.target.dataset.pecas,evento.target.dataset.controle)
     })
 })
 
@@ -103,5 +105,19 @@ controle.forEach((elemento) => {
     }
     return peca.value;
  }
+ 
+ function atualizaEstatistica(peca,operacao){
 
+    estatisticas.forEach((elemento) => {
+        if( operacao === "+"){
+        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica];
+        }
+        else{
+        elemento.textContent = parseInt(elemento.textContent) - pecas[peca][elemento.dataset.estatistica];
+        }
+        return elemento.textContent;
+        
+    })
+
+ }
 
