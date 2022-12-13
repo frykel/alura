@@ -16,14 +16,15 @@
 .titulo{
     margin-top: 30px;
     text-align: center;
+    font-size: 3rem;
+    text-shadow: 2px solid white;
 }
 .corpo{
     background-color: #FA7F08;
 }
 .caixas{
     margin: 50px auto;
-    width: 80%;
-    border: 1px solid black;
+    width: 80%;    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -34,12 +35,11 @@
     height: 200px;
     margin: 20px 10px;
     border: 1px solid black;
-    background-image: url('../imagens/Logo\ Fundo\ Transparente\ Reso\ Menor.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: white;
+    border-radius: 10px;
     font-size: 3rem;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content:center;
 }
 .bloco:hover{
