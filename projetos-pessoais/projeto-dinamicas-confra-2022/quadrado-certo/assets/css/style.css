@@ -30,9 +30,20 @@
       
 }
 .bloco{
-    width: 33%;
-    height: 100px;
+    width: 24%;
+    height: 200px;
+    margin: 20px 10px;
     border: 1px solid black;
     background-image: url('../imagens/Logo\ Fundo\ Transparente\ Reso\ Menor.png');
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+}
+.bloco:hover{
+    opacity: 0.8;
+    transition: 0.4s;
+    cursor: pointer;
 }
