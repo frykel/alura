@@ -31,9 +31,12 @@
       
 }
 .botao{
-    padding: 10px;
-    margin: 10px 50%;
+    padding: 5px;
+    margin: 10px 45%;
     cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+
 }
 .bloco{
     width: 28%;
