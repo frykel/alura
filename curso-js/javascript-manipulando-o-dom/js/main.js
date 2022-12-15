@@ -121,8 +121,23 @@ controle.forEach((elemento) => {
 
  }
  const imgRobo = document.querySelector("#robotron");
- 
- function trocaImagem(imagem){
+ const cores = ['img/robotron-amarelo/robotron-amarelo.png','img/robotron-azul/robotron-azul.png','img/robotron-branco/robotron-branco.png','img/robotron-preto/robotron-preto.png','img/robotron-rosa/robotron-rosa.png','img/robotron-vermelho/robotron-vermelho.png']
+ let cont = 0;
+ imgRobo.addEventListener("click",()=>{
+    
+    trocaImagem(imgRobo,cores,cont)
+    
+    
+ })
+ function trocaImagem(imagem,cor,contador){
+    imagem.src = cor[contador];
+    if(cont<cor.length-1){
+        cont = cont + 1;
+        }
+        else{
+        cont=0;
+        }
+        console.log(cont)
 
  }
 //site para dar deploy (colocar online o site)
