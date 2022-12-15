@@ -120,4 +120,9 @@ controle.forEach((elemento) => {
     })
 
  }
+ const imgRobo = document.querySelector("#robotron");
+ 
+ function trocaImagem(imagem){
+
+ }
 //site para dar deploy (colocar online o site)

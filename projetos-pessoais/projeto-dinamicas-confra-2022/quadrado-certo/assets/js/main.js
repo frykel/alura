@@ -1,7 +1,7 @@
 
 const bloco = document.querySelectorAll('[data-caixa]');
 const botao = document.querySelector('.botao');
-const premio = ["Barra de Chocolate","Trava-língua: O rato roeu a roupa do Rei de Roma (3 vezes)","Dia de Folga","Pote de Nutella","Voucher de R$ 50,00","Ligue para sua mãe e diga que quer uma boneca de aniversário","Barra de Chocolate","Ligue para a última pessoa que mandou mensagem no WhatsApp e diga que está apaixonado(a) por ela","Caixa de BIS"]
+const premio = ["Barra de Chocolate","Trava-língua: O rato roeu a roupa do Rei de Roma (3 vezes)","Caixa de Bis","Caixa de Bis","Fique em pé e toque os pés sem dobrar os joelhos","Ligue para sua mãe e diga que quer uma boneca de aniversário","Barra de Chocolate","Gire completamente dez vezes e depois tente andar em linha reta","Caixa de BIS"]
 function embaralha(arr){
     for(var i=0;i<bloco.length;i++){
         bloco[i].style.fontSize="3rem"
@@ -12,7 +12,7 @@ function embaralha(arr){
         var j = Math.floor( Math.random() * (i + 1) ); //random index
         [arr[i],arr[j]]=[arr[j],arr[i]]; // swap
     }
-    console.log(arr[0])
+    
 }
 
 botao.addEventListener("click",()=>{
@@ -23,12 +23,12 @@ botao.addEventListener("click",()=>{
 bloco.forEach((evento)=>{
 
     evento.addEventListener("click",(elemento)=>{
-        trocaImagem(elemento.target.dataset.caixa)
+        trocaTexto(elemento.target.dataset.caixa)
         
     })
 })
 
-function trocaImagem(elemento){
+function trocaTexto(elemento){
     for(var i=0;i<bloco.length;i++){
         bloco[i].style.fontSize="2rem"
         bloco[i].style.textAlign="center"
