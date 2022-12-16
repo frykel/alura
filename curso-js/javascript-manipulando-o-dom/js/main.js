@@ -137,7 +137,7 @@ controle.forEach((elemento) => {
         else{
         cont=0;
         }
-        console.log(cont)
+        
 
  }
 //site para dar deploy (colocar online o site)
