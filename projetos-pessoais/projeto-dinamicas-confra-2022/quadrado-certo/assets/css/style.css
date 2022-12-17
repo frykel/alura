@@ -53,6 +53,10 @@
     align-items: flex-end;
     justify-content:center;
 }
+.ativando{
+    align-items: center;
+    background:white;
+}
 .bloco:hover{
     opacity: 0.9;
     transition: 0.4s;

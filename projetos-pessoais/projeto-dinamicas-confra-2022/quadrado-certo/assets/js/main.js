@@ -16,6 +16,9 @@ function embaralha(arr){
 }
 
 botao.addEventListener("click",()=>{
+    bloco.forEach((evento)=>{
+        evento.classList.remove('ativando')
+    })
    embaralha(premio)
    
 })
@@ -23,8 +26,7 @@ botao.addEventListener("click",()=>{
 bloco.forEach((evento)=>{
 
     evento.addEventListener("click",(elemento)=>{
-        evento.style.background='white'
-        evento.style.justifyContent='center';
+        evento.classList.add('ativando');
         trocaTexto(elemento.target.dataset.caixa)
         
     })
