@@ -15,6 +15,8 @@ botao.addEventListener("mouseover",()=>{
         document.location.reload(); //recarrega a página
     }
 })
+botao.addEventListener("click",()=>{
+    alert("Você conseguiu!")})
 
 function mudaPosição(){
     //const x = Math.floor(Math.random() * 101) -100 //gera números aleatórios entre -100 e 100
