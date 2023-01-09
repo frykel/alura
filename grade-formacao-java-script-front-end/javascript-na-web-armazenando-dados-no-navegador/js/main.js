@@ -27,12 +27,26 @@ form.addEventListener("submit",(evento)=>{
 
     Então iremos usar um array de objetos para guardar múltiplas informações, conforme abaixo:
     */
+    const existe = itens.find(elemento => elemento.nome === nome.value) //verifica se o item digitado já existe
+   
    const itemAtual = {
     "nome": nome.value,
     "quantidade": quantidade.value
    }
-   criaElemento(itemAtual)
+
+   if(existe){
+    itemAtual.id = existe.id
+    atualizaElemento(itemAtual)
+   }
+   else{
+    
+    itemAtual.id = itens.length
+    criaElemento(itemAtual)
    itens.push(itemAtual);
+
+   }
+
+   
    localStorage.setItem("itens",JSON.stringify(itens)) //JSON.stringify transforma o elemento em uma string (o localStorage só consegue ler coisas em string e não em objeto conforme estamos passando)
 
     
@@ -49,7 +63,7 @@ function criaElemento(item){
 
     const numeroItem = document.createElement('strong')
     numeroItem.innerHTML = item.quantidade
-    
+    numeroItem.dataset.id = item.id //cria um data-attributes do tipo data-id dentro do strong
     novoItem.appendChild(numeroItem)
     novoItem.innerHTML = novoItem.innerHTML + item.nome;
 
@@ -57,4 +71,7 @@ function criaElemento(item){
 
     lista.appendChild(novoItem); 
 
+}
+function atualizaElemento (item){
+    document.querySelector("[data-id='"+item.id+"']").innerHTML= item.quantidade   
 }
