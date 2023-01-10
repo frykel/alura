@@ -1,5 +1,6 @@
 const form = document.getElementById('novoItem');
 const nom = document.getElementById('nome');
+const lista = document.querySelector('#lista');
 /*Para que ao recarregar a página o nosso LocalStorage seja consultado e adicione os itens que já tiverem
 sido adicionados iremos modificar o nosso array de objetos abaixo const itens = [], para que se ele identificar itens no LocalStorage ele já crie um array de objetos desses itens ao invés de um array vazio
 
@@ -14,7 +15,6 @@ criaElemento(elemento)
     
 )
 
-nome.focus();
 
 form.addEventListener("submit",(evento)=>{
     evento.preventDefault(); //este comando previne que o formulário execute sua função programada original (enviar os dados para algum lugar, que neste caso seria
@@ -63,15 +63,15 @@ function criaElemento(item){
 
     const numeroItem = document.createElement('strong')
     numeroItem.innerHTML = item.quantidade
-    numeroItem.dataset.id = item.id //cria um data-attributes do tipo data-id dentro do strong
+    numeroItem.dataset.num = item.id //cria um data-attributes do tipo data-id dentro do strong
     novoItem.appendChild(numeroItem)
     novoItem.innerHTML = novoItem.innerHTML + item.nome;
 
+    
     const lista = document.querySelector('#lista');
-
     lista.appendChild(novoItem); 
 
 }
 function atualizaElemento (item){
-    document.querySelector("[data-id='"+item.id+"']").innerHTML= item.quantidade   
+    document.querySelector("[data-num='"+item.id+"']").innerHTML= item.quantidade   
 }
