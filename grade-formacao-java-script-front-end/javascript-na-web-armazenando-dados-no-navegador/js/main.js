@@ -37,10 +37,13 @@ form.addEventListener("submit",(evento)=>{
    if(existe){
     itemAtual.id = existe.id
     atualizaElemento(itemAtual)
+    //itens[existe.id]=itemAtual
+    itens[itens.findIndex(elemento => elemento.id === existe.id)] = itemAtual;
    }
    else{
     
-    itemAtual.id = itens.length
+    //itemAtual.id = itens.length
+    itemAtual.id = itens[itens.length-1] ? (itens[itens.length-1]).id + 1 : 0;
     criaElemento(itemAtual)
    itens.push(itemAtual);
 
@@ -48,7 +51,7 @@ form.addEventListener("submit",(evento)=>{
 
    
    localStorage.setItem("itens",JSON.stringify(itens)) //JSON.stringify transforma o elemento em uma string (o localStorage só consegue ler coisas em string e não em objeto conforme estamos passando)
-
+   
     
 
     nome.value = ""; //esvazia o campo de digitação após passar os dados para a função
@@ -66,12 +69,31 @@ function criaElemento(item){
     numeroItem.dataset.num = item.id //cria um data-attributes do tipo data-id dentro do strong
     novoItem.appendChild(numeroItem)
     novoItem.innerHTML = novoItem.innerHTML + item.nome;
-
+    novoItem.appendChild(botaoDeleta(item.id))
     
     const lista = document.querySelector('#lista');
     lista.appendChild(novoItem); 
+    
 
 }
 function atualizaElemento (item){
     document.querySelector("[data-num='"+item.id+"']").innerHTML= item.quantidade   
+}
+
+function botaoDeleta (id){
+    const elementoBotao = document.createElement("button")
+    elementoBotao.innerHTML = 'X'
+
+    elementoBotao.addEventListener("click", function(){ /*Este event listener irá identificar qual dos botão de deleta (X) foi clicado*/
+        deletaElemento(this.parentNode,id) /*o this irá dizer qual o elemento clicado e irá ser passado como parâmetro para uma função que irá deletar o elemento, que neste caso seria o próprio botao X clicado, como eu quero o "pai" dele, uso this.parentNode*/
+    })
+
+    return elementoBotao
+}
+
+function deletaElemento(tag,id){
+    tag.remove() //remove a tag html passada como parâmetro
+
+    itens.splice(itens.findIndex(elemento => elemento.id === id),1) //isso irá remover um item do array de objetos de acordo com seu id
+    localStorage.setItem("itens",JSON.stringify(itens))
 }
