@@ -99,6 +99,23 @@ a{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    width: 40%;
+    border: 3px solid black;
+}
+.atendimento-titulo{
+    font-size: 2rem;
+    color: #013c57;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+}
+.atendimento-contato{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 1.5rem;
+padding: 5px;
 }
 
 
