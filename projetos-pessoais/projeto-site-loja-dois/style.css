@@ -91,6 +91,17 @@ a{
     transition: 0.5s;
     cursor: pointer;
 }
+.atendimento{
+    height: 70px;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .banner{
     position: relative;
     margin-top: 2px;
@@ -98,7 +109,7 @@ a{
 
 .banner-imagem{
     
-    height: calc(100vh - 203px);
+    height: calc(100vh - 273px);
     width: 100%;
 }
 .banner-texto{
