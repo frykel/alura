@@ -118,6 +118,15 @@ html {
     gap: 1em;
     font-size: 20px;
 }
+.botao{
+    padding: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0.7px 0.7px 1px black;
+}
+.botao:hover{
+    box-shadow: inset 1px 1px 1px;
+}
 
 .item strong {
     border-radius: 50%;

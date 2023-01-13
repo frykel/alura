@@ -28,7 +28,7 @@ form.addEventListener("submit",(evento)=>{
     Então iremos usar um array de objetos para guardar múltiplas informações, conforme abaixo:
     */
     const existe = itens.find(elemento => elemento.nome === nome.value) //verifica se o item digitado já existe
-   
+    console.log(existe)
    const itemAtual = {
     "nome": nome.value,
     "quantidade": quantidade.value
@@ -82,6 +82,7 @@ function atualizaElemento (item){
 
 function botaoDeleta (id){
     const elementoBotao = document.createElement("button")
+    elementoBotao.classList.add('botao')
     elementoBotao.innerHTML = 'X'
 
     elementoBotao.addEventListener("click", function(){ /*Este event listener irá identificar qual dos botão de deleta (X) foi clicado*/
