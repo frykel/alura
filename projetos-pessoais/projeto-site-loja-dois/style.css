@@ -171,6 +171,7 @@ main{
     height: 200px;
     position: relative;
 }
+
 .departamentos-container-segmento:hover{
     transform: scale(1.04);
     cursor: pointer;
@@ -200,7 +201,7 @@ main{
     background-image: url('assets/imagens/cortina-fundo.jpg');
     background-size: cover;
 }
-.mesa-posta{
+.mesa{
     background-image: url('assets/imagens/mesa.jpg');
     background-size: contain;
     background-repeat: no-repeat;
