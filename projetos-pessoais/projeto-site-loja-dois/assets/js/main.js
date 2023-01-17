@@ -15,22 +15,16 @@ const produtos = {
     mesa:['Sousplat',"Serviço Americano",'Anel p/ Guardanapos']      
     
 }
-
+const caixa = document.createElement('div')
 departamentos.forEach((elemento) =>{
-elemento.addEventListener("mouseover",(evento)=>{
-    const t = evento.target.dataset.departamento  
-    elemento.classList.remove(evento.target.dataset.departamento)
-    
+elemento.addEventListener("mouseenter",(evento)=>{
+    const t = evento.target.dataset.departamento      
+    elemento.classList.remove(t)
+    elemento.childNodes[1].style.display='none'
     const caixa = document.createElement('div')
-    caixa.classList.add('caixa')
-  
-    for(var i=0;i<departamentos.length;i++){
-       
-    if(t==departamentos[i].t){
-    departamentos[i].appendChild(caixa)
-    console.log(1)
-    }
-    }  
+    caixa.classList.add('caixa')           
+    elemento.appendChild(caixa)  
+    console.log(t)
     
     for(var i=0;i<produtos[t].length;i++){
     const text = document.createElement('p')
@@ -38,15 +32,23 @@ elemento.addEventListener("mouseover",(evento)=>{
     text.innerHTML=produtos[t][i]
     caixa.appendChild(text)      
     }
+    removeElemento(caixa,elemento)
+    
+         
+})
+})
+function removeElemento(item,elemento){     
+        elemento.addEventListener("mouseout",(evento)=>{
+            elemento.classList.add(evento.target.dataset.departamento)                
+            item.remove()
+            elemento.childNodes[1].style.display='block'
+    })                        
+    }  
 
-    elemento.addEventListener("mouseout",(evento)=>{
-        elemento.classList.add(evento.target.dataset.departamento)
-        for(var i=0;i<departamentos.length;i++){
-            if(t==departamentos[i].t){
-            departamentos[i].removeChild(caixa)
-            }
-            }  
-            
-    })    
-})
-})
+function modificaElemento(mod){
+    elemento.classList.remove(t)
+    elemento.childNodes[1].style.display='none'
+    const caixa = document.createElement('div')
+    caixa.classList.add('caixa')           
+    elemento.appendChild(caixa) 
+}
