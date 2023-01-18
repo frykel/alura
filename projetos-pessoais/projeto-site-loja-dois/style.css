@@ -93,14 +93,16 @@ a{
 }
 .atendimento{
     height: 70px;
-    width: 90%;
+    width: 95%;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 100%;
+    
+    border: 2px solid black;
+    box-shadow: 2px 2px 1px black;
   
 }
 .atendimento-titulo{
