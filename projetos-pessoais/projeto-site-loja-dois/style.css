@@ -152,17 +152,25 @@ main{
 .texto{
     max-height: 20px;    
     line-height: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 30%;
+    padding: 5px;
+    font-family: cursive;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    
 
 }
 .caixa{
     
-    background-color: white;
+    background-color: #014667;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     height: 200px;
+    color: white;
+    
+    text
     
 }
 .departamentos-titulo{
@@ -189,9 +197,9 @@ main{
 }
 
 .departamentos-container-segmento:hover{
-    transform: scale(1.04);
+    transform: scale(1.05);
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.1s;
 }
 .moda{
     background-image: url('assets/imagens/moda.jpg');
