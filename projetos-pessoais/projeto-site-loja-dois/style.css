@@ -334,7 +334,12 @@ padding-right: 5px;
 .canal-video{
     margin-top: 5px;
 }
-
+.copy{
+    background-color: #013c57;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
 /*Responsividade*/
 
 @media screen and (max-width:1220px) {
