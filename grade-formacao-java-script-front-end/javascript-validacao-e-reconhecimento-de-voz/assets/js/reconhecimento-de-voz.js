@@ -4,7 +4,7 @@
  recognition.lang = 'pt-Br';
  recognition.start();
 
- recognition.addEventListener('result',onSpeak())
+ recognition.addEventListener('result',onSpeak)
 
  function onSpeak(evento){
     const texto = document.querySelector('.box');
