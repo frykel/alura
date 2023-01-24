@@ -13,7 +13,9 @@ function verificaSeOChuteEValido(chute){
     if(numero===numeroSecreto){
         document.body.innerHTML=`
         <h1>Você acertou!</h1>
-        <h3>O número secreto era ${numeroSecreto} ! `
+        <h3>O número secreto era ${numeroSecreto} !
+        <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button> `
+        
     }
     else if(numero<numeroSecreto){
         resposta.innerHTML=`O número secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i>`
@@ -33,3 +35,9 @@ function numeroForMaiorOuMenorQueOPermitido(number){
     return number > maiorValor || number < menorValor 
     // vai retornar true se number> maiorValor ou number menor que menorValor
 }
+
+document.body.addEventListener('click',(evento)=>{
+    if(evento.target.id=="jogar-novamente"){
+        window.location.reload();
+    }
+})

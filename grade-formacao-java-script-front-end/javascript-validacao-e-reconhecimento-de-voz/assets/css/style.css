@@ -63,6 +63,14 @@ h3{
     display: none;
     
 }
+.btn-jogar{
+    padding: 8px 15px;
+    border: 0;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
 
 @media screen and (max-width: 700px) {
     .box{
