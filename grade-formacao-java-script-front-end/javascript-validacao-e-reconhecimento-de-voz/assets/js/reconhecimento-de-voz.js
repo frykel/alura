@@ -11,7 +11,7 @@
  function onSpeak(evento){
     
     const chute = evento.results[0][0].transcript
-    
+   
     exibeChuteNaTela(chute)  
     verificaSeOChuteEValido(chute)
 

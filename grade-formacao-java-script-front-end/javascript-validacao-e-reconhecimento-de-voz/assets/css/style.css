@@ -16,6 +16,7 @@ body{
     justify-content: space-around;
     height: 100vh;
     align-items: center;
+    margin: 5px;
 }
 .texto-principal{
     height: 20%;
@@ -72,7 +73,7 @@ h3{
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .box{
         font-size: 2rem;
     }
