@@ -1,0 +1,35 @@
+function verificaSeOChuteEValido(chute){
+    const resposta = document.querySelector("#dica")
+    const numero = +chute //converte chute em numero inteiro acrescentando o + na frente do chute
+
+    if(chuteForInvalido(numero)){ //verifica se o numero passado não é número (isNaN)
+        resposta.innerHTML="Valor Invalido, por favor diga um número"
+        resposta.style.display="block"
+    }
+    if(numeroForMaiorOuMenorQueOPermitido(numero)){
+        resposta.innerHTML=`Você precisa dizer um número entre ${menorValor} e ${maiorValor}`
+        resposta.style.display="block"
+    }
+    if(numero===numeroSecreto){
+        document.body.innerHTML=`
+        <h1>Você acertou!</h1>
+        <h3>O número secreto era ${numeroSecreto} ! `
+    }
+    else if(numero<numeroSecreto){
+        resposta.innerHTML=`O número secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i>`
+        resposta.style.display="block"
+    }
+    else if(numero>numeroSecreto){
+        resposta.innerHTML=`O número secreto é menor <i class="fa-sharp fa-solid fa-arrow-down"></i>`
+        resposta.style.display="block"  
+
+    }
+}
+
+function chuteForInvalido(numero) {
+    return Number.isNaN(numero);
+}
+function numeroForMaiorOuMenorQueOPermitido(number){
+    return number > maiorValor || number < menorValor 
+    // vai retornar true se number> maiorValor ou number menor que menorValor
+}

@@ -50,6 +50,17 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 30px;
+    
+}
+h1{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 3rem;
+}
+#dica{
+    display: none;
     
 }
 
