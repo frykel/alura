@@ -6,12 +6,12 @@
  recognition.start();
  const texto = document.querySelector('.box');
 
- texto.addEventListener('result',onSpeak)
+ recognition.addEventListener('result',onSpeak)
 
  function onSpeak(evento){
     
     const chute = evento.results[0][0].transcript
-   
+    console.log(1)
     exibeChuteNaTela(chute)  
     verificaSeOChuteEValido(chute)
 
