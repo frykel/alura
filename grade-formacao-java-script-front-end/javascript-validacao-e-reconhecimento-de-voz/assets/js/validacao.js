@@ -3,8 +3,16 @@ function verificaSeOChuteEValido(chute){
     const numero = +chute //converte chute em numero inteiro acrescentando o + na frente do chute
 
     if(chuteForInvalido(numero)){ //verifica se o numero passado não é número (isNaN)
+        if(chute.toUpperCase()==="GAME OVER"){
+            document.body.innerHTML=`
+        <h1>GAME OVER!</h1>
+        <h3>Se quiser jogar de novo, clique no botão!
+        <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button> `
+        }
+        else{
         resposta.innerHTML="Valor Invalido, por favor diga um número"
         resposta.style.display="block"
+        }
     }
     if(numeroForMaiorOuMenorQueOPermitido(numero)){
         resposta.innerHTML=`Você precisa dizer um número entre ${menorValor} e ${maiorValor}`
