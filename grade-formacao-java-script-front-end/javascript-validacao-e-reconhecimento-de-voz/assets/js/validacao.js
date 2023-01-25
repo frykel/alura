@@ -23,7 +23,7 @@ function verificaSeOChuteEValido(chute){
     if(numero===numeroSecreto){
         document.body.innerHTML=`
         <h1>Você acertou!</h1>
-        <h3>O número secreto era ${numeroSecreto} !
+        <h3>O número secreto era ${numeroSecreto} !<br><br>
         <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button> `
         
     }    else if(numero<numeroSecreto){
