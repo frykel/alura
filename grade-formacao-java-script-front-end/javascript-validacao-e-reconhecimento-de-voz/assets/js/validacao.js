@@ -13,10 +13,12 @@ function verificaSeOChuteEValido(chute){
         resposta.innerHTML="Valor Invalido, por favor diga um número"
         resposta.style.display="block"
         }
+        return
     }
     if(numeroForMaiorOuMenorQueOPermitido(numero)){
         resposta.innerHTML=`Você precisa dizer um número entre ${menorValor} e ${maiorValor}`
         resposta.style.display="block"
+        return
     }
     if(numero===numeroSecreto){
         document.body.innerHTML=`
@@ -24,12 +26,10 @@ function verificaSeOChuteEValido(chute){
         <h3>O número secreto era ${numeroSecreto} !
         <button id="jogar-novamente" class="btn-jogar">Jogar Novamente</button> `
         
-    }
-    else if(numero<numeroSecreto){
+    }    else if(numero<numeroSecreto){
         resposta.innerHTML=`O número secreto é maior <i class="fa-sharp fa-solid fa-arrow-up"></i>`
         resposta.style.display="block"
-    }
-    else if(numero>numeroSecreto){
+    }    else{
         resposta.innerHTML=`O número secreto é menor <i class="fa-sharp fa-solid fa-arrow-down"></i>`
         resposta.style.display="block"  
 
