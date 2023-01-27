@@ -6,19 +6,20 @@ body{
 /*background:linear-gradient(#02DAC7,#048F96,#014667);*/
 background-color: orange;
 box-shadow: 0px 3px 2px;
+height: 120px;
 }
 
 .cabecalho-logo img{
- height: 200px;    
+ height: 60px;    
 }
 
 .cabecalho-logo{
-    width: 60%;
-    height: 200px;            
+    
+    height: 60px;            
 }
 .cabecalho-texto{
-    max-width: 30%;
-    font-size: 1.6rem;
+    
+    font-size: 1.3rem;
     font-family: Pacifico, cursive;
     color: #014667;
     font-weight: 700;
@@ -38,71 +39,22 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 200px;   
+    height: 100px;   
 }
 
-.cabecalho-menu{
-    display: flex;    
-    width: 70%;    
-    height: 200px;
-   flex-direction: column-reverse;
-   justify-content: space-around; 
-   }
-.cabecalho-menu-lista{
-   display: flex;
-   margin-right: 1%;
-}
 
-.cabecalho-pesquisa{
-    align-self: left;    
-    display: flex;        
-}
-.cabecalho-pesquisa-caixa{
-    width: 30vw;
-    height: 30px;   
-}
-.cabecalho-menu-lista-link{
-   flex-grow: 1;
-    text-align: center;
-    height: 28px;
-    margin-left: 5px;
-    font-size: 1.5em;
-    border: 1px solid black;
-    box-shadow: 2px 2px 1px black;
-    background: rgba(255, 255, 255, 0.685);
-   
-}
-.cabecalho-menu-lista-link:hover{
-    background: rgba(255, 255, 255, 0.356);
-    cursor: pointer;
-}
-
-.cabecalho-pesquisa-botao{
-
-    background-color: orangered;
-    color: white;
-    font-size: 1em;
-    width: 100px;
-    box-shadow: 2px 2px 1px black;
-    font-weight: bold;
-}
-.cabecalho-pesquisa-botao:hover{
-    background-color: red;
-    transition: 0.5s;
-    cursor: pointer;
-}
 .atendimento{
-    height: 70px;
-    width: 95%;
-    margin: 10px auto;
+    height: 50px;
+    width: 100%;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    
+    background-color: #013c57;
     border: 2px solid black;
     box-shadow: 2px 2px 1px black;
+    color: white;
   
 }
 .atendimento-titulo{
@@ -113,6 +65,7 @@ a{
     border-bottom: 1px solid black;
     width: 100%;
     text-align: center;
+    
 }
 .atendimento-contato{
     width: 50%;
@@ -121,8 +74,15 @@ a{
     font-weight: bold;
     font-size: 1.5rem;
 padding: 5px;
+color: inherit;
 }
-
+.atendimento-horario{
+    font-size: 1rem;
+    line-height: 20px;
+}
+.rodape-whatsapp,.rodape-instagram{
+    color: white;
+}
 
 .banner{
     position: relative;
@@ -131,8 +91,9 @@ padding: 5px;
 
 .banner-imagem{
     
-    height: calc(100vh - 273px);
+    height: calc(100vh - 283px);
     width: 100%;
+    margin-top: 10px;
 }
 .banner-texto{
     position: absolute;
@@ -373,15 +334,17 @@ padding-right: 5px;
     }
     .cabecalho{
         flex-direction: column;
-        height: 250px;
-        justify-content: space-around;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
     }
     .cabecalho-texto{
         max-width: 100%;
     }
     .cabecalho-logo img{
+        margin: 10px auto;
+        height: 50%;
         width: 100%;
-        height: 70%;
     }
 }
 
@@ -401,7 +364,7 @@ padding-right: 5px;
     }
     .vantagens{
         flex-direction: column;
-        height: 130px;
+        height: 150px;
     }
     .vantagens-item{
         width: 100%;
@@ -432,15 +395,18 @@ padding-right: 5px;
     }
     .cabecalho{
         flex-direction: column;
-        height: 250px;
+        height: 100px;
         justify-content: space-around;
     }
     .cabecalho-texto{
         max-width: 100%;
+        height: 50%;
+        margin-bottom: 10px;
+        margin-left: 10px;
     }
     .cabecalho-logo img{
         width: 100%;
-        height: 70%;
+        height: 50%;
     }
 }
 
