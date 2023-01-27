@@ -346,6 +346,14 @@ padding-right: 5px;
         height: 50%;
         width: 100%;
     }
+    .copy{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .copy div{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width:800px) {
