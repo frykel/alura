@@ -36,14 +36,47 @@ height: 200px;
 position: absolute;
 box-shadow: 0px 8px 16px 0px black;
 min-width: 250px;
+max-width: 600px;
+max-height: 50vh;
+width: 100%;
 z-index: 1;
 margin-top: 5px;
-background-color: #f9f9f9;
-display: none;
+background-color: lightgray;
+border-radius: 5px;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+
+
 }
-.produtos:hover{
-    display: block;
+.produtos-setor{
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
 }
+.produtos-setor-titulo{
+    margin-bottom: 20px;
+    
+    padding: 3px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #013c57;
+    font-size: 1.3rem;
+    
+}
+.produtos-setor-item{
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+.produtoss{
+    display: flex;
+}
+
 .cabecalho-menu{
     background-color: #014667;
     height: 50px;
