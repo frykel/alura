@@ -49,7 +49,7 @@ produtosSetor.forEach((elemento)=>{
 
 )
 
-menu.addEventListener("click",(elemento)=>{
+menu.addEventListener("mouseenter",(elemento)=>{
 if(elemento.target.childNodes[3].style.display==="flex"){
     elemento.target.childNodes[3].style.display="none"
 }
@@ -60,4 +60,7 @@ else{
 
 }
 )
+menu.addEventListener("mouseleave",(elemento)=>{
+    elemento.target.childNodes[3].style.display="none"
+})
 
