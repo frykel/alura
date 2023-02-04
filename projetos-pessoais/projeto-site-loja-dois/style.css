@@ -44,7 +44,7 @@ margin-top: 5px;
 background-color: lightgray;
 border-radius: 5px;
 padding: 10px;
-display: flex;
+display: none;
 flex-wrap: wrap;
 flex-direction: row;
 
