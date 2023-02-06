@@ -472,6 +472,7 @@ padding-right: 5px;
         align-items: center;
         
     }
+    
     .cabecalho{
         flex-direction: column;
         height: 100px;
