@@ -1,4 +1,5 @@
 const menu = document.querySelector("[data-link]")
+const contato = document.querySelector("[data-contato]")
 const produtosSetor=document.querySelectorAll("[data-setor]")
 const setores = ["moda","festa","decor","cama","mesa","banho"]
 const separadores = {
@@ -64,3 +65,20 @@ menu.addEventListener("mouseleave",(elemento)=>{
     elemento.target.childNodes[3].style.display="none"
 })
 
+contato.addEventListener("mouseenter",(elemento)=>{
+   
+    if(elemento.target.childNodes[1].style.display==="flex"){
+        elemento.target.childNodes[1].style.display="none"
+    }
+    else{
+        elemento.target.childNodes[1].style.display="flex"
+        
+    }
+    
+    
+    }
+    )
+    contato.addEventListener("mouseleave",(elemento)=>{
+        elemento.target.childNodes[1].style.display="none"
+    })
+    
