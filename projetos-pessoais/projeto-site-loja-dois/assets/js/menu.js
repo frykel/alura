@@ -45,6 +45,8 @@ produtosSetor.forEach((elemento)=>{
    }
     elemento.innerHTML=separadores[setores[i]][cont]    
       cont++  
+    //elemento.attributes[2].textContent="a"
+    
       
     }   
 

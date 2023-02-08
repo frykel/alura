@@ -1,0 +1,15 @@
+.produto-titulo{
+
+margin-bottom: 20px;
+margin-top: 20px;    
+padding: 3px;
+text-align: center;
+text-shadow: 1px 1px 1px #013c57;
+font-size: 2.5rem;
+}
+.produto-descritivo{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    line-height: 30px;
+    
+}
