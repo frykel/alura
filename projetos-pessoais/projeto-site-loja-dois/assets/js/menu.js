@@ -10,6 +10,14 @@ const separadores = {
 "mesa":[],
 "banho":[]
 }
+const links ={
+"moda":[],
+"festa":[],
+"decor":[],
+"cama":[],
+"mesa":[],
+"banho":[]
+}
 const tamanho = Object.keys(separadores).length //calcula o tamanho de um objeto
 
 produtosSetor.forEach((elemento)=>{
@@ -20,6 +28,8 @@ produtosSetor.forEach((elemento)=>{
             
         if(elemento.dataset.setor===setores[i]){
             separadores[setores[i]].push(elemento.innerHTML)
+            links[setores[i]].push(elemento.attributes.href.value)
+            
            
         }
     }
@@ -27,12 +37,14 @@ produtosSetor.forEach((elemento)=>{
     
 })
 
-colocaOrdem(separadores)
 
-function colocaOrdem(objeto){
+colocaOrdem(separadores,links)
+
+function colocaOrdem(objeto,link){
 
     for(var i=0; i<tamanho;i++){
         objeto[setores[i]].sort()
+        link[setores[i]].sort()
     }
 }
 var cont=0;
@@ -43,9 +55,10 @@ produtosSetor.forEach((elemento)=>{
     i++
     cont=0
    }
-    elemento.innerHTML=separadores[setores[i]][cont]    
+    elemento.innerHTML=separadores[setores[i]][cont]
+    elemento.attributes.href.value=links[setores[i]][cont]     
       cont++  
-    //elemento.attributes[2].textContent="a"
+    
     
       
     }   
@@ -53,6 +66,7 @@ produtosSetor.forEach((elemento)=>{
 )
 
 menu.addEventListener("mouseenter",(elemento)=>{
+    
 if(elemento.target.childNodes[3].style.display==="flex"){
     elemento.target.childNodes[3].style.display="none"
 }
