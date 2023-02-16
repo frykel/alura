@@ -1,0 +1,56 @@
+{
+ "moda":[
+    {
+      "id": 1,
+      "titulo": "Alfaiataria",
+      "descricao": "3 mil visualizações",
+      "url": "../html/produto-alfaiataria.html"
+    },{
+        "id": 2,
+        "titulo": "Estamparia Exclusiva",
+        "descricao": "3 mil visualizações",
+        "url": "../html/produto-estamparia-exclusiva.html"
+      }
+],
+"festa":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/produto-crepe.html"
+    }
+],
+"cama":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+],
+"decor":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+]
+,
+"banho":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+],
+"mesa":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+]
+}
