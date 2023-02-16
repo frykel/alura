@@ -4,7 +4,7 @@
       "id": 1,
       "titulo": "Alfaiataria",
       "descricao": "3 mil visualizações",
-      "url": "../html/produto-alfaiataria.html"
+      "url": "assets/html/produto-alfaiataria.html"
     },{
         "id": 2,
         "titulo": "Estamparia Exclusiva",
