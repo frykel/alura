@@ -7,7 +7,7 @@ async function listaVideos(){
 
 /*Por padrão a função fetch() usa sempre o método GET, para podermos usar outro método dela como o POST precisamos informar isso na função, conforme abaixo: */
 async function criaVideo(tituloc,descricaoc,urlc,imagemc){
-    const conexao = await fetch("http://localhost:3000/videos",{
+    const conexao = await fetch("http://localhost:3000/video",{
         method: "POST", 
         headers: {
             "Content-type": "application/json"
@@ -19,6 +19,9 @@ async function criaVideo(tituloc,descricaoc,urlc,imagemc){
             imagem: imagemc
         })
     });
+    if(!conexao.ok){
+        throw new Error("Não foi possível enviar o vídeo")
+    }
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
 }
