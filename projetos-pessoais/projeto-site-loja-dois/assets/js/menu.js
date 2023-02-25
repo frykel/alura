@@ -1,5 +1,8 @@
+
 const menu = document.querySelector("[data-link]")
+
 const contato = document.querySelector("[data-contato]")
+/*
 const produtosSetor=document.querySelectorAll("[data-setor]")
 const setores = ["moda","festa","decor","cama","mesa","banho"]
 const separadores = {
@@ -64,7 +67,7 @@ produtosSetor.forEach((elemento)=>{
     }   
 
 )
-
+*/
 menu.addEventListener("mouseenter",(elemento)=>{
     
 if(elemento.target.childNodes[3].style.display==="flex"){

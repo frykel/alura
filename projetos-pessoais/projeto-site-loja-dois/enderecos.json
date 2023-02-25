@@ -1,0 +1,88 @@
+{
+ "moda":[
+    {
+      "id": 1,
+      "titulo": "Alfaiataria",
+      "descricao": "É um tecido estruturado, geralmente com presença de elastano na composição e poliéster. Possui gramatura mais pesada para caimento impecável.",
+      "urlindex": "assets/html/produto-alfaiataria.html",
+      "url": "produto-alfaiataria.html"
+    },{
+        "id": 2,
+        "titulo": "Estamparia Exclusiva",
+        "descricao": "Nossa loja trabalha com uma ampla gama de tecidos com <strong>Estampas Exclusivas Servlatec</strong>. São variadas opções em: Crepe Smooth, Crepe New Look, Seda Gloss, Malha Neopreme, Tule, Crepe Madame.",
+        "urlindex": "assets/html/produto-estamparia-exclusiva.html",
+        "url": "produto-estamparia-exclusiva.html"
+      },{
+        "id": 3,
+        "titulo": "Linho",
+        "descricao": "O Linho é um tecido de aspecto rústico que está super na moda. Podendo tanto ser feito da fibra natural de linho como misturado com outros tipos de fios (poliéster, algodão, viscose...) É um tecido versátil que ao mesmo tempo em que é sofisticado, também pode ser usado para peças casuais e despojadas. O linho é caracterizado como um tecido que simboliza conforto e elegância.",
+        "urlindex": "assets/html/produto-linho.html",
+        "url": "produto-linho.html"
+      },{
+        "id": 4,
+        "titulo": "Malhas",
+        "descricao": "Nossa loja trabalha com grande variedade de malhas de poliéster. Temos várias opções em: Malha Montaria, Malha Cirre, Malha Helanquinha, Malha Laise...",
+        "urlindex": "assets/html/produto-malha.html",
+        "url": "produto-malha.html"
+      },{
+        "id": 5,
+        "titulo": "Tecidos para Fantasia",
+        "descricao": "Nossa loja trabalha com grande de tecidos para fantasia, trabalhamos com: Paete para fantasia, organza, tule, cetim...",
+        "urlindex": "assets/html/produto-tecidos-fantasia.html",
+        "url": "produto-tecidos-fantasia.html"
+      },{
+        "id": 6,
+        "titulo": "Tricoline",
+        "descricao": "O tecido tricoline é conhecido por ser a base da camisaria do mundo todo! Seu caimento é um pouco mais estruturado e levemente encorpado. É perfeito para fazer camisas e camisetes, blusas e vestidos. Nas saias e vestidos, ele dá um leve volume. Por ser 100% algodão é super confortável!",
+        "urlindex": "assets/html/produto-tricoline.html",
+        "url": "produto-tricoline.html"
+      },{
+        "id": 6,
+        "titulo": "Viscose",
+        "descricao": "A viscose é um tecido de fibra artificial, feita a partir da celulose. Tem como principais características: um bom caimento, toque levemente aveludado, ser confortável e fria. Podendo ser tanto lisa quanto estampada. Ela não é transparente, mas por ser fina por muitas vezes pode precisar de forro.",
+        "urlindex": "assets/html/produto-viscose.html",
+        "url": "produto-viscose.html"
+      }
+],
+"festa":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/produto-crepe.html"
+    }
+],
+"cama":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+],
+"decor":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+]
+,
+"banho":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+],
+"mesa":[
+    {
+        "id": 1,
+        "titulo": "Crepe",
+      "descricao": "3 mil visualizações",
+      "url": "../html/crepe.html"
+    }
+]
+}
