@@ -1,0 +1,24 @@
+.banner{
+    position: relative;
+    background: url("../imagens/header/desktop/banner.jpg");
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.banner__texto{
+    position: absolute;
+    
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--font-banner);
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    opacity: 0.75;
+}
+.banner__texto__hashtag{
+    position: absolute;
+    left: -10%;
+}

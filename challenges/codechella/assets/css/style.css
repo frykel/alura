@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 :root{
 
     --primay-bg-color: #BFDAE6;
@@ -6,5 +8,13 @@
 
     --banner-color: #2E7BA2;
     --title-bg-color: #DF9010;
+
+    --font-principal: Raleway, Sans-serif;
+    --font-banner: Calistoga, Sans-serif;
 }
 
+.corpo{
+
+    background-image: linear-gradient(to bottom, var(--primay-bg-color),var(--secondary-bg-color),var(--terciary-bg-color));
+    
+}

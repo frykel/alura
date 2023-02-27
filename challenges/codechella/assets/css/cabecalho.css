@@ -11,6 +11,29 @@ header{
     align-items: center;
 }
 .cabecalho__logo{
-    width: 13%;
+    width: 35%;
     height: 50%;
 }
+.cabecalho__div__logo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho__menu{
+    width: 50%;
+}
+
+.cabecalho__menu__lista{
+    font-family: var(--font-principal);
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.cabecalho__menu__lista__link{
+    text-decoration: none;
+    color:inherit;
+    
+}
+
