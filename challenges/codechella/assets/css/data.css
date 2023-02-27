@@ -7,19 +7,17 @@
     justify-content: space-evenly;
 }
 .data__imagem{
-    width: 48%;
+    width: 43%;
     
 }
 .data__imagem__arquivo{
-    width: 100%;
+   
     height: 270px;
     border-radius: 20px;       
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    object-fit: cover;
-
-    
+    object-fit: cover;    
 }
 .data__texto{
     width: 48%;
@@ -48,8 +46,25 @@
     content: " >";
 }
 .data__descricao{
-    margin-top: 30px;
+    margin-top: 20px;
     line-height: 2rem;
     font-size: 0.9rem;
     text-align: justify;
+    margin-bottom: 20px;
 }
+
+.botao__compra__ingresso{
+    background-color: var(--banner-color);
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px #444444;
+    display: flex;
+    align-items: center;
+}
+
+
