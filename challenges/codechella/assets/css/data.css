@@ -40,7 +40,8 @@
 }
 
 .data__titulo__dia::before{
-    content: "< ";
+    content: " < ";
+    margin-left: 8px;
 }
 .data__titulo__dia::after{
     content: " >";
