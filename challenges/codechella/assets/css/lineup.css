@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .atracoes__bandas__l1, .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
@@ -71,4 +72,30 @@
     font-size: 1.1rem;
     font-weight: 500;
     width: 50%;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (max-width: 1024px){
+    .lineup__dia__titulo{
+        width: 50%;
+    }
+    .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+        flex-wrap: wrap;
+        margin-bottom: 0; 
+        justify-content: center;         
+        width: 100%;
+
+    }
+    .atracoes__artistas{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    .atracoes__artistas:nth-child(3){
+        width: 30%;
+        
+    }
+    .atracoes__artistas:nth-child(4){
+        width: 40%;
+    }
 }

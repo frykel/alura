@@ -1,4 +1,20 @@
 .rodape{
     background-color: var(--terciary-bg-color);
     height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rodape__informacoes__logo{
+
+    width: 60%;
+}
+
+.rodape__informacoes__contato__descricao{
+    font-family: var(--font-principal);
+}
+
+.rodape__copy{
+    font-family: var(--font-principal);
+    line-height: 2rem;
 }

@@ -37,3 +37,27 @@ header{
     
 }
 
+/* Responsividade para Tablets: */
+
+@media screen and (max-width: 1024px){
+    .cabecalho__container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cabecalho__logo{
+        width: 100%;
+    }
+    .cabecalho__menu{
+        width: 100%;
+        margin-top: 20px;
+    }
+    header{
+        height: 180px;
+    }
+    .cabecalho__logo{
+        height: 80%;
+    }
+    .cabecalho__menu__lista__item{
+        font-size: 1.1rem;
+    }
+}

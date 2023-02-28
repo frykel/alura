@@ -9,10 +9,9 @@
 
 .banner__texto{
     position: absolute;
-    
-    top: 40%;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0);
     font-family: var(--font-banner);
     font-size: 2.5rem;
     line-height: 3.3rem;
@@ -21,4 +20,13 @@
 .banner__texto__hashtag{
     position: absolute;
     left: -10%;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (max-width: 1024px){
+    .banner{
+        height: 30vh;
+
+    }
 }
