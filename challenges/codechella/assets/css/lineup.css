@@ -1,0 +1,72 @@
+
+.atracoes__titulo{
+    text-align: center;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.lineup__dia__titulo{
+    text-align: center;
+    background-color: var(--title-bg-color);
+    color: white;
+    margin: 20px auto;
+    width: 25%;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.lineup__dia{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.linha{
+    width: 35%;
+    border-top: 1px solid var(--title-bg-color);
+    height: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.atracoes__bandas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atracoes__bandas__l1, .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+    font-family: var(--font-principal);
+    margin-bottom: 25px;
+}
+.atracoes__bandas__l1{
+    font-size: 1.7rem;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+.atracoes__bandas__l2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+.atracoes__bandas__l3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 60%;
+}
+.atracoes__bandas__l4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 50%;
+}

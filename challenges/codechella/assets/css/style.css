@@ -16,5 +16,5 @@
 .corpo{
 
     background-image: linear-gradient(to bottom, var(--primay-bg-color),var(--secondary-bg-color),var(--terciary-bg-color));
-    
+    height: 1000px;
 }
