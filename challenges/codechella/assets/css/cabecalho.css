@@ -39,7 +39,7 @@ header{
 
 /* Responsividade para Tablets: */
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .cabecalho__container{
         flex-direction: column;
         justify-content: center;

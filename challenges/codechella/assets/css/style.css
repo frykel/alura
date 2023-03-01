@@ -11,6 +11,11 @@
 
     --font-principal: Raleway, Sans-serif;
     --font-banner: Calistoga, Sans-serif;
+
+    --pc-width: 1440px;
+    --tablet-width: 768px;
+    --mobile-width: 478px;
+
 }
 
 .corpo{

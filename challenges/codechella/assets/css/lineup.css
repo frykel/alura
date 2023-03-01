@@ -76,26 +76,47 @@
 
 /*Responsividade para Tablet*/
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .lineup__dia__titulo{
         width: 50%;
     }
     .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
         flex-wrap: wrap;
         margin-bottom: 0; 
-        justify-content: center;         
+        justify-content: space-around;        
         width: 100%;
+       
 
     }
     .atracoes__artistas{
-        width: 48%;
-        margin-bottom: 30px;
-    }
-    .atracoes__artistas:nth-child(3){
-        width: 30%;
-        
-    }
-    .atracoes__artistas:nth-child(4){
         width: 40%;
+        margin-bottom: 30px;
+        margin: 15px auto;
+    }
+    
+    .atracoes__bandas__l1{
+        font-size: 2.5rem;
+    }
+    .atracoes__bandas__l2{
+        width: 90%;
+        font-size: 2rem;
+    }
+    .atracoes__bandas__l3{
+        width: 80%;
+        font-size: 1.7rem;
+    }
+    .atracoes__bandas__l4{
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .cinco{
+        width: 29%;
+    }
+    .cinco:nth-child(5){
+        width: 40%;
+        margin-left: 0;
+    }
+    .cinco:nth-child(4){
+        margin-right: 20px;
     }
 }

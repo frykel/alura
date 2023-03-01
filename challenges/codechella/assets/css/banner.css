@@ -11,7 +11,7 @@
     position: absolute;
     top: 25%;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%,50%);
     font-family: var(--font-banner);
     font-size: 2.5rem;
     line-height: 3.3rem;
@@ -24,9 +24,13 @@
 
 /*Responsividade para Tablet*/
 
-@media screen and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .banner{
-        height: 30vh;
+        height: 70vh;
+       
 
+    }
+    .banner__texto{
+        top: 55%;
     }
 }
