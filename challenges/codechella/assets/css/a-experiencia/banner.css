@@ -1,0 +1,57 @@
+.banner{
+    position: relative;
+    background: url("../../imagens/header/desktop/banner-a-experiencia.jpg");
+    height: 67vh;
+    background-position: top;
+    background-size: cover;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+   
+}
+
+.banner__texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--font-banner);
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    opacity: 0.75;
+}
+.banner__texto__hashtag{
+    position: absolute;
+    left: -10%;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .banner{
+        height: 70vh;
+       
+
+    }
+    .banner__texto{
+        top: 55%;
+        width: 80%;
+        transform: translate(-20%,50%);
+    }
+}
+
+/*Responsividade para Smartphone*/
+
+@media screen and (max-width: 480px){
+    .banner{
+        height: 40vh;
+       
+
+    }
+    .banner__texto{
+        
+        font-size: 1.6rem;
+        top: 23%;
+       transform: translate(-20%,50%);
+       width: 80%;
+    }
+}

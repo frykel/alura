@@ -1,6 +1,6 @@
 .banner{
     position: relative;
-    background: url("../imagens/header/desktop/banner.jpg");
+    background: url("../../imagens/header/desktop/banner.jpg");
     height: 50vh;
     background-position: center;
     background-size: cover;
@@ -24,7 +24,7 @@
 
 /*Responsividade para Tablet*/
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 480px) and (max-width: 768px){
     .banner{
         height: 70vh;
        
@@ -32,5 +32,24 @@
     }
     .banner__texto{
         top: 55%;
+        width: 80%;
+        transform: translate(-20%,50%);
+    }
+}
+
+/*Responsividade para Smartphone*/
+
+@media screen and (max-width: 480px){
+    .banner{
+        height: 40vh;
+       
+
+    }
+    .banner__texto{
+        
+        font-size: 1.6rem;
+        top: 23%;
+       transform: translate(-20%,50%);
+       width: 80%;
     }
 }

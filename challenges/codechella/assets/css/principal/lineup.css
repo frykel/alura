@@ -12,7 +12,8 @@
     background-color: var(--title-bg-color);
     color: white;
     margin: 20px auto;
-    width: 25%;
+    width: 43%;
+    max-width: 300px;
     font-family: var(--font-principal);
     font-size: 1.5rem;
     height: 50px;
@@ -76,9 +77,11 @@
 
 /*Responsividade para Tablet*/
 
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 480px) and (max-width: 768px){
     .lineup__dia__titulo{
-        width: 50%;
+        width: 100%;
+        font-size: 1.2rem;
+        height: 40px;
     }
     .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
         flex-wrap: wrap;
@@ -95,19 +98,19 @@
     }
     
     .atracoes__bandas__l1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .atracoes__bandas__l2{
         width: 90%;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .atracoes__bandas__l3{
         width: 80%;
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
     .atracoes__bandas__l4{
-        width: 70%;
-        font-size: 1.5rem;
+        width: 80%;
+        font-size: 1.2rem;
     }
     .cinco{
         width: 29%;
@@ -118,5 +121,31 @@
     }
     .cinco:nth-child(4){
         margin-right: 20px;
+    }
+}
+/*Responsividade para Smartphone*/
+
+@media screen and (max-width: 480px){
+    .lineup__dia__titulo{
+        width: 70%;
+        font-size: 1.2rem;
+        height: 40px;
+    }
+    .linha{
+        display: none;
+    }
+    .atracoes__artistas{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        
+    }
+    .atracoes__bandas__l1, .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
     }
 }

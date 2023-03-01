@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cabecalho.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/data.css">
-    <link rel="stylesheet" href="assets/css/lineup.css">
-    <link rel="stylesheet" href="assets/css/banner-rodape.css">
+    <link rel="stylesheet" href="assets/css/principal/banner.css">
+    <link rel="stylesheet" href="assets/css/principal/data.css">
+    <link rel="stylesheet" href="assets/css/principal/lineup.css">
+    <link rel="stylesheet" href="assets/css/principal/banner-rodape.css">
     <link rel="stylesheet" href="assets/css/rodape.css">
 </head>
 <body>
     <header>
         <section class="cabecalho__container">
             <div class="cabecalho__div__logo">
-                <img src="assets/imagens/header/desktop/logo.png" alt="Logo CodeChella" class="cabecalho__logo">
+                <a href="index.html" class="cabecalho__logo"><img src="assets/imagens/header/desktop/logo.png" alt="Logo CodeChella" ></a>
             </div>
+            <span class="material-symbols-outlined menu__interativo">
+                menu
+                </span>
             <nav class="cabecalho__menu">
                 <ul class="cabecalho__menu__lista">
-                    <li class="cabecalho__menu__lista__item"><a href="#" class="cabecalho__menu__lista__link">A experiência</a></li>
+                    <li class="cabecalho__menu__lista__item"><a href="assets/pages/experiencia.html" class="cabecalho__menu__lista__link">A experiência</a></li>
                     <li class="cabecalho__menu__lista__item"><a href="#" class="cabecalho__menu__lista__link">Mapa de Setores</a></li>
                     <li class="cabecalho__menu__lista__item"><a href="#" class="cabecalho__menu__lista__link">Informações</a></li>
                     <li class="cabecalho__menu__lista__item"><a href="#" class="cabecalho__menu__lista__link">Ingresso</a></li>
@@ -50,7 +53,9 @@
                         <h3 class="data__titulo"> <span class="data__titulo__dia">11 e 12 de Março</span></h3>
                         <h3 class="data__titulo">Aluródromo de São Paulo</h3>
                         <p class="data__descricao">Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!</p>
-                        <button class="botao__compra__ingresso">Comprar Ingresso!    <span class="material-symbols-outlined">magic_button</span>                         
+                        <button class="botao__compra__ingresso">Comprar Ingresso!    <span class="material-symbols-outlined simbolo__ticket">
+                            local_activity
+                            </span>                      
                             </button>
                     </div>
                 </div>
@@ -129,10 +134,10 @@
 
     <footer class="rodape">
         <section class="rodape__informacoes">
-            <img src="assets/imagens/footer/desktop/logo-cinza.png" alt="Logo Cinza" class="rodape__informacoes__logo">
+            <div class="rodape__informacoes__container"><img src="assets/imagens/footer/desktop/logo-cinza.png" alt="Logo Cinza" class="rodape__informacoes__logo"></div>
         
             <section class="rodape__informacoes__contato">
-                 <p class="rodape__informacoes__contato__descricao">Acesse nossas redes: 
+                 <p class="rodape__informacoes__contato__descricao"><span class="rodape__informacoes__titulo">Acesse nossas redes:</span> 
                     <img src="assets/imagens/footer/desktop/whatsapp.png" alt="Logo Whatsapp">
                     <img src="assets/imagens/footer/desktop/twitch.png" alt="Logo Twitch">
                     <img src="assets/imagens/footer/desktop/instagram.png" alt="Logo Instagram">
@@ -141,8 +146,8 @@
             </section>     
         </section>
         <section class="rodape__copy">
-            <p>Desenvolvido por Silvio Fernandes.</p>
-            <p>Projeto fictício sem fins lucrativos </p>
+            <p class="rodape__copy__texto">Desenvolvido por Silvio Fernandes.</p>
+            <p class="rodape__copy__texto">Projeto fictício sem fins lucrativos </p>
         </section>
 
 
