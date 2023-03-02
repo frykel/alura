@@ -1,26 +1,30 @@
 
-.banner{
-    
-    background-color: aqua;
-    background: url("../../imagens/header/desktop/banner-a-experiencia.jpg");
-    height: 70vh;
-    background-position: top;
-    background-size: cover;
-    opacity: 0.4;
-    background-repeat: no-repeat;
-   
-}
-
-.banner__texto{
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  .banner::before {
+    content: "";
     position: absolute;
-   
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    inset: 0;
+    background-image: url("../../imagens/header/desktop/banner-a-experiencia.jpg");
+    background-size: cover;
+    background-position: top;
+    
+    opacity: 0.5;
+  }
+
+.banner__texto{    
+
     font-family: var(--font-banner);
     font-size: 2.5rem;
     line-height: 3.3rem;
-    opacity: 0.75;
+    opacity: 0.8;
     
 }
 
@@ -28,10 +32,12 @@
 /*Responsividade para Tablet*/
 
 @media screen and (min-width: 480px) and (max-width: 768px){
-  
+    .banner{
+        height: 60vh;
+    }
     .banner__texto{
         font-size: 2rem;
-        top: 72%;
+       
     }
     
 }
@@ -46,7 +52,7 @@
     }
     .banner__texto{
         font-size: 1.5rem;
-        top: 30%;
+       
     }
     
         

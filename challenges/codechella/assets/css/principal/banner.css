@@ -1,39 +1,46 @@
-.banner{
-    position: relative;
-    background: url("../../imagens/header/desktop/banner.jpg");
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 50vh;
-    background-position: center;
+    width: 100%;
+    position: relative;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../imagens/header/desktop/banner.jpg  ");
     background-size: cover;
-    opacity: 0.4;
-}
+    background-position: center;
+    
+    opacity: 0.5;
+  }
+
 
 .banner__texto{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,50%);
+   
     font-family: var(--font-banner);
     font-size: 2.5rem;
     line-height: 3.3rem;
     opacity: 0.75;
 }
 .banner__texto__hashtag{
-    position: absolute;
-    left: -10%;
+    margin-left: 30px;
 }
 
 /*Responsividade para Tablet*/
 
 @media screen and (min-width: 480px) and (max-width: 768px){
     .banner{
-        height: 70vh;
+        height: 60vh;
        
 
     }
     .banner__texto{
-        top: 55%;
-        width: 80%;
-        transform: translate(-20%,50%);
+     
+      font-size: 2rem;
     }
 }
 
@@ -41,15 +48,12 @@
 
 @media screen and (max-width: 480px){
     .banner{
-        height: 40vh;
+        height: 50vh;
        
 
     }
     .banner__texto{
-        
-        font-size: 1.6rem;
-        top: 23%;
-       transform: translate(-20%,50%);
-       width: 80%;
+   
+      font-size: 1.6rem;
     }
 }
