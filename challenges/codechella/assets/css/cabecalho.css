@@ -90,8 +90,8 @@ header{
     .cabecalho__menu__suspenso{
         display: none;
         position: absolute;
-        top: 21%;
-        right: 0%;
+        top: 11.5%;
+        right: 0.5%;
         background-color: var(--banner-color);
         z-index: 1;
         width: 150px;

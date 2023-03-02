@@ -1,7 +1,9 @@
+
 .banner{
-    position: relative;
+    
+    background-color: aqua;
     background: url("../../imagens/header/desktop/banner-a-experiencia.jpg");
-    height: 67vh;
+    height: 70vh;
     background-position: top;
     background-size: cover;
     opacity: 0.4;
@@ -11,6 +13,7 @@
 
 .banner__texto{
     position: absolute;
+   
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -20,24 +23,17 @@
     opacity: 0.75;
     
 }
-.banner__texto__hashtag{
-    position: absolute;
-    left: -10%;
-}
+
 
 /*Responsividade para Tablet*/
 
 @media screen and (min-width: 480px) and (max-width: 768px){
-    .banner{
-        height: 70vh;
-       
-
-    }
+  
     .banner__texto{
-        top: 55%;
-        width: 80%;
-        transform: translate(-20%,50%);
+        font-size: 2rem;
+        top: 72%;
     }
+    
 }
 
 /*Responsividade para Smartphone*/
@@ -49,11 +45,9 @@
 
     }
     .banner__texto{
-        
-        font-size: 1.6rem;
-        top: 40%;
-        left: 65%;
-       transform: translate(-50%,-50%);
-       width: 80%;
+        font-size: 1.5rem;
+        top: 30%;
     }
+    
+        
 }
