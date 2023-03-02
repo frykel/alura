@@ -51,3 +51,47 @@
     text-align: right;
     padding-right: 30px;
 }
+
+/*Responsividade para Tablets*/
+
+@media screen and (max-width: 768px) {
+    .informacoes__card{
+        flex-direction: column;
+       
+    }
+    .informacoes__card__imagem{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+       
+    }
+    
+    .informacoes__card__container{
+        width: 100%;
+      
+    }
+    .informacoes__card:nth-child(2){
+        flex-direction: column;
+        
+    }
+    .informacoes__card:nth-child(2) .informacoes__card__titulo{
+        text-align: center;
+        padding-right: 30px;
+    }
+    .informacoes__card__descricao,.informacoes__card__titulo{
+        text-align: center;
+    }
+    .informacoes__card__titulo{
+        margin-top: 20px;
+    }
+    
+}
+
+/*Responsividade para Smarthphone*/
+
+@media screen and (max-width: 480px){
+    .informacoes__card__imagem img{
+        min-width: 100px;
+        max-height: 200px;
+    }
+}

@@ -18,6 +18,7 @@
     font-size: 2.5rem;
     line-height: 3.3rem;
     opacity: 0.75;
+    
 }
 .banner__texto__hashtag{
     position: absolute;
@@ -50,8 +51,9 @@
     .banner__texto{
         
         font-size: 1.6rem;
-        top: 23%;
-       transform: translate(-20%,50%);
+        top: 40%;
+        left: 65%;
+       transform: translate(-50%,-50%);
        width: 80%;
     }
 }
