@@ -8,7 +8,7 @@ const resposta = document.querySelectorAll("[data-resposta]")
 button.forEach((elemento) => {
 
     elemento.addEventListener("click",(evento)=>{
-        console.log(evento.target.dataset.botao)
+      
         abreCaixa(evento.target.dataset.botao)
     })
 })
