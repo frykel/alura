@@ -14,10 +14,10 @@ button.forEach((elemento) => {
 })
 
 function abreCaixa(botao){
-    if(resposta[botao].style.display=="none"){
-    resposta[botao].style.display="block"
+    if(resposta[botao].style.display=="block"){
+    resposta[botao].style.display="none"
     }else{
-        resposta[botao].style.display="none"
+        resposta[botao].style.display="block"
     }
 
 }
