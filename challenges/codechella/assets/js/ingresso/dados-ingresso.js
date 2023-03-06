@@ -1,15 +1,25 @@
-
+function dado(nome,email,tipo,data){
 
 const dados = {
-    "nome" : document.getElementById("nome"),
-    "email" : document.getElementById("email"),
-    "tipo": "cadeira",
-    "data": document.getElementById("data")
+    "nome" : "",
+    "email" : "",
+    "tipo": "",
+    "data": ""
 }
+dados["nome"] = nome
+dados["email"] = email
+dados["tipo"] = tipo
+dados["data"] = data
 
-const ingresso = {
-    "nome" : document.getElementsByClassName("ingresso__container__corpo__texto__nome")
-
+    return dados
 }
-console.log(dados)
-console.log(ingresso)
+const form = document.querySelector("#form")
+form.addEventListener("submit",(evento)=>{
+dado(evento.target.elements["nome"].value,evento.target.elements["email"].value,evento.target.elements["ingresso"].value,evento.target.elements["data"].value)    
+   
+}
+)
+
+export const informacoes = {
+    dado
+}
