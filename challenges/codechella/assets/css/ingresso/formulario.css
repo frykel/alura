@@ -64,3 +64,38 @@
   margin-left: 10px;
 }
 
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .div__dupla{
+        flex-direction: column;
+        width: 100%;
+    }
+    .div__dupla__item{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container__data__nascimento{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .div__dupla{
+        flex-direction: column;
+        width: 100%;
+    }
+    .div__dupla__item{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container__data__nascimento{
+        width: 100%;
+    }
+    .ingresso__titulo{
+        font-size: 1.4rem;
+    }
+    .input__label{
+        font-size: 1.2rem;
+    }
+}
