@@ -1,25 +1,16 @@
-function dado(nome,email,tipo,data){
-
-const dados = {
-    "nome" : "",
-    "email" : "",
-    "tipo": "",
-    "data": ""
-}
-dados["nome"] = nome
-dados["email"] = email
-dados["tipo"] = tipo
-dados["data"] = data
-
-    return dados
+import imprimeIngresso from "./imprime-ingresso.js"
+function dados(evento){
+evento.preventDefault()
+console.log(evento)
+const nome = evento.target.elements.nome.value
+//const email = evento.target.elements.email.value
+const tipo = evento.target.elements.ingresso.value
+//const data = evento.target.elements.data.value
+imprimeIngresso(nome,tipo)    
 }
 const form = document.querySelector("#form")
 form.addEventListener("submit",(evento)=>{
-dado(evento.target.elements["nome"].value,evento.target.elements["email"].value,evento.target.elements["ingresso"].value,evento.target.elements["data"].value)    
-   
+dados(evento)
+window.location.assign("../pages/pos-compra-ingresso.html")
 }
 )
-
-export const informacoes = {
-    dado
-}
