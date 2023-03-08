@@ -2,24 +2,10 @@
   "pessoas": [
     {
       "id": 1,
-      "nome": "Sergio",
+      "nome": "Silvio Claudio Fernandes",
       "email": "sergio@gmail.com",
-      "data": "09/12/1998",
+      "data": "03/02/1994",
       "ingresso": "Pista"
-    },
-    {
-      "nome": "Silvio",
-      "email": "",
-      "data": "",
-      "ingresso": "Pista",
-      "id": 2
-    },
-    {
-      "nome": "Silvio",
-      "email": "silviocla@gmail.com",
-      "data": "2023-03-04",
-      "ingresso": "Cadeira Terreo",
-      "id": 3
     }
   ]
 }

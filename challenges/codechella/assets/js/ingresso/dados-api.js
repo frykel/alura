@@ -19,7 +19,14 @@ async function criaPessoa(nome,email,data,ingresso){
     return conexaoConvertida;
 
 }
+async function mostraPessoa(){
+    const conexao = await fetch("http://localhost:3000/pessoas");
+    const conexaoConvertida = await conexao.json();
+    
+    return conexaoConvertida;
+}
 
 export const conectaApi = {
-    criaPessoa
+    criaPessoa,
+    mostraPessoa
 }

@@ -2,8 +2,13 @@ import { conectaApi } from "./dados-api.js"
 
 const ingresso = document.querySelectorAll("[data-info]")
 
-function ingresso(){
+async function ingressoImpresso(){
 
-    const nome = conectaApi.
+    const listaPessoas = await conectaApi.mostraPessoa()
+
+   ingresso[0].textContent=listaPessoas[listaPessoas.length-1].nome
+   ingresso[1].textContent=listaPessoas[listaPessoas.length-1].ingresso
 
 }
+
+ingressoImpresso()
