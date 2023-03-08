@@ -17,13 +17,30 @@ header{
     align-items: center;
 }
 .cabecalho__logo img{
-    width: 80%;
+    width: 70%;
     height: 80%;
+    
 }
 .cabecalho__div__logo{
     width: 55%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.botao__tema{
+    width: 25%;
+    max-width: 70px;    
+    height: 25px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    font-family: var(--font-principal);
+    font-weight: bold;
+}
+.botao__tema:hover{
+    cursor: pointer;
 }
 
 .cabecalho__menu{
@@ -114,4 +131,12 @@ header{
         margin: 0;
         height: 0.1px;
     }
+}
+.cabecalho__container__boreal{
+    height: inherit;
+    width: 100%;
+    background-color: var(--banner-color-2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

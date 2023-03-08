@@ -1,6 +1,7 @@
 
 async function criaPessoa(nome,email,data,ingresso){
-    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json/pessoas",{
+    
+    const conexao = await fetch("http://localhost:3000/pessoas",{
         method: "POST", 
         headers: {
             "Content-type": "application/json"
@@ -20,7 +21,7 @@ async function criaPessoa(nome,email,data,ingresso){
 
 }
 async function mostraPessoa(){
-    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json/pessoas");
+    const conexao = await fetch("http://localhost:3000/pessoas");
     const conexaoConvertida = await conexao.json();
     
     return conexaoConvertida;
