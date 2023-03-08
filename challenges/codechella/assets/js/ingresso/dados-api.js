@@ -1,6 +1,6 @@
 
 async function criaPessoa(nome,email,data,ingresso){
-    const conexao = await fetch("http://localhost:3000",{
+    const conexao = await fetch("http://localhost:3000/pessoas",{
         method: "POST", 
         headers: {
             "Content-type": "application/json"
