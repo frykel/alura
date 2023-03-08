@@ -57,3 +57,17 @@
       font-size: 1.6rem;
     }
 }
+.banner__boreal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../imagens/header/desktop/banner-boreal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  opacity: 1;
+}
+.banner__texto__boreal{
+  color: white;
+}

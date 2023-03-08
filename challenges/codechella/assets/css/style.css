@@ -32,3 +32,8 @@
     background-image: linear-gradient(to bottom, var(--primay-bg-color),var(--secondary-bg-color),var(--terciary-bg-color));
     
 }
+.corpo__boreal{
+
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    
+}
