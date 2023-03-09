@@ -149,3 +149,18 @@
     margin-bottom: 15px;
     }
 }
+.lineup__dia__titulo__boreal{
+    text-align: center;
+    background-color: var(--title-bg-color-2);
+    color: white;
+    margin: 20px auto;
+    width: 43%;
+    max-width: 300px;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
