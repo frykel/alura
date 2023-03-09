@@ -164,3 +164,11 @@
     justify-content: center;
     font-weight: 600;
 }
+.linha__boreal{
+    width: 35%;
+    border-top: 1px solid var(--title-bg-color-2);
+    height: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}

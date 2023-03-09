@@ -75,3 +75,11 @@
     }
 
 }
+.rodape__boreal{
+    background-color: var(--rodape-color-2);
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}

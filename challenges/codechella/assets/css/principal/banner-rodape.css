@@ -9,3 +9,13 @@
     
     
 }
+.banner__rodape__boreal{
+    background-image: url("../../imagens/body/desktop/rodape-boreal.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    filter: hue-rotate(19deg);
+    
+}
