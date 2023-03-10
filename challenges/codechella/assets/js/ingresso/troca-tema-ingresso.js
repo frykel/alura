@@ -5,13 +5,13 @@ botao.addEventListener("click",(elemento)=>{
     if(cont==0){
     submitBotao.forEach((evento)=>{
     
-        evento.classList.add("pergunta__duvida__boreal")
+        evento.classList.add("botao__compra__ingresso__boreal")
     })
     cont++
 }else{
     submitBotao.forEach((evento)=>{
 
-        evento.classList.remove("pergunta__duvida__boreal")
+        evento.classList.remove("botao__compra__ingresso__boreal")
     })
     cont=0
 
