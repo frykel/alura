@@ -132,3 +132,12 @@
         
     }
 }
+.ingresso__container__boreal{
+   
+    margin-top: 30px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    box-shadow: 2px 2px 2px black;
+   
+
+}
