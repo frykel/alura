@@ -34,6 +34,13 @@
       "data": "",
       "ingresso": "Pista",
       "id": 5
+    },
+    {
+      "nome": "Silvio Claudio Fernandes",
+      "email": "silviocla@gmail.com",
+      "data": "2023-03-05",
+      "ingresso": "Cadeira Terreo",
+      "id": 6
     }
   ]
 }
