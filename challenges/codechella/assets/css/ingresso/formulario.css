@@ -99,3 +99,17 @@
         font-size: 1.2rem;
     }
 }
+.botao__compra__ingresso__boreal{
+    background-color: var(--banner-color-2);
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px #444444;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}

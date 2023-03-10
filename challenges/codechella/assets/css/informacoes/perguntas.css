@@ -81,3 +81,18 @@
     }
 
 }
+
+.pergunta__duvida__boreal{
+    font-size: 1.7rem;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    background-color: var(--banner-color-2);
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    max-width: 100%;
+
+}
