@@ -38,6 +38,7 @@ header{
     background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
     font-family: var(--font-principal);
     font-weight: bold;
+    box-shadow: 2px 2px 1px black;
 }
 .botao__tema:hover{
     cursor: pointer;
