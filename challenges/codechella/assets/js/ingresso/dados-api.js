@@ -12,7 +12,7 @@ export const handler = async (event) => {
 };
 async function criaPessoa(nome,email,data,ingresso){
     
-    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json/pessoas",{
+    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json",{
         method: "POST", 
         headers: {
             "Content-type": "application/json"
@@ -32,7 +32,7 @@ async function criaPessoa(nome,email,data,ingresso){
 
 }
 async function mostraPessoa(){
-    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json/pessoas");
+    const conexao = await fetch("https://projeto-codechella.vercel.app/dados.json");
     const conexaoConvertida = await conexao.json();
     
     return conexaoConvertida;
