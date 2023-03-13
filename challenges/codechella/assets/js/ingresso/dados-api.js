@@ -3,7 +3,7 @@ export const handler = async (event) => {
         statusCode: 200,
         headers: {
             "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "http://localhost:3000/pessoas",
+            "Access-Control-Allow-Origin": "http://localhost:3000",
             "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
         },
         body: JSON.stringify('Hello from Lambda!'),
@@ -25,7 +25,7 @@ async function criaPessoa(nome,email,data,ingresso){
         })
     });
     if(!conexao.ok){
-        throw new Error("Não foi possível enviar o vídeo")
+        throw new Error("Não foi possível enviar os dados")
     }
     const conexaoConvertida = await conexao.json();
     return conexaoConvertida;
