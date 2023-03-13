@@ -1,4 +1,4 @@
-import { func } from "prop-types";
+
 
 export default function ehUmCpf(campo) {
     const cpf = campo.value.replace(/\.|-/g, ""); /*Remove caracteres . e - se houverem*/
