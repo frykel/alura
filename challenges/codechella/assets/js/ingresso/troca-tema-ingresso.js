@@ -1,5 +1,5 @@
 const submitBotao = document.querySelector(".botao__compra__ingresso")
-console.log(submitBotao)
+
 let cont = 0
 botao.addEventListener("click",(elemento)=>{
     if(cont==0){
