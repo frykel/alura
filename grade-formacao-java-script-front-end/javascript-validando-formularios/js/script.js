@@ -1,11 +1,26 @@
 import ehUmCpf from "./valida-cpf.js";
 import ehMaiorDeIdade from "./valida-idade.js";
 const camposDoFormulario = document.querySelectorAll("[required]");
+const formulario = document.querySelector("[data-formulario]");
 
+formulario.addEventListener("submit",(e) =>{
+    e.preventDefault();
+
+    const listaRespostas ={
+        "nome": e.target.elements["nome"].value,
+        "email": e.target.elements["email"].value,
+        "rg": e.target.elements["rg"].value,
+        "cpf": e.target.elements["cpf"].value,
+        "aniversario": e.target.elements["aniversario"].value,
+    }
+    localStorage.setItem("cadastro", JSON.stringify(listaRespostas))
+    window.location.href = "./abrir-conta-form-2.html"
+})
 
 camposDoFormulario.forEach((campo)=>{
     campo.addEventListener("blur",()=>verificaCampo(campo))
     campo.addEventListener("invalid", evento => evento.preventDefault())
+    console.log(campo.parentNode)
     /*O event listener do tipo invalid será ativado quando um dos campos do formulário for inválido, ou seja, o usuário não digitou as informações da maneira correta. Como queremos personalizar as mensagens de erro, usamos o preventDefault para bloquear a resposta padrão do html que é o aparecimento de um pop-up dizendo que está inválido.*/ 
 })
 const tiposDeErro = [
@@ -48,6 +63,7 @@ const mensagens = {
 
 function verificaCampo(campo){
     let mensagem = "";
+    campo.setCustomValidity('') /*O comando usado aqui serve para resetar a validação e apagar possíveis mensagens de erro caso o usuário já tenha digitado e encontrado erros, e queira digitar novos dados, fazendo então uma nova validação*/
     if(campo.name == "cpf" && campo.value.length >= 11){
         ehUmCpf(campo)
     }
