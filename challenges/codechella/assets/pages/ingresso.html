@@ -58,27 +58,28 @@
                     <div class="ingresso__formulario__container">
                         <label for="nome" class="input__label">Nome Completo:</label>
                         <input type="text" name="nome" id="nome" class="input" placeholder="digite seu nome" required>
+                        <span class="mensagem-erro"></span>
                         
                     </div>
                     <div class="ingresso__formulario__container">
                         <label for="nome" class="input__label">Email:</label>
                        <input type="email" name="email" class="input" id="email" placeholder="exemplo@gmail.com" required>
-                        
+                        <span class="mensagem-erro"></span>
                     </div>
                     <div class="ingresso__formulario__container div__dupla">
                         <div class="div__dupla__item">
                             <label for="nome" class="input__label">Tipo de Ingresso:</label>
-                            <select name="ingresso" id="ingresso" class="input">
+                            <select name="ingresso" id="ingresso" class="input" required>
                                 <option value="Pista">Pista</option>
                                 <option value="Pista Premium">Pista Premium</option>
                                 <option value="Cadeira Terreo">Cadeiras Térreo</option>
                                 <option value="Cadeira Superior">Cadeiras Superiores</option>
-                            </select>
+                            </select><span class="mensagem-erro"></span>
                         </div>
                         
                         <div class="container__data__nascimento div__dupla__item">
                                 <label for="nome" class="input__label">Data de Nascimento:</label>
-                                <input type="date" name="data" class="input" id="data" required>
+                                <input type="date" name="data" class="input" id="data" required><span class="mensagem-erro"></span>
                         </div>
         
                        
@@ -118,9 +119,11 @@
 
     </footer>
     <script src="../js/menu-responsivo.js"></script>
-    <script src="../js/ingresso/imprime-ingresso.js" type="module"></script>
+   <!--  <script src="../js/ingresso/imprime-ingresso.js" type="module"></script> -->
+   <script src="../js/ingresso/armazena-dados.js"></script>
     <script src="../js/trocar-tema-pages.js"></script>
     <script src="../js/ingresso/troca-tema-ingresso.js"></script>
+    <script src="../js/ingresso/valida.js" type="module"></script>
     
    
     

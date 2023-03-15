@@ -5,6 +5,9 @@
     
 
 }
+.mensagem-erro{
+    color: red;
+}
 .ingresso__titulo{
     text-align: center;
     font-family: var(--font-banner);
