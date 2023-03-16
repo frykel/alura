@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <Banner/>
       <CampoTexto/>
+      <CampoTexto/>
       
     </div>
   );
