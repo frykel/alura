@@ -9,6 +9,7 @@ const Formulario = () => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    /*No r*/
 const aoSalvar = (evento) =>{
     evento.preventDefault()
     
