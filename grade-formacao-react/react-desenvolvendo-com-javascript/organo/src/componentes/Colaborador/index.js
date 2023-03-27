@@ -4,8 +4,8 @@ const Colaborador = (props) =>{// pode ser escrito como parâmetro de função J
     return(
         <div className='colaborador'>
             <div className='cabecalho'>
-                <img src = {props.imagem} alt = {props.nome}/>{/*src={imagem} por exemplo*/}
-
+                <img src = {props.imagem} alt = {props.imagem}/>{/*src={imagem} por exemplo*/}
+                
             </div>
             <div className='rodape'>
                 <h4>{props.nome}</h4>

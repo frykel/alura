@@ -54,6 +54,7 @@ function App() {
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]) //esse método cria uma novo array com os dados dos outros
     //colaboradores (...colaboradores) e adiciona o novo (colaborador)
+    console.log(colaboradores)
 }
   return (
     <div className="App">
@@ -67,7 +68,7 @@ function App() {
       colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
     </div>
-  );
+  )
 }
 
 export default App;
