@@ -3,8 +3,8 @@ import './Colaborador.css'
 const Colaborador = (props) =>{// pode ser escrito como parâmetro de função JS: Time = ({nome,cargo,imagem}), ai neste caso se elimina a necessidade de escrever props
     return(
         <div className='colaborador'>
-            <div className='cabecalho'>
-                <img src = {props.imagem} alt = {props.imagem}/>{/*src={imagem} por exemplo*/}
+            <div className='cabecalho' style={{backgroundColor : props.corDeFundo}}>
+                <img src = {props.imagem} alt = {props.nome}/>{/*src={imagem} por exemplo*/}
                 
             </div>
             <div className='rodape'>

@@ -9,7 +9,7 @@ const Formulario = (props) => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [time, setTime] = useState('Programação')
     /*Os setAlgumacoisa também são chamados de Hooks no React, conforme a sintaxe acima. Para que a renderização aconteça da forma como queremos devemos usar o useState no formulário.*/
     /*No r*/
 const aoSalvar = (evento) =>{
