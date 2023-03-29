@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
+import Rodape from './componentes/Rodape';
 import Time from './componentes/Time';
 
 function App() {
@@ -42,8 +43,114 @@ function App() {
       corSecundaria: '#FFEEDF'
     }
   ]
-
-  const [colaboradores, setColaboradores] = useState([])
+  const inicial = [
+      { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Programação"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Programação"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Programação"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Front-End"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Front-End"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Front-End"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Data Science"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Data Science"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Data Science"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Devops"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Devops"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Devops"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "UX e Design"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "UX e Design"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "UX e Design"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Mobile"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Mobile"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Mobile"
+    },
+    { nome: "Silvio Claudio Fernandes",
+        cargo: "COO",
+        imagem: "https://github.com/frykel.png",
+        time: "Inovação e Gestão"
+      },
+      { nome: "Ismar Fernandes Sobrinho",
+        cargo:  "CFO",
+        imagem: "https://github.com/frykel.png",
+        time: "Inovação e Gestão"
+      },
+      { nome: "Francimar Fernandes",
+      cargo: "CEO",
+      imagem: "https://github.com/frykel.png",
+      time: "Inovação e Gestão"
+    }
+  ]
+  const [colaboradores, setColaboradores] = useState(inicial)
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     debugger
@@ -62,7 +169,7 @@ function App() {
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}   
-
+      <Rodape/>
     </div>
   );
 }
