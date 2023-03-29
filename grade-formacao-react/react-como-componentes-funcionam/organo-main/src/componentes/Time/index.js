@@ -12,7 +12,7 @@ const Time = (props) => {
 
                     
 
-                    return <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/>
+                    return <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} aoDeletar ={props.aoDeletar}/>
                 } )}
             </div>
         </section> 
