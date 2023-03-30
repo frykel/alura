@@ -41,6 +41,7 @@ align-items: center;
     color: #FFF;
     background-color: #013c57;
     width: 10%;
+    min-width: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     font-size: 1.1rem;
