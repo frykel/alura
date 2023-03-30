@@ -1,0 +1,47 @@
+
+.body{
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+.text p{
+    width: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.password{
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+.senha{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.senha label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.imagem__construcao{
+    width: 30%;
+}
+.botao-senha{
+    cursor: pointer;
+    padding: 10px;
+    color: #FFF;
+    background-color: #013c57;
+    width: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
