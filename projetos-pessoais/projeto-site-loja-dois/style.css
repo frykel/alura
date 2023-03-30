@@ -57,7 +57,8 @@ flex-direction: row;
     margin-right: 10px;
 }
 .produtos-setor-titulo{
-   cd
+   margin: 10px;
+   font-weight: bold;
     
 }
 .produtos-setor-item{

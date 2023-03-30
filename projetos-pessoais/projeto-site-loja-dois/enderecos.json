@@ -55,7 +55,7 @@
 "cama":[
     {
         "id": 1,
-        "titulo": "Crepe",
+        "titulo": "Colcha",
       "descricao": "3 mil visualizações",
       "url": "../html/crepe.html"
     }
@@ -63,7 +63,7 @@
 "decor":[
     {
         "id": 1,
-        "titulo": "Crepe",
+        "titulo": "Almofadas",
       "descricao": "3 mil visualizações",
       "url": "../html/crepe.html"
     }
@@ -72,7 +72,7 @@
 "banho":[
     {
         "id": 1,
-        "titulo": "Crepe",
+        "titulo": "Toalha",
       "descricao": "3 mil visualizações",
       "url": "../html/crepe.html"
     }
@@ -80,7 +80,7 @@
 "mesa":[
     {
         "id": 1,
-        "titulo": "Crepe",
+        "titulo": "Serviço Americano",
       "descricao": "3 mil visualizações",
       "url": "../html/crepe.html"
     }
