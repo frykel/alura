@@ -19,13 +19,13 @@ async function exibirLinksNaTela(departamento,num){
     
     produtosDepartamento[num].appendChild(tituloDoSetor)
 
-    linksApi.forEach(links => produtosDepartamento[num].appendChild(criaLink(links.titulo,links.urlIndex)));
+    linksApi.forEach(links => produtosDepartamento[num].appendChild(criaLink(links.titulo,links.urlindex)));
 
 }
 function criaLink(nome,link){
     const categoria = document.createElement("div")
     categoria.innerHTML =`
-        <a href =${link}>${nome}</a>
+        <a href =${link} class="item">${nome}</a>
     `
     return categoria
 }
