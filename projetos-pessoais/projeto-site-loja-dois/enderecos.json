@@ -46,10 +46,53 @@
 ],
 "festa":[
     {
-        "id": 1,
-        "titulo": "Crepe",
-      "descricao": "3 mil visualizações",
-      "url": "../html/produto-crepe.html"
+      "id": 1,
+      "titulo": "Crepes",
+      "descricao": "Trabalhamos com uma ampla coleção de crepes: mais grossos (Crepe amanda, crepe madame e outros), crepes médios (crepe moss, prada twill, crepe mirela, crepe four way e outros) e crepes finos (musseline, gloss, crepe niunai, crepe bubble e entre outros)",
+      "urlindex": "assets/html/produto-crepe.html",
+      "url": "produto-crepe.html"
+    },
+    {
+      "id": 2,
+      "titulo": "Tules Finos",
+      "descricao": "Muito usado em sobreposições nas saias de moda festa, além de aparecer em babados e detalhes das roupas da moda casual. O tule fino é um tecido indispensável na composição de roupas de festas.",
+      "urlindex": "assets/html/produto-tule.html",
+      "url": "produto-tule.html"
+    },
+    {
+      "id": 3,
+      "titulo": "Tules Bordados",
+      "descricao": "O tule bordado está sempre presente nos vestidos mais luxuosos da moda noiva e moda festa. Pode aparecer em apenas algumas partes do vestido ou por todo ele. Os desenhos conferem mais elegância e sofisticação ao tule. Os desenhos arabescos e florais nunca saem de moda e são os preferidos das noivas, madrinhas e formandas",
+      "urlindex": "assets/html/produto-tule-bordado.html",
+      "url": "produto-tule-bordado.html"
+    },
+    {
+      "id": 4,
+      "titulo": "Tules com Pedraria",
+      "descricao": "Tules bordados com pedrarias são a escolha perfeita para noivas, madrinhas e formandas. São os tecidos mais luxuosos da moda festa. As rendas são conhecidas por serem clássicas e atemporais, além de muito versáteis. Podemos considerá-las curingas do guarda-roupa feminino",
+      "urlindex": "assets/html/produto-tule-pedraria.html",
+      "url": "produto-tule-pedraria.html"
+    },
+    {
+      "id": 5,
+      "titulo": "Paetê",
+      "descricao": "Os tecidos de paetê são brilhosos e elegantes, por isso são muito usados na moda festa. O caimento depende da quantidade e do espaçamento das lantejoulas. A maioria das lantejoulas utilizadas para confecção de paetês são feitas de vinil e costuradas em uma base de tule ou malha, que são tecidos maleáveis. As peças com aplicações mais espaçada costumam ter um caimento mais leve. Já aquelas com maior quantidade de lantejoulas e sem muito ou nenhum espaço entre elas, têm um resultado mais encorpado",
+      "urlindex": "assets/html/produto-paete.html",
+      "url": "produto-tule-paete.html"
+    },
+    {
+      "id": 6,
+      "titulo": "Lurex",
+      "descricao": "O Lurex possui brilho metalizado intenso e marcante. Possui elastano, por isso apresenta elasticidade e se molda de forma confortável ao corpo. É muito usado na moda casual, moda festa e até moda praia. O Lurex são tecidos com bom caimento, semelhante às malharias",
+      "urlindex": "assets/html/produto-lurex.html",
+      "url": "produto-tule-lurex.html"
+    },
+    {
+      "id": 7,
+      "titulo": "Gripir",
+      "descricao": "também chamada de guipir, gripir ou gripier, é uma renda de linho ou seda com motivos em relevo, que formam arabescos. A renda guipure tem visual mais robusto e é considerada a mais nobre das rendas",
+      "urlindex": "assets/html/produto-lurex.html",
+      "url": "produto-tule-lurex.html"
     }
 ],
 "cama":[
