@@ -234,7 +234,7 @@ main{
       
 }
 
-.departamentos-titulo{
+.departamentos-titulo, .vantagens-titulo{
     background-color: #014667;
     border-radius: 5px;
     font-size: 2rem;
@@ -242,6 +242,7 @@ main{
     color: white;
     height: 35px;
     text-shadow: 1px 1px 1px black;
+    padding: 10px;
 }
 .departamentos-container{
     display: flex;
@@ -319,7 +320,7 @@ main{
     height: 100px;
 
 }
-.vantagens{
+.vantagens-beneficios{
     margin-top: 5px;
     display: flex;
     justify-content: space-around;
@@ -327,6 +328,9 @@ main{
     background-color: #014667;
     height: 100px;
     align-items: center;
+}
+.vantagens-lista{
+    list-style:initial;
 }
 .vantagens-item{
     width: 23%;
