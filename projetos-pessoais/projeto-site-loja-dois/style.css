@@ -330,8 +330,12 @@ main{
     align-items: center;
 }
 .vantagens-lista{
-    list-style:initial;
+    list-style:circle;
 }
+.vantagens-lista-item{
+    margin-left: 20px;
+}
+
 .vantagens-item{
     width: 23%;
    text-align: center;
