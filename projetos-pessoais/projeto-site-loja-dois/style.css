@@ -510,6 +510,10 @@ padding-right: 5px;
     .vantagens-cortinas-item{
         width: 48%;
     }
+    .vantagens-estilista-imagens-item{
+        width: 40%;
+        margin: 20px;
+    }
     .copy{
         display: flex;
         flex-direction: column;
@@ -545,6 +549,10 @@ padding-right: 5px;
     }
     .vantagens-cortinas-item{
         width: 98%;
+    }
+    .vantagens-estilista-imagens-item{
+        width: 80%;
+        margin: 20px;
     }
     .departamentos-container-segmento{
         width: 100%;
