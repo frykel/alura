@@ -465,7 +465,8 @@ padding-right: 5px;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
-    width: 97.8%;
+    width: 100%;
+    box-sizing: border-box;
 }
 /*Responsividade*/
 
