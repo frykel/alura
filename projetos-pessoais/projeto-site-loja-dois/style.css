@@ -417,6 +417,7 @@ strong{
     color: #013c57;
     text-shadow: 0.5px 0.5px 0.5px black;
     padding: 10px;
+    box-sizing: border-box;
     
 }
 .rodape-departamentos, .rodape-contatos, .rodape-redes{
