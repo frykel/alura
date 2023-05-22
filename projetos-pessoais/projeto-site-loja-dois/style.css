@@ -237,7 +237,9 @@ main{
 .departamentos-titulo, .vantagens-titulo{
     background-color: #014667;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-family: 'montserrat',sans-serif;
     text-align: center;
     color: white;
     height: 35px;
@@ -414,6 +416,7 @@ strong{
     justify-content: left;
     color: #013c57;
     text-shadow: 0.5px 0.5px 0.5px black;
+    padding: 10px;
     
 }
 .rodape-departamentos, .rodape-contatos, .rodape-redes{
@@ -541,6 +544,9 @@ padding-right: 5px;
     }
     .departamentos-titulo{
         height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .vantagens-item{
