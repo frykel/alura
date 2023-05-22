@@ -7,7 +7,7 @@ body{
 /*background:linear-gradient(#02DAC7,#048F96,#014667);*/
 background-color: orange;
 box-shadow: 0px 3px 2px;
-height: 200px;
+height: 150px;
 }
 
 .cabecalho-logo img{
@@ -190,7 +190,7 @@ color: inherit;
 
 .banner-imagem{
     
-    height: calc(100vh - 283px);
+    height: calc(100vh - 233px);
     width: 100%;
     margin-top: 10px;
 }
@@ -538,11 +538,18 @@ padding-right: 5px;
     iframe{
         height: 250px;
     }
+    .departamentos-titulo{
+        height: 70px;
+    }
     
     .vantagens-item{
         width: 100%;
         line-height: 40px;
         
+    }
+    .vantagens-titulo{
+        height: 60px;
+        margin-top: 20px;
     }
     .vantagens-beneficios{
         height: 100%;
@@ -579,14 +586,19 @@ padding-right: 5px;
     
     .cabecalho{
         flex-direction: column;
-        height: 150px;
+        height: 200px;
+        padding: 20px;
         justify-content: space-around;
+    }
+    .container-cabecalho{
+        height: 200px;
     }
     .cabecalho-texto{
         max-width: 100%;
-        height: 50%;
+        height: 100%;
         margin-bottom: 10px;
         margin-left: 10px;
+        padding-bottom: 30px;
     }
     .cabecalho-logo img{
         width: 100%;
