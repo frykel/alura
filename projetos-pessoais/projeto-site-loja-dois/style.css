@@ -3,16 +3,7 @@ body{
     background-color: lightgray;
 }
 
-.container-cabecalho{
-/*background:linear-gradient(#02DAC7,#048F96,#014667);*/
-background-color: orange;
-box-shadow: 0px 3px 2px;
-height: 150px;
-}
 
-.cabecalho-logo img{
- height: 60px;    
-}
 .cabecalho-lista{
     width: 100%;
     display: flex;
@@ -115,16 +106,6 @@ box-sizing: border-box;
     margin-left: 20px;
     height: 60px;            
 }
-.cabecalho-texto{
-    
-    font-size: 1.3rem;
-    font-family: Pacifico, cursive;
-    color: #014667;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px black;
-    line-height: 40px;
-    margin-right: 20px;
-}
 
 a{
     text-decoration: none;
@@ -134,78 +115,6 @@ a{
     margin-left: 0;
 }
 
-.cabecalho{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;   
-}
-
-
-.atendimento{
-    height: 50px;
-    width: 100%;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #013c57;
-    border-bottom: 2px solid black;
-    box-shadow: 2px 2px 1px black;
-    color: white;
-  
-}
-.atendimento-titulo{
-    font-size: 2rem;
-    color: #013c57;
-    text-shadow: 1px 1px 1px black;
-    font-weight: bold;
-    border-bottom: 1px solid black;
-    width: 100%;
-    text-align: center;
-    
-}
-.atendimento-contato{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-size: 1.2rem;
-padding: 5px;
-color: inherit;
-}
-.atendimento-horario{
-    font-size: 1rem;
-    line-height: 20px;
-}
-.atendimento .rodape-whatsapp,.atendimento .rodape-instagram{
-    color: white;
-}
-
-.banner{
-    position: relative;
-    margin-top: 2px;
-}
-
-.banner-imagem{
-    
-    height: calc(100vh - 233px);
-    width: 100%;
-    margin-top: 10px;
-}
-.banner-texto{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%,-50%);
-    font-family: Pacifico, cursive;
-    font-size: 2.5rem;
-    text-shadow: 0 4px 4px black;
-    color: #00DCC7;
-    text-align: center;
-}
 main{
     width: 90%;
     margin: 0 auto;
@@ -482,36 +391,8 @@ padding-right: 5px;
     .departamentos-container{
         margin-top: 10px;
     }
-    .banner-imagem{
-        height: calc(70vh - 273px);
-    }
-    .banner-texto{
-        font-size: 1.4rem;
-    }
-    .atendimento{
-        height: 110px;
-        line-height: 35px;
-    }
-    .atendimento-contato{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        
-    }
-    .cabecalho{
-        flex-direction: column;
-        height: 150px;
-        justify-content: center;
-        align-items: center;
-    }
-    .cabecalho-texto{
-        max-width: 100%;
-    }
-    .cabecalho-logo img{
-        margin: 10px auto;
-        height: 50%;
-        width: 100%;
-    }
+      
+    
     .vantagens-cortinas-item{
         width: 48%;
     }
@@ -574,44 +455,8 @@ padding-right: 5px;
     }
     .departamentos-container{
         margin-top: 10px;
-    }
-    .banner-imagem{
-        height: calc(70vh - 273px);
-    }
-    .banner-texto{
-        font-size: 1.4rem;
-    }
-    .atendimento{
-        height: 110px;
-        line-height: 35px;
-    }
-    .atendimento-contato{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        
-    }
+    }  
     
-    .cabecalho{
-        flex-direction: column;
-        height: 200px;
-        padding: 20px;
-        justify-content: space-around;
-    }
-    .container-cabecalho{
-        height: 200px;
-    }
-    .cabecalho-texto{
-        max-width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        padding-bottom: 30px;
-    }
-    .cabecalho-logo img{
-        width: 100%;
-        height: 50%;
-    }
     .produtos{
         left:5%;
         max-width: 500px;

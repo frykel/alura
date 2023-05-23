@@ -1,0 +1,42 @@
+.banner{
+    position: relative;
+    margin-top: 2px;
+}
+
+.banner-imagem{
+    
+    height: calc(100vh - 233px);
+    width: 100%;
+    margin-top: 10px;
+}
+.banner-texto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    font-family: Pacifico, cursive;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 4px black;
+    color: #00DCC7;
+    text-align: center;
+}
+
+
+@media screen and (max-width:1220px) {
+.banner-imagem{
+    height: calc(70vh - 273px);
+}
+.banner-texto{
+    font-size: 1.4rem;
+}
+}
+
+@media screen and (max-width:800px) {
+.banner-imagem{
+    height: calc(70vh - 273px);
+}
+.banner-texto{
+    font-size: 1.4rem;
+}
+}
