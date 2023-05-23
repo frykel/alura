@@ -143,7 +143,7 @@ main{
       
 }
 
-.departamentos-titulo, .vantagens-titulo{
+.vantagens-titulo{
     background-color: #014667;
     border-radius: 5px;
     font-size: 1.7rem;
@@ -154,65 +154,6 @@ main{
     height: 35px;
     text-shadow: 1px 1px 1px black;
     padding: 10px;
-}
-.departamentos-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.departamentos-container-segmento{
-    width: 30%;
-    margin: 1%;
-    border: 1px solid black;
-    box-shadow: 2px 2px 1px black;
-    height: 200px;
-    position: relative;
-}
-
-.departamentos-container-segmento:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-    transition: 0.1s;
-}
-.moda{
-    background-image: url('assets/imagens/moda.jpg');
-    background-size: contain;    
-}
-.festa{
-    background-image: url('assets/imagens/festa.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.cama{
-    background-image: url('assets/imagens/cama.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-}
-.banho{
-    background-image: url('assets/imagens/banho.jpg');
-    background-size: contain;
-}
-.decor{
-    background-image: url('assets/imagens/cortina-fundo.jpg');
-    background-size: cover;
-}
-.mesa{
-    background-image: url('assets/imagens/mesa.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.departamentos-container-segmento-texto{   
-    position: absolute;
-    color: white;
-    width: 100%;
-    box-shadow: 2px 2px 1px black;
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: #014667;
-
 }
 .fornecedores{
     border: 1px solid black;
@@ -384,15 +325,7 @@ padding-right: 5px;
 /*Responsividade*/
 
 @media screen and (max-width:1220px) {
-    
-    .departamentos-container-segmento{
-        width: 45%;
-    }
-    .departamentos-container{
-        margin-top: 10px;
-    }
-      
-    
+   
     .vantagens-cortinas-item{
         width: 48%;
     }
@@ -424,12 +357,7 @@ padding-right: 5px;
     iframe{
         height: 250px;
     }
-    .departamentos-titulo{
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  
     
     .vantagens-item{
         width: 100%;
@@ -450,13 +378,7 @@ padding-right: 5px;
         width: 80%;
         margin: 20px;
     }
-    .departamentos-container-segmento{
-        width: 100%;
-    }
-    .departamentos-container{
-        margin-top: 10px;
-    }  
-    
+       
     .produtos{
         left:5%;
         max-width: 500px;
