@@ -49,7 +49,7 @@
 
 @media screen and (max-width:1220px) {
 .banner{
-    height: calc(80vh - 200px);
+   height: 400px;
 }
 .banner-texto{
     font-size: 1.4rem;
@@ -58,7 +58,7 @@
 
 @media screen and (max-width:800px) {
 .banner{
-    height: calc(70vh - 200px);
+    height: 300px;
 }
 .banner-texto{
     font-size: 1.4rem;
