@@ -2,6 +2,7 @@
 const menu = document.querySelector("[data-link]")
 
 const contato = document.querySelector("[data-contato]")
+
 /*
 const produtosSetor=document.querySelectorAll("[data-setor]")
 const setores = ["moda","festa","decor","cama","mesa","banho"]
@@ -68,6 +69,7 @@ produtosSetor.forEach((elemento)=>{
 
 )
 */
+/*
 menu.addEventListener("mouseenter",(elemento)=>{
     
 if(elemento.target.childNodes[3].style.display==="flex"){
@@ -78,14 +80,15 @@ else{
 }
 
 
+
 }
 )
 menu.addEventListener("mouseleave",(elemento)=>{
     elemento.target.childNodes[3].style.display="none"
 })
-
+*/
 contato.addEventListener("mouseenter",(elemento)=>{
-   
+    
     if(elemento.target.childNodes[1].style.display==="flex"){
         elemento.target.childNodes[1].style.display="none"
     }
@@ -96,7 +99,9 @@ contato.addEventListener("mouseenter",(elemento)=>{
     
     
     }
+    
     )
+
     contato.addEventListener("mouseleave",(elemento)=>{
         elemento.target.childNodes[1].style.display="none"
     })
