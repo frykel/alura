@@ -1,0 +1,174 @@
+.atracoes{
+    padding-bottom: 40px;
+}
+.atracoes__titulo{
+    text-align: center;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.lineup__dia__titulo{
+    text-align: center;
+    background-color: var(--title-bg-color);
+    color: white;
+    margin: 20px auto;
+    width: 43%;
+    max-width: 300px;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.lineup__dia{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.linha{
+    width: 35%;
+    border-top: 1px solid var(--title-bg-color);
+    height: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.atracoes__bandas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.atracoes__bandas__l1, .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+    font-family: var(--font-principal);
+    margin-bottom: 25px;
+}
+.atracoes__bandas__l1{
+    font-size: 1.7rem;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+.atracoes__bandas__l2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+.atracoes__bandas__l3{
+    font-size: 1.3rem;
+    font-weight: 500;
+    width: 60%;
+}
+.atracoes__bandas__l4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 50%;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .lineup__dia__titulo{
+        width: 100%;
+        font-size: 1.2rem;
+        height: 40px;
+    }
+    .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+        flex-wrap: wrap;
+        margin-bottom: 0; 
+        justify-content: space-around;        
+        width: 100%;
+       
+
+    }
+    .atracoes__artistas{
+        width: 40%;
+        margin-bottom: 30px;
+        margin: 15px auto;
+    }
+    
+    .atracoes__bandas__l1{
+        font-size: 2rem;
+    }
+    .atracoes__bandas__l2{
+        width: 90%;
+        font-size: 1.6rem;
+    }
+    .atracoes__bandas__l3{
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    .atracoes__bandas__l4{
+        width: 80%;
+        font-size: 1.2rem;
+    }
+    .cinco{
+        width: 29%;
+    }
+    .cinco:nth-child(5){
+        width: 40%;
+        margin-left: 0;
+    }
+    .cinco:nth-child(4){
+        margin-right: 20px;
+    }
+}
+/*Responsividade para Smartphone*/
+
+@media screen and (max-width: 480px){
+    .lineup__dia__titulo{
+        width: 70%;
+        font-size: 1.2rem;
+        height: 40px;
+    }
+    .linha{
+        display: none;
+    }
+    .atracoes__artistas{
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        
+    }
+    .atracoes__bandas__l1, .atracoes__bandas__l2,.atracoes__bandas__l3,.atracoes__bandas__l4{
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+    }
+}
+.lineup__dia__titulo__boreal{
+    text-align: center;
+    background-color: var(--title-bg-color-2);
+    color: white;
+    margin: 20px auto;
+    width: 43%;
+    max-width: 300px;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.linha__boreal{
+    width: 35%;
+    border-top: 1px solid var(--title-bg-color-2);
+    height: 5px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}

@@ -1,0 +1,46 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Silvio Claudio Fernandes",
+      "email": "sergio@gmail.com",
+      "data": "03/02/1994",
+      "ingresso": "Pista"
+    },
+    {
+      "nome": "Silvio Fernandes",
+      "email": "",
+      "data": "",
+      "ingresso": "Pista",
+      "id": 2
+    },
+    {
+      "nome": "Cimar Fernandes",
+      "email": "",
+      "data": "",
+      "ingresso": "Cadeira Superior",
+      "id": 3
+    },
+    {
+      "nome": "Ssilvio",
+      "email": "",
+      "data": "",
+      "ingresso": "Pista",
+      "id": 4
+    },
+    {
+      "nome": "Silvio",
+      "email": "",
+      "data": "",
+      "ingresso": "Pista",
+      "id": 5
+    },
+    {
+      "nome": "Silvio Claudio Fernandes",
+      "email": "silviocla@gmail.com",
+      "data": "2023-03-05",
+      "ingresso": "Cadeira Terreo",
+      "id": 6
+    }
+  ]
+}

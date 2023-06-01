@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/styles/destaques.css">
+    <link rel="stylesheet" href="assets/styles/contato.css">
+    <link rel="stylesheet" href="assets/styles/menu.css">
+    <link rel="stylesheet" href="assets/styles/principal/banner.css">
+    <link rel="stylesheet" href="assets/styles/principal/departamentos.css">
+    <link rel="stylesheet" href="assets/styles/principal/destaques.css">
+    <link rel="stylesheet" href="assets/styles/menu.css">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T6Z06LJ62D">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T6Z06LJ62D');
+</script>
+
+    
 </head>
 <body>
     <section class="atendimento">
@@ -31,83 +48,70 @@
             </div>
             <div class="cabecalho-texto">A sua loja de tecidos, cama, mesa, banho e decoração</div>                  
         </div>
-        <nav class="cabecalho-menu">
+       <nav class="cabecalho-menu">
             <ul class="cabecalho-lista">
-                <li class="cabecalho-lista-link"><a href="index.html">Início
+                <li class="cabecalho-lista-link"><a href="index.html" class="link">Início
 
                 </a></li>
-                <li class="cabecalho-lista-link"><a href="#">Produtos <i class="fa-solid fa-chevron-down"></i> </a>
+          <!--      <li class="cabecalho-lista-link"><div data-link="produtos" class="link">Produtos <i class="fa-solid fa-chevron-down"></i> 
                 <div class="produtos">
-                    <div class="produtos-setor">
-                            <h3 class="produtos-setor-titulo">Moda</h3>  
-
+                    <div class="produtos-setor" data-setor="Moda">
+                        
+                            
+                    </div> 
+                    <div class="produtos-setor" data-setor="Festa">
+                      
+                    </div>
+                     <div class="produtos-setor" data-setor="Cama">
+                       
+                     </div>
+                     <div class="produtos-setor" data-setor="Decor">
+                      
+                     </div>
+                     <div class="produtos-setor" data-setor="Banho">
+                         <h3 class="produtos-setor-titulo">Banho</h3>  
                             <div class="produtos-setor-item">
-                                <span class="item" data-setor="moda">Viscose</span>
-                                <span class="item" data-setor="moda">Linho</span>
-                                <span class="item" data-setor="moda">Malhas</span>
-                                <span class="item" data-setor="moda">Estamparia Exclusiva</span>
-                                <span class="item" data-setor="moda">Alfaiataria</span>
-                            </div>
-                        </div>
-                    <div class="produtos-setor">
-                        <h3 class="produtos-setor-titulo">Festa</h3>  
-                            <div class="produtos-setor-item">
-                                <span class="item" data-setor="festa">Tule Bordado</span>
-                                <span class="item" data-setor="festa">Paetê</span>
-                                <span class="item" data-setor="festa">Crepe</span>
-                                <span class="item" data-setor="festa">Tule fino</span>
-                                <span class="item" data-setor="festa">Lurex</span>
+                                <a class="item" data-setor="banho" href="#">Toalhas</a>
+                                <a class="item" data-setor="banho" href="#">Roupão</a>
+                                <a class="item" data-setor="banho" href="#">Toalha de Piso</a>
                             </div>
                      </div>
-                     <div class="produtos-setor">
-                        <h3 class="produtos-setor-titulo">Cama</h3>  
-                            <div class="produtos-setor-item">
-                                <span class="item" data-setor="cama">Colcha</span>
-                                <span class="item" data-setor="cama">Lençol</span>
-                                <span class="item" data-setor="cama">Travesseiro</span>
-                                <span class="item" data-setor="cama">Protetor de Cama</span>
-                                <span class="item" data-setor="cama">Saia Box</span>
-                                <span class="item" data-setor="cama">Fronha</span>
-                            </div>
-                     </div>
-                     <div class="produtos-setor">
-                        <h3 class="produtos-setor-titulo">Decor</h3>  
-                            <div class="produtos-setor-item">
-                                <span class="item" data-setor="decor">Almofada</span>
-                                <span class="item" data-setor="decor">Manta</span>
-                                <span class="item" data-setor="decor">Peseira</span>
-                                <span class="item" data-setor="decor">Cortina</span>
-                                <span class="item" data-setor="decor">Kit Varão</span>
-                                <span class="item" data-setor="decor">Pingentes e Abraçadeiras</span>
-                                <span class="item" data-setor="decor">Tecidos de Decoração</span>
-                            </div>
-                     </div>
-                     <div class="produtos-setor">
-                        <h3 class="produtos-setor-titulo">Banho</h3>  
-                            <div class="produtos-setor-item">
-                                <span class="item" data-setor="banho">Toalhas</span>
-                                <span class="item" data-setor="banho">Roupão</span>
-                                <span class="item" data-setor="banho">Toalha de Piso</span>
-                            </div>
-                     </div>
-                     <div class="produtos-setor">
+                     <div class="produtos-setor" data-setor="Mesa">
                         <h3 class="produtos-setor-titulo">Mesa</h3>  
                             <div class="produtos-setor-item">
-                                <span class="item" data-setor="mesa">Serviço Americano</span>
-                                <span class="item" data-setor="mesa">Anel p/ Guardanapos</span>
-                            </div>
+                                <a class="item" data-setor="mesa" href="#">Serviço Americano</a>
+                                <a class="item" data-setor="mesa" href="#">Anel p/ Guardanapos</a>
+                            </div> 
                      </div>
                 </div>
 
-                
+            </div>
             </li>
-                <li class="cabecalho-lista-link"><a href="#">Contato <i class="fa-solid fa-chevron-down"></i></a></li>
+            -->
+            <li class="cabecalho-lista-link"><a href="assets/html/historia/historia.html" class="link">História
+
+            </a></li>
+                <li class="cabecalho-lista-link" data-contato><a href="#" class="link">Contato <i class="fa-solid fa-chevron-down"></i>
+                <div class="contatos">
+                    <a href="https://wa.me/+5584999954878" target="_blank" class="rodape-whatsapp">(84) 9 9995-4878</a>
+            <a href="https://instagram.com/servlatec" target="_blank">
+            <p class="rodape-instagram">@servlatec</p></a>
+        </div>    
+                </div>
+                </a></li>
             </ul>
         </nav>
+    
     </header>
     
     <section class="banner">
-        <img src="assets/imagens/banner.jpg" alt="Produtos da Loja" class="banner-imagem">
+        <img src="assets/imagens/banners/cama.jpeg" alt="Vitrine da Cama" class="banner-imagem">
+        <img src="assets/imagens/banners/sofa.JPEG" alt="Vitrine do Sofá">
+        <img src="assets/imagens/banners/vitrine.JPEG" alt="Vitrine da fachada">
+        <img src="assets/imagens/banners/cambraia.png" alt="Cambraia">
+        <div class="arrow prev">&#8249;</div>
+        <div class="arrow next">&#8250;</div>
+        <div class="indicators"></div>
         <h2 class="banner-texto">Venha conhecer nossos produtos!</h2>
     </section>
     <main>
@@ -139,9 +143,48 @@
        
         </section>
         <section class="vantagens">
-            <p class="vantagens-item"> Parcele em até 6x</p>
-            <p class="vantagens-item"> Delivery gratuito em Pau dos Ferros</p>
-            <p class="vantagens-item"> Aceitamos troca em até 7 dias</p>
+
+            <h2 class="vantagens-titulo">Nossos Serviços e Benefícios</h2>
+            <div class="vantagens-cortinas">
+
+                <h3 class="vantagens-cortina-titulo">Cortinas Sob Medida</h3>
+                <div>
+                    <p class="vantagens-cortina-descricao">Venha conhecer nosso serviço de cortina sob medida. Trabalhamos com variados modelos e tecidos para deixar o seu ambiente do jeito que você sempre sonhou. Conheça nossos modelos em <span class="forte">trilho suiço</span> abaixo:
+                        
+                    </p>
+
+                    <div class="vantagens-cortinas-modelos">
+                        <div class="vantagens-cortinas-item">
+                            <h3 class="vantagens-cortinas-item-titulo">Prega Macho</h3>
+                            <img src="assets/imagens/pregas-cortinas/prega-macho.jpeg" alt="Cortina Prega Macho" class="vantagens-cortina-imagem imagem-sombra">
+                        </div>
+                        <div class="vantagens-cortinas-item">
+                            <h3 class="vantagens-cortinas-item-titulo">Prega Americana</h3>
+                            <img src="assets/imagens/pregas-cortinas/prega-americana.jpeg" alt="Cortina Prega Americana" class="vantagens-cortina-imagem imagem-sombra">
+                        </div>
+                        <div class="vantagens-cortinas-item">
+                            <h3 class="vantagens-cortinas-item-titulo">Prega Casa de Abelha</h3>
+                            <img src="assets/imagens/pregas-cortinas/prega-casa-de-abelha.jpeg" alt="Cortina Prega Casa de Abelha" class="vantagens-cortina-imagem imagem-sombra">
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="vantagens-estilista">
+                <h3 class="vantagens-estilista-titulo">Estilista</h3>
+                <p class="vantagens-estilista-descricao">Já pensou em ter aquela roupa do jeitinho que você sempre imaginou? Contamos com um estilista especializado que irá desenhar looks perfeitos para você. </p>
+                <div class="vantagens-estilista-imagens">
+                    <img src="assets/imagens/modelos-estilista/modelo-1.jpeg" alt="Imagem de um Modelo de roupa desenhada no papel" class="vantagens-estilista-imagens-item imagem-sombra">
+                    <img src="assets/imagens/modelos-estilista/modelo-2.jpeg" alt="Imagem de um Modelo de roupa desenhada no papel" class="vantagens-estilista-imagens-item imagem-sombra">
+                    <img src="assets/imagens/modelos-estilista/modelo-3.jpeg" alt="Imagem de um Modelo de roupa desenhada no papel" class="vantagens-estilista-imagens-item imagem-sombra">
+                </div>
+            </div>
+            <div class="vantagens-beneficios">
+                <p class="vantagens-item"> Parcele em até 6x</p>
+                <p class="vantagens-item"> Delivery gratuito em Pau dos Ferros</p>
+                <p class="vantagens-item"> Desconto em compras à vista</p>
+            </div>
             
         </section>
         <section class="mapa">
@@ -184,7 +227,12 @@
             <div>Desenvolvido por Silvio Fernandes</div>
         </section>
     </footer>
+    <script src="assets/js/enderecosIndex.js" type="module"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/principal/banner-rotativo.js"></script>
+   
+    
+    
 </body>
 </html>

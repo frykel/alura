@@ -1,0 +1,118 @@
+.ingresso{
+    margin: 40px auto auto;
+    width: 65%;
+    
+    
+
+}
+.mensagem-erro{
+    color: red;
+}
+.ingresso__titulo{
+    text-align: center;
+    font-family: var(--font-banner);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;  
+}
+.ingresso__formulario__container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px ;
+}
+.input__label{
+    margin-bottom: 10px;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.input{
+    border: none;
+    height: 35px;
+}
+.div__dupla{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.div__dupla__item{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+.botao__compra__ingresso{
+    background-color: var(--banner-color);
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px #444444;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.botao__compra__ingresso:hover{
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  margin-left: 10px;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .div__dupla{
+        flex-direction: column;
+        width: 100%;
+    }
+    .div__dupla__item{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container__data__nascimento{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .div__dupla{
+        flex-direction: column;
+        width: 100%;
+    }
+    .div__dupla__item{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .container__data__nascimento{
+        width: 100%;
+    }
+    .ingresso__titulo{
+        font-size: 1.4rem;
+    }
+    .input__label{
+        font-size: 1.2rem;
+    }
+}
+.botao__compra__ingresso__boreal{
+    background-color: var(--banner-color-2);
+    margin: auto;
+    padding: 10px;
+    border: none;
+    color: white;
+    font-family: var(--font-principal);
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 1px #444444;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}

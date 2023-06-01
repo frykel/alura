@@ -1,0 +1,57 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../imagens/header/desktop/banner-ingresso.jpg");
+    background-size: cover;
+    background-position: top; 
+    opacity: 0.5;
+  }
+
+.banner__texto{    
+
+    font-family: var(--font-banner);
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    opacity: 0.8;
+    
+}
+
+
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .banner{
+        height: 60vh;
+    }
+    .banner__texto{
+        font-size: 2rem;
+       
+    }
+    
+}
+
+/*Responsividade para Smartphone*/
+
+@media screen and (max-width: 480px){
+    .banner{
+        height: 40vh;
+       
+
+    }
+    .banner__texto{
+        font-size: 1.5rem;
+       
+    }
+    
+        
+}

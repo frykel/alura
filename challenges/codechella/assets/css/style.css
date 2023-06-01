@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+:root{
+
+    --primay-bg-color: #BFDAE6;
+    --secondary-bg-color: #FCF0DD;
+    --terciary-bg-color: #facf9dd2;
+    --rodape-color: #FACF9D;
+
+    --primay-bg-color-2: #304968;
+    --secondary-bg-color-2: #008364;
+    --terciary-bg-color-2: #36C1A0;
+    --rodape-color-2: #4650BD;
+
+    --banner-color-2: #4650BD;
+
+
+    --banner-color: #2E7BA2;
+    --title-bg-color: #DF9010;
+
+    --title-bg-color-2: #008364;
+
+    --font-principal: Raleway, Sans-serif;
+    --font-banner: Calistoga, Sans-serif;
+
+    --pc-width: 1440px;
+    --tablet-width: 768px;
+    --mobile-width: 478px;
+
+}
+
+.corpo{
+
+    background-image: linear-gradient(to bottom, var(--primay-bg-color),var(--secondary-bg-color),var(--terciary-bg-color));
+    
+}
+.corpo__boreal{
+
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    color: white;
+}

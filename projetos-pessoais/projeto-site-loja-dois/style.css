@@ -1,55 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{
     background-color: lightgray;
 }
-
-.container-cabecalho{
-/*background:linear-gradient(#02DAC7,#048F96,#014667);*/
-background-color: orange;
-box-shadow: 0px 3px 2px;
-height: 200px;
-}
-
-.cabecalho-logo img{
- height: 60px;    
-}
-.cabecalho-lista{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.cabecalho-lista-link{
-    padding: 5px 35px;
-    font-size: 1.5rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-}
-.cabecalho-lista-link a{
-    color: white;
-}
-
-.cabecalho-lista-link:active{
-    text-decoration: underline;
-    position: relative;
-}
 .produtos{
 position: absolute;
+left: 20%;
 box-shadow: 0px 8px 16px 0px black;
 min-width: 250px;
-max-width: 600px;
-max-height: 50vh;
+max-width: 800px;
+max-height: 60vh;
 width: 100%;
 z-index: 1;
 margin-top: 5px;
 background-color: lightgray;
+color: black;
 border-radius: 5px;
 padding: 10px;
-display: flex;
+display: none;
 flex-wrap: wrap;
 flex-direction: row;
+box-sizing: border-box;
 
 
 }
+
 .produtos-setor{
     width: 23%;
     display: flex;
@@ -57,128 +31,33 @@ flex-direction: row;
     margin-right: 10px;
 }
 .produtos-setor-titulo{
-    margin-bottom: 20px;
-    
-    padding: 3px;
-    text-align: center;
-    text-shadow: 1px 1px 1px #013c57;
-    font-size: 1.3rem;
+   margin: 10px;
+   font-size: 1.3rem;
     
 }
 .produtos-setor-item{
     display: flex;
     flex-direction: column;
 }
+
 .item{
-    margin-bottom: 10px;
-    font-size: 1rem;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+
+}
+.item:hover{
+    font-weight: bold;
 }
 .produtoss{
     display: flex;
 }
 
-.cabecalho-menu{
-    background-color: #014667;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-}
-.cabecalho-logo{
-    margin-left: 20px;
-    height: 60px;            
-}
-.cabecalho-texto{
-    
-    font-size: 1.3rem;
-    font-family: Pacifico, cursive;
-    color: #014667;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px black;
-    line-height: 40px;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
 .home{
     margin-left: 0;
 }
 
-.cabecalho{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;   
-}
-
-
-.atendimento{
-    height: 50px;
-    width: 100%;
-    margin: 0px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #013c57;
-    border: 2px solid black;
-    box-shadow: 2px 2px 1px black;
-    color: white;
-  
-}
-.atendimento-titulo{
-    font-size: 2rem;
-    color: #013c57;
-    text-shadow: 1px 1px 1px black;
-    font-weight: bold;
-    border-bottom: 1px solid black;
-    width: 100%;
-    text-align: center;
-    
-}
-.atendimento-contato{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-size: 1.2rem;
-padding: 5px;
-color: inherit;
-}
-.atendimento-horario{
-    font-size: 1rem;
-    line-height: 20px;
-}
-.atendimento .rodape-whatsapp,.atendimento .rodape-instagram{
-    color: white;
-}
-
-.banner{
-    position: relative;
-    margin-top: 2px;
-}
-
-.banner-imagem{
-    
-    height: calc(100vh - 283px);
-    width: 100%;
-    margin-top: 10px;
-}
-.banner-texto{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%,-50%);
-    font-family: Pacifico, cursive;
-    font-size: 2.5rem;
-    text-shadow: 0 4px 4px black;
-    color: #00DCC7;
-    text-align: center;
-}
 main{
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 3px;
 }
@@ -205,73 +84,17 @@ main{
       
 }
 
-.departamentos-titulo{
+.vantagens-titulo{
     background-color: #014667;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-family: 'montserrat',sans-serif;
     text-align: center;
     color: white;
     height: 35px;
     text-shadow: 1px 1px 1px black;
-}
-.departamentos-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.departamentos-container-segmento{
-    width: 30%;
-    margin: 1%;
-    border: 1px solid black;
-    box-shadow: 2px 2px 1px black;
-    height: 200px;
-    position: relative;
-}
-
-.departamentos-container-segmento:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-    transition: 0.1s;
-}
-.moda{
-    background-image: url('assets/imagens/moda.jpg');
-    background-size: contain;    
-}
-.festa{
-    background-image: url('assets/imagens/festa.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.cama{
-    background-image: url('assets/imagens/cama.jpg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-}
-.banho{
-    background-image: url('assets/imagens/banho.jpg');
-    background-size: contain;
-}
-.decor{
-    background-image: url('assets/imagens/cortina-fundo.jpg');
-    background-size: cover;
-}
-.mesa{
-    background-image: url('assets/imagens/mesa.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.departamentos-container-segmento-texto{   
-    position: absolute;
-    color: white;
-    width: 100%;
-    box-shadow: 2px 2px 1px black;
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: #014667;
-
+    padding: 10px;
 }
 .fornecedores{
     border: 1px solid black;
@@ -290,14 +113,75 @@ main{
     height: 100px;
 
 }
-.vantagens{
+.vantagens-beneficios{
     margin-top: 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     color: white;
     background-color: #014667;
     height: 100px;
     align-items: center;
+}
+.vantagens-cortina-imagem{
+    
+    width: 100%;
+}
+.vantagens-cortina-titulo,.vantagens-estilista-titulo{
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.7rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px #800247;
+}
+.vantagens-cortina-descricao,.vantagens-estilista-descricao{
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.7rem;
+    
+
+}
+.vantagens-cortinas-modelos{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.vantagens-cortinas-item{
+    width: 30%;
+}
+.forte{
+    text-decoration: underline;
+}
+.imagem-sombra{
+    box-shadow: 4px 4px 1px black;
+    border-radius: 40px;
+    
+}
+.vantagens-cortinas-item-titulo{
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: #800247;
+    color: white;
+    text-shadow: 1px solid black;
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 1px 1px black;
+
+}
+.vantagens-estilista-imagens{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+.vantagens-estilista-imagens-item{
+    width: 30%;
 }
 .vantagens-item{
     width: 23%;
@@ -323,6 +207,8 @@ strong{
     justify-content: left;
     color: #013c57;
     text-shadow: 0.5px 0.5px 0.5px black;
+    padding: 10px;
+    box-sizing: border-box;
     
 }
 .rodape-departamentos, .rodape-contatos, .rodape-redes{
@@ -374,47 +260,19 @@ padding-right: 5px;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
-    width: 97.8%;
+    width: 100%;
+    box-sizing: border-box;
 }
 /*Responsividade*/
 
 @media screen and (max-width:1220px) {
-    
-    .departamentos-container-segmento{
-        width: 45%;
+   
+    .vantagens-cortinas-item{
+        width: 48%;
     }
-    .departamentos-container{
-        margin-top: 10px;
-    }
-    .banner-imagem{
-        height: calc(70vh - 273px);
-    }
-    .banner-texto{
-        font-size: 1.4rem;
-    }
-    .atendimento{
-        height: 110px;
-        line-height: 35px;
-    }
-    .atendimento-contato{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        
-    }
-    .cabecalho{
-        flex-direction: column;
-        height: 100px;
-        justify-content: center;
-        align-items: center;
-    }
-    .cabecalho-texto{
-        max-width: 100%;
-    }
-    .cabecalho-logo img{
-        margin: 10px auto;
-        height: 50%;
-        width: 100%;
+    .vantagens-estilista-imagens-item{
+        width: 40%;
+        margin: 20px;
     }
     .copy{
         display: flex;
@@ -440,51 +298,31 @@ padding-right: 5px;
     iframe{
         height: 250px;
     }
-    .vantagens{
-        flex-direction: column;
-        height: 150px;
-    }
+  
+    
     .vantagens-item{
         width: 100%;
         line-height: 40px;
         
     }
-    .departamentos-container-segmento{
-        width: 100%;
+    .vantagens-titulo{
+        height: 60px;
+        margin-top: 20px;
     }
-    .departamentos-container{
-        margin-top: 10px;
+    .vantagens-beneficios{
+        height: 100%;
     }
-    .banner-imagem{
-        height: calc(70vh - 273px);
+    .vantagens-cortinas-item{
+        width: 98%;
     }
-    .banner-texto{
-        font-size: 1.4rem;
+    .vantagens-estilista-imagens-item{
+        width: 80%;
+        margin: 20px;
     }
-    .atendimento{
-        height: 110px;
-        line-height: 35px;
-    }
-    .atendimento-contato{
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        
-    }
-    .cabecalho{
-        flex-direction: column;
-        height: 100px;
-        justify-content: space-around;
-    }
-    .cabecalho-texto{
-        max-width: 100%;
-        height: 50%;
-        margin-bottom: 10px;
-        margin-left: 10px;
-    }
-    .cabecalho-logo img{
-        width: 100%;
-        height: 50%;
+       
+    .produtos{
+        left:5%;
+        max-width: 500px;
     }
 }
 

@@ -1,0 +1,85 @@
+.rodape{
+    background-color: var(--rodape-color);
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.rodape__informacoes__logo{
+
+    width: 60%;
+}
+
+.rodape__informacoes__contato__descricao{
+    font-family: var(--font-principal);
+}
+
+.rodape__copy{
+    font-family: var(--font-principal);
+    line-height: 2rem;
+}
+
+/*Responsividade para Tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+
+    .rodape{
+        flex-direction: column;
+        
+    }
+    .rodape__informacoes__container{
+       display: flex;
+       justify-content: center;
+       margin-bottom: 20px;
+    }
+    .rodape__copy{
+        display: flex;
+    }
+    .rodape__copy__texto{
+        margin-right: 5px;
+        font-size: 0.9rem;
+    }
+
+
+}
+@media screen and (max-width: 480px){
+    
+    .rodape{
+        flex-direction: column;
+        
+    }
+    .rodape__informacoes__container{
+       display: flex;
+       justify-content: center;
+       margin-bottom: 20px;
+       align-items: center;
+    }
+    .rodape__informacoes__contato{
+        text-align: center;
+    }
+    
+    .rodape__copy{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .rodape__copy__texto{
+        margin-right: 5px;
+        font-size: 0.9rem;
+    }
+    .rodape__informacoes__titulo{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        
+    }
+
+}
+.rodape__boreal{
+    background-color: var(--rodape-color-2);
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}

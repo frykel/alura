@@ -1,0 +1,95 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "titulo": "Conhecendo a linguagem Go | Hipsters.Talks",
+      "descricao": "3 mil visualizações",
+      "url": "https://www.youtube.com/embed/y8FeZMv37WU",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 2,
+      "titulo": "Desmistificando mobile - Linguagens e Frameworks",
+      "descricao": "1,5 mil visualizações",
+      "url": "https://www.youtube.com/embed/fmu1LQvZhms",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 3,
+      "titulo": "Orientação a objetos com Roberta Arcoverde | #Hipster...",
+      "descricao": "30 mil visualizações",
+      "url": "https://www.youtube.com/embed/jpuJ1qrluoU",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 4,
+      "titulo": "Linguagens e ferramentas usadas em Ciência de Dados...",
+      "descricao": "2,5 mil visualizações",
+      "url": "https://www.youtube.com/embed/h83e1aAM5xQ",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 5,
+      "titulo": "Reencontrando a paixão por programar: Beatriz Ramerindo",
+      "descricao": "1,2 mil visualizações",
+      "url": "https://www.youtube.com/embed/CnB3eLTrkn4",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 6,
+      "titulo": "Híbridos: Flutter e React Native | Desmistificando..",
+      "descricao": "1,6 mil visualizações",
+      "url": "https://www.youtube.com/embed/vf9P_PycgRw",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 7,
+      "titulo": "Data Science na prática- com Jéssika Ribeiro do Grupo...",
+      "descricao": "3,2 mil visualizações",
+      "url": "https://www.youtube.com/embed/Nts3P35mHzE",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "id": 8,
+      "titulo": "baNaNa | Memes do JavaScript #2",
+      "descricao": "1,2 mil visualizações",
+      "url": "https://www.youtube.com/embed/HBVCsBtsmzA",
+      "imagem": "https://github.com/MonicaHillman/aluraplay-requisicoes/blob/main/img/logo.png?raw=true"
+    },
+    {
+      "titulo": "[Casa do Código] Live de lançamento: Navegando no Universo da Programação",
+      "descricao": "1 mil visualizações",
+      "url": "https://www.youtube.com/embed/z43rcfjXOxU",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 9
+    },
+    {
+      "titulo": "Educação coorporativa",
+      "descricao": "9 mil visualizações",
+      "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 10
+    },
+    {
+      "titulo": "Educação coorporativa",
+      "descricao": "4 mil visualizações",
+      "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 11
+    },
+    {
+      "titulo": "Educação coorporativa",
+      "descricao": "7 mil visualizações",
+      "url": "https://www.youtube.com/embed/IGFSiBJIXFQ",
+      "imagem": "https://purr.objects-us-east-1.dream.io/i/OoNx6.jpg",
+      "id": 12
+    },
+    {
+      "titulo": "Coleção Essence",
+      "descricao": "3 mil visualizações",
+      "url": "https://www.youtube.com/embed/8eORkljb1F4",
+      "imagem": "data:image/jpeg;base64,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",
+      "id": 13
+    }
+  ]
+}
