@@ -6,7 +6,7 @@ const produtos = {
     festa: ['Tule Bordado', 'Tecidos de Festa', 'Tule com Pedraria', 'Crepes', 'Paête', 'Lurex'],
     cama: ['Colcha','Travesseiro','Protetor de Colchão', 'Lençol', 'Fronha'],
     decor: ['Cortina','Almofada','Tapetes','Tecido p/ Sofa','Pingentes','Mantas','Kit Cozinha', 'Plásticos'],
-    banho:['Toalha','Roupão'],
+    banho:['Toalha','Roupão', 'Piso de banheiro'],
     mesa:['Sousplat',"Serviço Americano",'Anel p/ Guardanapos', 'Guardanapos']      
     
 }
