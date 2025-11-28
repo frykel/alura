@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma Tributária 2026: Impacto no Simples Nacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Warm Professional -->
+    <!-- Primary: Warm Slate/Charcoal (Text), Secondary: Terracotta/Clay (Accents), Background: Warm Beige/Stone -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        clay: {
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                        },
+                        sage: {
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            800: '#166534',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fafaf9; color: #292524; }
+        h1, h2, h3, h4 { font-family: 'Merriweather', serif; }
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+            max-height: 400px; 
+        } 
+        @media (min-width: 768px) { 
+            .chart-container { height: 350px; } 
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #e7e5e4;
+            z-index: 0;
+        }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .active-tab { border-bottom: 2px solid #c2410c; color: #c2410c; font-weight: 600; }
+        .inactive-tab { color: #57534e; }
+        .inactive-tab:hover { color: #c2410c; }
+    </style>
+
+    <!-- Application Structure Plan: 
+         1. Hero: Hook the user with the "Before vs After" essence (Goods vs Services -> Unified).
+         2. Timeline: Interactive slider/cards to navigate the 2026-2032 transition period.
+         3. Simples Nacional Module: Interactive "Recommender" where user selects their profile and sees Unified vs Regular regime comparison.
+         4. Financial Impact Module: "Split Payment Simulator" and Chart comparing Cash Flow dynamics (Liquidity vs Time).
+         5. Preparation Checklist: Interactive list for business owners to track readiness.
+    -->
+    <!-- Visualization & Content Choices:
+         - Timeline: Vertical interactive list (HTML/JS) to show gradual changes.
+         - Simples Comparison: Logic-based text/card display based on user selection (Retail/Industry/Service).
+         - Cash Flow: Chart.js Bar chart comparing "Money in Hand" vs "Tax Liability" over time (Old vs New).
+         - Split Payment: HTML/CSS Flow diagram animated via class toggles.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-stone-50/95 backdrop-blur shadow-sm border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-clay-700 font-bold text-xl font-serif">Reforma 2026</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#contexto" class="text-stone-600 hover:text-clay-700 text-sm font-medium transition">Contexto</a>
+                    <a href="#transicao" class="text-stone-600 hover:text-clay-700 text-sm font-medium transition">Cronograma</a>
+                    <a href="#simples" class="text-stone-600 hover:text-clay-700 text-sm font-medium transition">Simples Nacional</a>
+                    <a href="#financeiro" class="text-stone-600 hover:text-clay-700 text-sm font-medium transition">Financeiro</a>
+                    <a href="#preparacao" class="bg-clay-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-clay-800 transition">Preparar-se</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="contexto" class="bg-white pt-16 pb-12 border-b border-stone-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-clay-600 font-semibold tracking-wide uppercase text-sm">Novo Regime Tributário Brasileiro</span>
+            <h1 class="mt-4 text-4xl sm:text-5xl font-bold text-stone-900 leading-tight">
+                O fim da distinção entre <br><span class="text-clay-700">Mercadoria e Serviço</span>
+            </h1>
+            <p class="mt-4 text-lg text-stone-600 max-w-2xl mx-auto">
+                A partir de 2026, entenda como o IBS e a CBS transformarão o Simples Nacional, o fluxo de caixa e a gestão tributária da sua empresa.
+            </p>
+            
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                <!-- Before Card -->
+                <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl text-left">
+                    <div class="flex items-center mb-4">
+                        <div class="w-2 h-2 rounded-full bg-stone-400 mr-2"></div>
+                        <h3 class="font-bold text-stone-500 uppercase text-xs">Até 2025 (Mundos Diferentes)</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-stone-200 pb-2">
+                            <span class="text-stone-700 font-medium">Serviços</span>
+                            <span class="bg-stone-200 text-stone-700 px-2 py-1 rounded text-xs font-bold">ISS (~5%)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-stone-700 font-medium">Mercadorias</span>
+                            <span class="bg-stone-200 text-stone-700 px-2 py-1 rounded text-xs font-bold">ICMS (~20%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- After Card -->
+                <div class="bg-clay-50 border border-clay-100 p-6 rounded-xl text-left shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-clay-200 text-clay-800 text-[10px] px-2 py-1 font-bold rounded-bl">IVA MODERNO</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-2 h-2 rounded-full bg-clay-600 mr-2"></div>
+                        <h3 class="font-bold text-clay-700 uppercase text-xs">A Partir de 2026 (Unificado)</h3>
+                    </div>
+                    <div class="flex flex-col justify-center h-full space-y-2">
+                        <p class="text-stone-800 font-semibold text-lg">IBS + CBS</p>
+                        <p class="text-sm text-stone-600">Fato gerador amplo e único para bens, direitos e serviços.</p>
+                        <p class="text-xs text-clay-700 font-medium mt-2">Neutro e Uniforme</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- SECTION 1: Timeline -->
+        <section id="transicao">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-stone-900">Cronograma de Transição</h2>
+                <p class="text-stone-600 mt-2">A mudança não acontece da noite para o dia. Entenda as fases de 2026 a 2032.</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="timeline-line hidden md:block"></div>
+                <div class="space-y-8" id="timeline-container">
+                    <!-- Javascript will populate this -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Simples Nacional Options -->
+        <section id="simples" class="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+            <div class="p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold text-stone-900 mb-4">O Novo Simples Nacional</h2>
+                        <p class="text-stone-600 mb-6">
+                            A partir de 2027, empresas do Simples terão que decidir como apurar o IBS e a CBS. A escolha errada pode custar competitividade ou aumentar a complexidade burocrática.
+                        </p>
+                        
+                        <div class="bg-stone-50 rounded-lg p-6 border border-stone-200">
+                            <h3 class="font-bold text-stone-800 mb-4 flex items-center">
+                                <span class="bg-clay-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-2">?</span>
+                                Qual é o seu perfil?
+                            </h3>
+                            <p class="text-sm text-stone-500 mb-4">Selecione sua atividade para ver a recomendação:</p>
+                            
+                            <div class="grid grid-cols-1 gap-2">
+                                <button onclick="updateSimplesRecommendation('varejo_pf')" class="profile-btn bg-white border border-stone-300 hover:border-clay-500 hover:text-clay-700 text-stone-600 py-2 px-4 rounded text-left transition font-medium focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-opacity-50" data-id="varejo_pf">
+                                    🛒 Comércio Varejista (Venda para Consumidor Final)
+                                </button>
+                                <button onclick="updateSimplesRecommendation('b2b')" class="profile-btn bg-white border border-stone-300 hover:border-clay-500 hover:text-clay-700 text-stone-600 py-2 px-4 rounded text-left transition font-medium focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-opacity-50" data-id="b2b">
+                                    🏭 Indústria ou B2B (Venda para Empresas)
+                                </button>
+                                <button onclick="updateSimplesRecommendation('servicos_simples')" class="profile-btn bg-white border border-stone-300 hover:border-clay-500 hover:text-clay-700 text-stone-600 py-2 px-4 rounded text-left transition font-medium focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-opacity-50" data-id="servicos_simples">
+                                    💼 Serviços de Baixo Custo (Advocacia, Consultoria)
+                                </button>
+                                <button onclick="updateSimplesRecommendation('servicos_insumos')" class="profile-btn bg-white border border-stone-300 hover:border-clay-500 hover:text-clay-700 text-stone-600 py-2 px-4 rounded text-left transition font-medium focus:outline-none focus:ring-2 focus:ring-clay-500 focus:ring-opacity-50" data-id="servicos_insumos">
+                                    🏥 Serviços com Insumos (Clínicas, Laboratórios)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="recommendation-card" class="bg-stone-100 rounded-xl p-8 flex flex-col justify-center h-full transition-all duration-300">
+                        <div class="text-center">
+                            <span class="text-4xl mb-4 block">👋</span>
+                            <h3 class="text-xl font-bold text-stone-800">Selecione um perfil ao lado</h3>
+                            <p class="text-stone-500 mt-2">Descubra se o Regime Unificado ou Regular é melhor para o seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-12 border-t border-stone-100">
+                    <h3 class="font-bold text-lg text-stone-800 mb-6 text-center">Comparativo Geral dos Regimes</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-stone-600">
+                            <thead class="text-xs text-stone-500 uppercase bg-stone-50 border-b border-stone-200">
+                                <tr>
+                                    <th class="px-6 py-3">Característica</th>
+                                    <th class="px-6 py-3 text-clay-700">Regime Unificado (Padrão)</th>
+                                    <th class="px-6 py-3 text-blue-700">Regime Regular (Opcional)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-stone-100">
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-stone-900">Recolhimento IBS/CBS</td>
+                                    <td class="px-6 py-4">Dentro do DAS (Guia Única)</td>
+                                    <td class="px-6 py-4">Fora do DAS (Separado)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-stone-900">Créditos de Entrada</td>
+                                    <td class="px-6 py-4">🚫 Não toma crédito</td>
+                                    <td class="px-6 py-4">✅ Toma crédito integral</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-stone-900">Crédito para o Cliente</td>
+                                    <td class="px-6 py-4">Apenas Crédito Presumido (Menor)</td>
+                                    <td class="px-6 py-4">Crédito Integral</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-stone-900">Complexidade</td>
+                                    <td class="px-6 py-4"><span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs font-bold">BAIXA</span></td>
+                                    <td class="px-6 py-4"><span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-bold">ALTA</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Financial Impact & Split Payment -->
+        <section id="financeiro">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Chart Section -->
+                <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">O Fim do "Fôlego Financeiro"</h3>
+                    <p class="text-sm text-stone-600 mb-6">
+                        Hoje, o imposto pago 30-60 dias após a venda funciona como capital de giro. Com o <strong>Split Payment</strong>, esse dinheiro nem passa pela sua conta.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="cashFlowChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-xs text-stone-400 text-center">
+                        * Gráfico ilustrativo comparando disponibilidade de caixa no tempo.
+                    </div>
+                </div>
+
+                <!-- Simulation Section -->
+                <div class="bg-stone-900 text-stone-50 p-8 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-clay-600 rounded-full blur-3xl opacity-20 -mr-10 -mt-10"></div>
+                    
+                    <h3 class="text-xl font-bold mb-6 text-white relative z-10">Simulação: Split Payment</h3>
+                    <div class="space-y-6 relative z-10">
+                        <div>
+                            <label class="block text-sm font-medium text-stone-300 mb-2">Valor da Venda (R$)</label>
+                            <input type="number" id="saleValue" value="1000" class="w-full bg-stone-800 border border-stone-700 rounded-md px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-clay-500">
+                        </div>
+                        
+                        <div class="p-4 bg-stone-800 rounded-lg border border-stone-700 space-y-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-stone-400">Pagamento do Cliente</span>
+                                <span class="font-mono text-white" id="displayTotal">R$ 1.000,00</span>
+                            </div>
+                            
+                            <!-- Arrow Animation Area -->
+                            <div class="flex flex-col items-center justify-center py-2 relative h-12">
+                                <div class="absolute w-0.5 h-full bg-stone-600"></div>
+                                <div class="bg-stone-900 px-2 z-10 text-xs text-stone-500">Split Automático</div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-green-900/30 p-3 rounded border border-green-800/50">
+                                    <span class="block text-xs text-green-400 mb-1">Sua Conta (Líquido)</span>
+                                    <span class="block text-lg font-bold text-white font-mono" id="displayNet">R$ 800,00</span>
+                                </div>
+                                <div class="bg-clay-900/30 p-3 rounded border border-clay-800/50">
+                                    <span class="block text-xs text-clay-400 mb-1">Governo (IBS/CBS)</span>
+                                    <span class="block text-lg font-bold text-white font-mono" id="displayTax">R$ 200,00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-xs text-stone-400 bg-stone-800/50 p-3 rounded">
+                            <span class="text-clay-400 font-bold">Atenção:</span> Se a nota fiscal tiver erros (NCM, local), o imposto retido pode ser maior que o devido. A precisão na emissão da nota passa a ser obrigação financeira.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Cashback Note -->
+            <div class="mt-8 bg-sage-100 border border-sage-200 p-6 rounded-lg flex items-start">
+                <div class="text-3xl mr-4">🤝</div>
+                <div>
+                    <h4 class="font-bold text-sage-800">Impacto do Cashback (Cidadania Fiscal)</h4>
+                    <p class="text-sm text-sage-800 mt-1">
+                        Famílias de baixa renda receberão parte do imposto de volta. <strong>Consequência:</strong> Clientes exigirão CPF na nota, forçando a formalização do mercado. Concorrência desleal tende a diminuir.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: New Operations (Apuração) -->
+        <section class="bg-white rounded-xl shadow-sm border border-stone-200 p-8">
+            <h2 class="text-2xl font-bold text-stone-900 mb-8 text-center">A Nova Era da Apuração</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Old Way -->
+                <div class="opacity-70 grayscale transition hover:grayscale-0 hover:opacity-100 duration-300">
+                    <h3 class="text-lg font-bold text-stone-600 mb-4 border-b pb-2">Passado: Homologação</h3>
+                    <ul class="space-y-3 text-sm text-stone-600">
+                        <li class="flex items-start"><span class="mr-2">📝</span> Você calcula tudo manualmente.</li>
+                        <li class="flex items-start"><span class="mr-2">😰</span> Confessa a dívida e corre risco de erro.</li>
+                        <li class="flex items-start"><span class="mr-2">⏳</span> Aguarda 5 anos com medo de revisão fiscal.</li>
+                    </ul>
+                </div>
+
+                <!-- New Way -->
+                <div class="bg-blue-50/50 p-6 rounded-lg border border-blue-100">
+                    <h3 class="text-lg font-bold text-blue-800 mb-4 border-b border-blue-200 pb-2">Futuro: Apuração Assistida</h3>
+                    <ul class="space-y-3 text-sm text-stone-700">
+                        <li class="flex items-start"><span class="mr-2">📄</span> <strong>A Nota Fiscal é a Declaração.</strong></li>
+                        <li class="flex items-start"><span class="mr-2">🤖</span> Receita + Comitê Gestor calculam automático.</li>
+                        <li class="flex items-start"><span class="mr-2">✅</span> Você só valida e corrige a nota se necessário.</li>
+                        <li class="flex items-start text-xs text-blue-600 mt-2 bg-blue-100 p-2 rounded">
+                            "O sistema faz tudo, sua única tarefa é emitir a nota corretamente."
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Preparation Checklist -->
+        <section id="preparacao" class="bg-stone-900 text-white rounded-2xl p-8 md:p-16 text-center">
+            <h2 class="text-3xl font-serif font-bold mb-4">Plano de Ação Imediata</h2>
+            <p class="text-stone-300 mb-10 max-w-2xl mx-auto">Não espere 2026 chegar. Quem não controlar o financeiro e a contabilidade agora, vai perder dinheiro que não enxerga.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left max-w-6xl mx-auto">
+                
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700 hover:border-clay-500 transition cursor-pointer group" onclick="toggleCheck(this)">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl bg-stone-700 w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-clay-600 transition">💰</span>
+                        <div class="w-6 h-6 border-2 border-stone-500 rounded-full flex items-center justify-center check-circle transition"></div>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Organizar Financeiro</h4>
+                    <p class="text-sm text-stone-400">Conciliação diária de PIX e cartões. Separe vendas de taxas. Acabou o fôlego do imposto.</p>
+                </div>
+
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700 hover:border-clay-500 transition cursor-pointer group" onclick="toggleCheck(this)">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl bg-stone-700 w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-clay-600 transition">🧾</span>
+                        <div class="w-6 h-6 border-2 border-stone-500 rounded-full flex items-center justify-center check-circle transition"></div>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Sanear Notas Fiscais</h4>
+                    <p class="text-sm text-stone-400">Revise NCMs e códigos de tributação. Informação errada = Imposto errado.</p>
+                </div>
+
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700 hover:border-clay-500 transition cursor-pointer group" onclick="toggleCheck(this)">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl bg-stone-700 w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-clay-600 transition">💳</span>
+                        <div class="w-6 h-6 border-2 border-stone-500 rounded-full flex items-center justify-center check-circle transition"></div>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Revisar Meios Pagto</h4>
+                    <p class="text-sm text-stone-400">Simule seu líquido real com as novas taxas. Entenda como cada adquirente fará o split.</p>
+                </div>
+
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700 hover:border-clay-500 transition cursor-pointer group" onclick="toggleCheck(this)">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-2xl bg-stone-700 w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-clay-600 transition">🔗</span>
+                        <div class="w-6 h-6 border-2 border-stone-500 rounded-full flex items-center justify-center check-circle transition"></div>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2 text-white">Integrar Contador</h4>
+                    <p class="text-sm text-stone-400">Contabilidade deve espelhar o real. Precisão virou obrigação, não diferencial.</p>
+                </div>
+
+            </div>
+            
+            <p class="mt-8 text-xs text-stone-500">Clique nos cartões para marcar como "Em Progresso"</p>
+        </section>
+
+        <footer class="text-center text-stone-500 text-sm pb-8 pt-4 border-t border-stone-200">
+            <p>Baseado na palestra sobre o Novo Regime Tributário (2025/2026). LC 214/2025.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- DATA STORAGE ---
+        const timelineData = [
+            { year: '2026', title: 'Teste e Integração', desc: 'Início da cobrança teste (IBS 0,1% e CBS 0,9%). Destaque na nota, mas sem aumento real de carga (compensado no PIS/COFINS).' },
+            { year: '2027', title: 'Adeus PIS/COFINS', desc: 'Extinção oficial de PIS/COFINS. IBS e CBS entram em vigor. Novos anexos do Simples passam a valer. Início do Cashback.' },
+            { year: '2028', title: 'Manutenção', desc: 'Alíquotas do CBS e IBS permanecem reduzidas. Período de estabilidade para ajustes.' },
+            { year: '2029-2032', title: 'Transição Gradual', desc: 'Redução progressiva de ICMS e ISS (10% em 2029 até 100% em 2033). O IBS substitui gradualmente os impostos locais.' }
+        ];
+
+        const simplesProfiles = {
+            'varejo_pf': {
+                title: 'Comércio Varejista (PF)',
+                rec: 'Regime Unificado (Padrão)',
+                color: 'bg-green-100 text-green-800 border-green-200',
+                reason: 'Seu cliente final não aproveita crédito. A simplicidade e a carga unificada do Simples tradicional continuam vantajosas.',
+                icon: '🛒'
+            },
+            'b2b': {
+                title: 'Indústria / B2B',
+                rec: 'Regime Regular (Opcional)',
+                color: 'bg-blue-100 text-blue-800 border-blue-200',
+                reason: 'Seus clientes (empresas) precisam de crédito integral. Se você ficar no unificado, transfere pouco crédito e perde competitividade.',
+                icon: '🏭'
+            },
+            'servicos_simples': {
+                title: 'Serviços Baixo Custo',
+                rec: 'Regime Unificado (Padrão)',
+                color: 'bg-green-100 text-green-800 border-green-200',
+                reason: 'Poucos insumos para gerar crédito de entrada. Margem de lucro presumida alta. O padrão costuma ser melhor.',
+                icon: '💼'
+            },
+            'servicos_insumos': {
+                title: 'Serviços c/ Insumos',
+                rec: 'Regime Regular (Opcional)',
+                color: 'bg-blue-100 text-blue-800 border-blue-200',
+                reason: 'Você compra muito insumo (medicamentos, peças). No regular, você abate esse crédito do imposto devido, o que pode reduzir a conta final.',
+                icon: '🏥'
+            }
+        };
+
+        // --- RENDER TIMELINE ---
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            timelineData.forEach((item, index) => {
+                const alignLeft = index % 2 === 0;
+                const html = `
+                    <div class="relative flex items-center justify-between md:justify-normal ${alignLeft ? 'md:flex-row-reverse' : ''} group">
+                        <!-- Line Dot -->
+                        <div class="absolute left-0 md:left-1/2 w-8 h-8 bg-white border-4 border-clay-500 rounded-full transform -translate-x-1/2 md:-translate-x-1/2 z-10 flex items-center justify-center font-bold text-xs text-clay-700 shadow-sm group-hover:scale-110 transition">
+                            ${index + 1}
+                        </div>
+                        
+                        <!-- Empty Space for desktop Layout -->
+                        <div class="hidden md:block w-5/12"></div>
+
+                        <!-- Content Card -->
+                        <div class="w-full md:w-5/12 pl-10 md:pl-0 ${alignLeft ? 'md:pr-8 text-left md:text-right' : 'md:pl-8 text-left'}">
+                            <div class="bg-white p-5 rounded-lg border border-stone-200 shadow-sm card-hover">
+                                <span class="text-clay-600 font-bold text-lg block mb-1">${item.year}</span>
+                                <h3 class="font-bold text-stone-800 mb-2">${item.title}</h3>
+                                <p class="text-sm text-stone-600 leading-relaxed">${item.desc}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+        }
+
+        // --- SIMPLES INTERACTION ---
+        function updateSimplesRecommendation(profileKey) {
+            const data = simplesProfiles[profileKey];
+            const card = document.getElementById('recommendation-card');
+            
+            // Highlight active button
+            document.querySelectorAll('.profile-btn').forEach(btn => {
+                if(btn.dataset.id === profileKey) {
+                    btn.classList.add('border-clay-500', 'bg-clay-50', 'text-clay-800');
+                    btn.classList.remove('border-stone-300', 'bg-white', 'text-stone-600');
+                } else {
+                    btn.classList.remove('border-clay-500', 'bg-clay-50', 'text-clay-800');
+                    btn.classList.add('border-stone-300', 'bg-white', 'text-stone-600');
+                }
+            });
+
+            // Update content with animation reset
+            card.style.opacity = '0';
+            setTimeout(() => {
+                card.className = `rounded-xl p-8 flex flex-col justify-center h-full transition-all duration-300 shadow-md ${data.color}`;
+                card.innerHTML = `
+                    <div class="text-left">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-4xl bg-white/50 w-16 h-16 rounded-full flex items-center justify-center">${data.icon}</span>
+                            <span class="text-xs font-bold uppercase tracking-wider bg-white/60 px-2 py-1 rounded">Recomendação</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">${data.rec}</h3>
+                        <p class="text-sm opacity-90 font-medium mb-6">${data.title}</p>
+                        <div class="bg-white/60 p-4 rounded-lg">
+                            <p class="text-sm leading-relaxed"><strong>Por que?</strong> ${data.reason}</p>
+                        </div>
+                    </div>
+                `;
+                card.style.opacity = '1';
+            }, 200);
+        }
+
+        // --- SPLIT PAYMENT LOGIC ---
+        const saleInput = document.getElementById('saleValue');
+        const displayTotal = document.getElementById('displayTotal');
+        const displayNet = document.getElementById('displayNet');
+        const displayTax = document.getElementById('displayTax');
+
+        // Hypothetical consolidated tax rate for simulation (e.g., 20% total for easy math)
+        // In reality, Simples varies, but we illustrate the mechanics.
+        const TAX_RATE = 0.20; 
+
+        function updateSimulation() {
+            const val = parseFloat(saleInput.value) || 0;
+            const tax = val * TAX_RATE;
+            const net = val - tax;
+
+            displayTotal.innerText = val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            displayNet.innerText = net.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            displayTax.innerText = tax.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        saleInput.addEventListener('input', updateSimulation);
+
+        // --- CHECKLIST INTERACTION ---
+        function toggleCheck(el) {
+            const circle = el.querySelector('.check-circle');
+            if(circle.innerHTML === '') {
+                circle.innerHTML = '✓';
+                circle.classList.add('bg-green-500', 'border-green-500', 'text-white');
+                el.classList.add('border-green-500');
+            } else {
+                circle.innerHTML = '';
+                circle.classList.remove('bg-green-500', 'border-green-500', 'text-white');
+                el.classList.remove('border-green-500');
+            }
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTimeline();
+            updateSimulation();
+
+            // --- CHART.JS CONFIG ---
+            const ctx = document.getElementById('cashFlowChart').getContext('2d');
+            
+            // Comparison: Old Regime (Receives 100%, pays later) vs New Regime (Receives Net)
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Dia 0 (Venda)', 'Dia 15', 'Dia 30 (Imposto Antigo)', 'Dia 45'],
+                    datasets: [
+                        {
+                            label: 'Regime Atual (Antes)',
+                            data: [1000, 1000, 800, 800], // Drops on day 30
+                            backgroundColor: 'rgba(120, 113, 108, 0.5)', // Stone-500
+                            borderColor: 'rgba(120, 113, 108, 1)',
+                            borderWidth: 2,
+                            type: 'line',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Novo Regime (Split Payment)',
+                            data: [800, 800, 800, 800], // Starts lower, stays flat
+                            backgroundColor: 'rgba(194, 65, 12, 0.8)', // Clay-700
+                            borderColor: 'rgba(194, 65, 12, 1)',
+                            borderWidth: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': R$ ' + context.raw;
+                                },
+                                afterBody: function(context) {
+                                    if(context[0].dataIndex === 0 && context[0].datasetIndex === 0) {
+                                        return 'Antes: Você recebe R$1000 e usa o imposto como capital de giro.';
+                                    }
+                                    if(context[0].dataIndex === 0 && context[0].datasetIndex === 1) {
+                                        return 'Novo: O imposto já foi descontado. O caixa é real.';
+                                    }
+                                }
+                            }
+                        },
+                        legend: { position: 'bottom' }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Caixa Disponível (R$)' }
+                        }
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
