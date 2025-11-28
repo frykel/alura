@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body{
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
 }
 .produtos{
 position: absolute;
@@ -12,7 +12,7 @@ max-height: 60vh;
 width: 100%;
 z-index: 1;
 margin-top: 5px;
-background-color: lightgray;
+background-color: rgba(221, 220, 220, 0.952);
 color: black;
 border-radius: 5px;
 padding: 10px;
@@ -212,7 +212,7 @@ strong{
 .rodape{
     height: 300px;
     width: 100%;
-    background:#02bba5;
+    background:#e0e0e0;
     display: flex;
     justify-content: left;
     color: #013c57;
@@ -266,11 +266,12 @@ padding-right: 5px;
     color: white;
     text-align: center;
     text-shadow: 1px 1px 1px black;
-    padding: 20px;
-    font-size: 1.2rem;
+    padding: 10px;
+    font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 30px;
     box-sizing: border-box;
 }
 /*Responsividade*/
@@ -345,6 +346,11 @@ padding-right: 5px;
     .produtos{
         left:5%;
         max-width: 500px;
+    }
+    .copy{
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 60px;
     }
 }
 
