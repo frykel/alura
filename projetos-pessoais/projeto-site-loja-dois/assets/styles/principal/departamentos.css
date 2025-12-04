@@ -1,0 +1,97 @@
+.departamentos-titulo{
+    background-color: #014667;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-family: 'montserrat',sans-serif;
+    text-align: center;
+    color: white;
+    height: 35px;
+    text-shadow: 1px 1px 1px black;
+    padding: 10px;
+}
+.departamentos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.departamentos-container-segmento{
+    width: 30%;
+    margin: 1%;
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px black;
+    height: 200px;
+    position: relative;
+}
+
+.departamentos-container-segmento:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.1s;
+}
+.moda{
+    background-image: url('../../imagens/departamentos/moda.jpg');
+    background-size: contain;    
+}
+.festa{
+    background-image: url('../../imagens/departamentos/festa.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cama{
+    background-image: url('../../imagens/departamentos/cama.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+.banho{
+    background-image: url('../../imagens/departamentos/banho.jpg');
+    background-size: contain;
+}
+.decor{
+    background-image: url('../../imagens/departamentos/cortina-fundo.jpg');
+    background-size: cover;
+}
+.mesa{
+    background-image: url('../../imagens/departamentos/mesa.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.departamentos-container-segmento-texto{   
+    position: absolute;
+    color: white;
+    width: 100%;
+    box-shadow: 2px 2px 1px black;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #014667;
+
+}
+
+
+@media screen and (max-width:1220px) {
+    
+    .departamentos-container-segmento{
+        width: 45%;
+    }
+    .departamentos-container{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+.departamentos-titulo{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.departamentos-container-segmento{
+    width: 100%;
+}
+.departamentos-container{
+    margin-top: 10px;
+}  
+}

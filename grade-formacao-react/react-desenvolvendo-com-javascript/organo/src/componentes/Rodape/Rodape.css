@@ -1,0 +1,15 @@
+.rodape{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #6278F7;
+    height: 200px;
+}
+
+.redes__sociais img{
+    margin-right: 30px;
+}
+
+.texto p {
+    color: #FFF;
+}

@@ -1,0 +1,15 @@
+
+.formulario-container{
+    width: 70%;
+    margin: 100px auto;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+}
+
+.formulario-container form{
+    max-width: 80%;
+    margin: auto;
+    padding: 36px 64px;
+    
+}

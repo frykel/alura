@@ -1,0 +1,143 @@
+header{
+    width: 100%;
+    height: 100px;
+}
+.menu__interativo{
+    display: none;
+}
+.cabecalho__menu__suspenso{
+    display: none;
+}
+.cabecalho__container{
+    height: inherit;
+    width: 100%;
+    background-color: var(--banner-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cabecalho__logo img{
+    width: 70%;
+    height: 80%;
+    
+}
+.cabecalho__div__logo{
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.botao__tema{
+    width: 25%;
+    max-width: 70px;    
+    height: 25px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    font-family: var(--font-principal);
+    font-weight: bold;
+    box-shadow: 2px 2px 1px black;
+}
+.botao__tema:hover{
+    cursor: pointer;
+}
+
+.cabecalho__menu{
+    width: 60%;
+}
+
+.cabecalho__menu__lista{
+    font-family: var(--font-principal);
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.cabecalho__menu__lista__link{
+    text-decoration: none;
+    color:inherit;
+    
+}
+
+/* Responsividade para Tablets: */
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .cabecalho__container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .cabecalho__logo{
+        width: 100%;
+    }
+    .cabecalho__menu{
+        width: 100%;
+        margin-top: 20px;
+    }
+    header{
+        height: 180px;
+    }
+    .cabecalho__logo{
+        height: 80%;
+    }
+    .cabecalho__menu__lista__item{
+        font-size: 1.1rem;
+    }
+}
+/* Responsividade para Smartphones: */
+
+@media screen and (max-width: 480px){
+    header{
+        height: 100px;
+    }
+    .cabecalho__logo{
+        width: 100%;
+    }
+    .cabecalho__menu{
+      display: none;
+    }
+    
+    .cabecalho__logo{
+        height: 80%;
+    }
+    .menu__interativo{
+        display: block;
+        color: white;
+    }
+    .cabecalho__menu__suspenso{
+        display: none;
+        position: absolute;
+        top: 11.5%;
+        right: 0.5%;
+        background-color: var(--banner-color);
+        z-index: 1;
+        width: 150px;
+        
+    }
+    .cabecalho__menu__lista{
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+        
+    }
+    .cabecalho__menu__lista__item{
+        font-weight: bold;
+        
+        
+    }
+    .cabecalho__linha{
+        width: 80%;
+        margin: 0;
+        height: 0.1px;
+    }
+}
+.cabecalho__container__boreal{
+    height: inherit;
+    width: 100%;
+    background-color: var(--banner-color-2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

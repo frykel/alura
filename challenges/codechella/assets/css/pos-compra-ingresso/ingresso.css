@@ -1,0 +1,143 @@
+.corpo__ingresso{
+    background-color: var(--terciary-bg-color);
+    padding-bottom: 50px;
+}
+
+.ingresso{
+    margin: 60px auto auto;
+    width: 60%;
+    
+    
+}
+.ingresso__titulo{
+
+    font-family: var(--font-principal);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.ingresso__container{
+   
+    margin-top: 30px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, var(--primay-bg-color),var(--secondary-bg-color),var(--terciary-bg-color));
+    box-shadow: 2px 2px 2px black;
+   
+
+}
+.ingresso__logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ingresso__logo__imagem{
+    width: 15%;
+}
+.ingresso__logo__texto{
+    width: 5%;
+}
+.ingresso__container__corpo{
+    display: flex;
+    margin: 20px;
+    
+}
+.ingresso__container__corpo__imagem{
+    width: 35%;
+}
+.ingresso__container__corpo__texto{
+    margin-left: 30px;
+    width: 60%;
+
+
+}
+.ingresso__container__corpo__texto__nome{
+    font-family: var(--font-principal);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.ingresso__container__corpo__texto__descricao{
+    font-family: var(--font-principal);
+    font-size: 1rem;
+    line-height: 3rem;
+    
+}
+
+/*Responsividade tablet*/
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    .ingresso{
+        width: 85%;
+    }
+    .ingresso__container__corpo__imagem{
+        width: 60%;
+    }
+    .ingresso__container__corpo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ingresso__container__corpo__texto__nome{
+        font-size: 1.3rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+       
+    }
+    .ingresso__container__corpo__texto{
+        margin: auto;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px){
+    .ingresso{
+        width: 90%;
+    }
+    .ingresso__logo__imagem{
+        width: 45%;
+    }
+    .ingresso__logo__texto{
+        width: 15%;
+    }
+    .ingresso__titulo{
+        font-size: 1.7rem;
+    }
+    .ingresso__container__corpo__imagem{
+        width: 70%;
+    }
+    .ingresso__container__corpo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ingresso__container__corpo__texto__nome{
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+       
+    }
+    .ingresso__container__corpo__texto{
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+    .ingresso__container__corpo__texto__descricao{
+        font-family: var(--font-principal);
+        font-size: 1rem;
+        line-height: 2rem;
+        width: 100%;
+        
+        
+    }
+}
+.ingresso__container__boreal{
+   
+    margin-top: 30px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, var(--primay-bg-color-2),var(--secondary-bg-color-2),var(--terciary-bg-color-2));
+    box-shadow: 2px 2px 2px black;
+   
+
+}

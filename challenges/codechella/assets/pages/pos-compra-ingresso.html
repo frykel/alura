@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeChella 2023</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cabecalho.css">
+    <link rel="stylesheet" href="../css/pos-compra-ingresso/banner-pos-compra.css">
+    <link rel="stylesheet" href="../css/pos-compra-ingresso/ingresso.css">
+    <link rel="stylesheet" href="../css/rodape.css">
+</head>
+<body>
+    <header>
+        <section class="cabecalho__container">
+            <div class="cabecalho__div__logo">
+                <button class="botao__tema" data-tema>Tema</button>
+               <a href="../../index.html" class="cabecalho__logo"><img src="../imagens/header/desktop/logo.png" alt="Logo CodeChella" ></a> 
+            </div>
+            <span class="material-symbols-outlined menu__interativo" id="icone__menu">
+                menu
+                </span>
+            <nav class="cabecalho__menu">
+                <ul class="cabecalho__menu__lista">
+                    <li class="cabecalho__menu__lista__item"><a href="experiencia.html" class="cabecalho__menu__lista__link">A experiência</a></li>
+                    <li class="cabecalho__menu__lista__item"><a href="mapa-setores.html" class="cabecalho__menu__lista__link">Mapa de Setores</a></li>
+                    <li class="cabecalho__menu__lista__item"><a href="informacoes.html" class="cabecalho__menu__lista__link">Informações</a></li>
+                    <li class="cabecalho__menu__lista__item"><a href="ingresso.html" class="cabecalho__menu__lista__link">Ingresso</a></li>
+                </ul>
+            </nav>
+            <nav class="cabecalho__menu__suspenso">
+                <ul class="cabecalho__menu__lista">
+                    <li class="cabecalho__menu__lista__item"><a href="experiencia.html" class="cabecalho__menu__lista__link">A Experiência</a></li><hr class="cabecalho__linha"> 
+                    <li class="cabecalho__menu__lista__item"><a href="mapa-setores.html" class="cabecalho__menu__lista__link">Mapa de Setores</a></li><hr class="cabecalho__linha">
+                    <li class="cabecalho__menu__lista__item"><a href="informacoes.html" class="cabecalho__menu__lista__link">Informações</a></li><hr class="cabecalho__linha">
+                    <li class="cabecalho__menu__lista__item"><a href="ingresso.html" class="cabecalho__menu__lista__link">Ingresso</a></li>
+                </ul>
+            </nav>
+
+        </section>
+    </header>
+
+    <main class="corpo__ingresso">
+
+    <section class="banner">
+        <h3 class="banner__texto">Seu ingresso está aqui!</h3>
+
+    </section>
+
+    <section class="ingresso">
+        <h2 class="ingresso__titulo">Uhul, agora sim! Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</h2>
+        <section class="ingresso__container">
+            <div class="ingresso__logo">
+                <img src="../imagens/footer/desktop/logo-cinza.png" alt="Logo do Festival" class="ingresso__logo__imagem">
+                <img src="../imagens/body/desktop/pos-compra-ingresso/simbolo.png" alt="Símbolo maior que menor que" class="ingresso__logo__texto">
+            </div>
+            <div class="ingresso__container__corpo">
+                <img src="../imagens/body/desktop/pos-compra-ingresso/qr-code-pos-compra-ingresso.png" alt="QR code do ingresso" class="ingresso__container__corpo__imagem">
+                <div class="ingresso__container__corpo__texto">
+                    <h3 class="ingresso__container__corpo__texto__nome" data-info = "nome">Moni Hillman</h3>
+                    <div class="ingresso__container__corpo__texto__descricao">
+                        <p class="ingresso__bonus">Ingresso Cortesia</p>
+                        <p class="ingresso__setor" data-info = "setor">Setor Pista</p>
+                        <p class="ingresso__data">Data: 11/03</p>
+                        <p class="ingresso__local" >Local: São Paulo-SP</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+   </main>
+
+    <footer class="rodape">
+        <section class="rodape__informacoes">
+            <div class="rodape__informacoes__container"><img src="../imagens/footer/desktop/logo-cinza.png" alt="Logo Cinza" class="rodape__informacoes__logo"></div>
+        
+            <section class="rodape__informacoes__contato">
+                 <p class="rodape__informacoes__contato__descricao"><span class="rodape__informacoes__titulo">Acesse nossas redes:</span> 
+                    <img src="../imagens/footer/desktop/whatsapp.png" alt="Logo Whatsapp" class="logo__redes">
+                    <img src="../imagens/footer/desktop/twitch.png" alt="Logo Twitch" class="logo__redes">
+                    <img src="../imagens/footer/desktop/instagram.png" alt="Logo Instagram" class="logo__redes">
+                    <img src="../imagens/footer/desktop/twitter.png" alt="Logo Twitter" class="logo__redes">
+                 </p>
+            </section>     
+        </section>
+        <section class="rodape__copy">
+            <p class="rodape__copy__texto">Desenvolvido por Silvio Fernandes.</p>
+            <p class="rodape__copy__texto">Projeto fictício sem fins lucrativos </p>
+        </section>
+
+
+    </footer>
+    <script src="../js/menu-responsivo.js"></script>
+    <!-- <script src="../js/ingresso/mostra-ingresso.js" type="module"></script>   -->  
+    <script src="../js/ingresso-pos/troca-tema-pos-ingresso.js"></script>
+    <script src="../js/ingresso-pos/ingresso-final.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jogo da Cobrinha</title>
+    <style>
+        #game-board {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+        }
+        .tile {
+            box-sizing: border-box;
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+        }
+        .snake {
+            background-color: #000;
+        }
+        .food {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo da Cobrinha</h1>
+    <div id="game-board"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const boardSize = 20; // Tamanho do tabuleiro
+            const tileSize = 20; // Tamanho de cada célula do tabuleiro
+            const initialSnakeLength = 3; // Tamanho inicial da cobrinha
+            const gameSpeed = 200; // Velocidade do jogo em milissegundos
+
+            let snake = []; // Array que representa a cobrinha
+            let direction = "right"; // Direção inicial da cobrinha
+            let gameInterval;
+            let food = { x: 0, y: 0 }; // Posição da comida
+
+            // Função para criar o tabuleiro
+            function createBoard() {
+                const gameBoard = document.getElementById("game-board");
+                gameBoard.innerHTML = "";
+
+                for (let row = 0; row < boardSize; row++) {
+                    for (let col = 0; col < boardSize; col++) {
+                        const tile = document.createElement("div");
+                        tile.classList.add("tile");
+                        tile.style.width = `${tileSize}px`;
+                        tile.style.height = `${tileSize}px`;
+                        gameBoard.appendChild(tile);
+                    }
+                }
+            }
+
+            // Função para atualizar a posição da cobrinha
+            function updateSnake() {
+                const head = snake[snake.length - 1];
+                let newHead;
+
+                switch (direction) {
+                    case "up":
+                        newHead = { x: head.x, y: (head.y - 1 + boardSize) % boardSize };
+                        break;
+                    case "down":
+                        newHead = { x: head.x, y: (head.y + 1) % boardSize };
+                        break;
+                    case "left":
+                        newHead = { x: (head.x - 1 + boardSize) % boardSize, y: head.y };
+                        break;
+                    case "right":
+                        newHead = { x: (head.x + 1) % boardSize, y: head.y };
+                        break;
+                }
+
+                // Verifica se a cobrinha comeu a comida
+                if (newHead.x === food.x && newHead.y === food.y) {
+                    // Gera uma nova posição para a comida
+                    generateFood();
+
+                    // Aumenta o tamanho da cobrinha
+                    snake.push(newHead);
+                } else {
+                    snake.push(newHead);
+
+                    // Remove a calda da cobrinha se ela não comeu a comida
+                    if (snake.length > initialSnakeLength) {
+                        snake.shift();
+                    }
+                }
+
+                // Verifica se a cobrinha passou por cima de si mesma
+                if (checkCollision()) {
+                    endGame();
+                }
+            }
+            
+
+            // Função para verificar se a cobrinha colidiu consigo mesma
+            function checkCollision() {
+                const head = snake[snake.length - 1];
+
+                for (let i = 0; i < snake.length - 1; i++) {
+                    if (snake[i].x === head.x && snake[i].y === head.y) {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+
+            // Função para desenhar a cobrinha no tabuleiro
+            function drawSnake() {
+                const gameBoard = document.getElementById("game-board");
+
+                // Limpa o tabuleiro antes de desenhar a cobrinha
+                const tiles = gameBoard.getElementsByClassName("tile");
+                for (let i = 0; i < tiles.length; i++) {
+                    tiles[i].classList.remove("snake");
+                }
+
+                // Desenha a cobrinha
+                for (let i = 0; i < snake.length; i++) {
+                    const { x, y } = snake[i];
+                    const tileIndex = x + y * boardSize;
+                    tiles[tileIndex].classList.add("snake");
+                }
+
+                // Desenha a comida
+                const foodTileIndex = food.x + food.y * boardSize;
+                tiles[foodTileIndex].classList.add("food");
+            }
+
+            // Função para gerar uma posição aleatória para a comida
+            function generateFood() {
+                const availableTiles = [];
+                for (let row = 0; row < boardSize; row++) {
+                    for (let col = 0; col < boardSize; col++) {
+                        availableTiles.push({ x: col, y: row });
+                    }
+                }
+
+                // Remove as posições ocupadas pela cobrinha
+                for (let i = 0; i < snake.length; i++) {
+                    const { x, y } = snake[i];
+                    const index = availableTiles.findIndex(tile => tile.x === x && tile.y === y);
+                    if (index !== -1) {
+                        availableTiles.splice(index, 1);
+                    }
+                }
+
+                // Escolhe uma posição aleatória para a comida entre as posições disponíveis
+                const randomIndex = Math.floor(Math.random() * availableTiles.length);
+                food = availableTiles[randomIndex];
+            }
+
+            // Função para iniciar o jogo
+            function startGame() {
+                createBoard();
+                snake = [{ x: Math.floor(boardSize / 2), y: Math.floor(boardSize / 2) }];
+                direction = "right";
+                generateFood();
+                drawSnake();
+
+                gameInterval = setInterval(() => {
+                    updateSnake();
+                    drawSnake();
+                }, gameSpeed);
+            }
+
+            // Função para encerrar o jogo
+            function endGame() {
+                clearInterval(gameInterval);
+                alert("Fim de jogo!");
+            }
+
+            // Função para verificar a direção da cobrinha
+            function changeDirection(event) {
+                const key = event.keyCode;
+
+                switch (key) {
+                    case 37: // Seta para a esquerda
+                        if (direction !== "right") {
+                            direction = "left";
+                        }
+                        break;
+                    case 38: // Seta para cima
+                        if (direction !== "down") {
+                            direction = "up";
+                        }
+                        break;
+                    case 39: // Seta para a direita
+                        if (direction !== "left") {
+                            direction = "right";
+                        }
+                        break;
+                    case 40: // Seta para baixo
+                        if (direction !== "up") {
+                            direction = "down";
+                        }
+                        break;
+                }
+            }
+
+            // Inicia o jogo quando a tecla de espaço é pressionada
+            document.addEventListener("keydown", (event) => {
+                if (event.keyCode === 32 && !gameInterval) {
+                    startGame();
+                }
+            });
+
+            // Define a função de mudança de direção quando uma seta é pressionada
+            document.addEventListener("keydown", changeDirection);
+        });
+    </script>
+</body>
+</html>

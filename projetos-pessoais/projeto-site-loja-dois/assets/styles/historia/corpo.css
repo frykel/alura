@@ -1,0 +1,37 @@
+.historia-titulo{
+       
+    line-height: 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    font-family: "montserrat",sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(151, 0, 63);
+    text-align: center;
+    margin: 40px 0;
+
+}
+.historia-texto{
+    font-family: "montserrat",sans-serif;
+    line-height: 1.6rem;
+    text-shadow: 0.3px 0.3px black;
+    margin-top: 20px;
+    text-align: justify;
+}
+.historia-lista, .historia-sublista {
+	list-style: circle;
+}
+.historia-lista{
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.historia-lista-item{
+    font-family: "montserrat",sans-serif;
+    line-height: 1.6rem;
+    text-shadow: 0.3px 0.3px black;
+    margin-top: 20px;
+    text-align: justify;
+}
+.historia-sublista{
+    margin-left: 40px;
+}
